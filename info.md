@@ -23,7 +23,7 @@ The geometry functions keep fabrication units in millimetres. Angular sampling w
 
 ## Toolchain
 
-The frontend uses React, TypeScript, Vite, Tailwind CSS, Radix UI primitives, Three.js, and a small VTracer WebAssembly binding. Vitest exercises validation, worker lifecycle, geometry, and serialization paths. ESLint checks the TypeScript and React source, and the root GitHub Actions workflow runs the complete `npm run check` command.
+The frontend uses React, TypeScript, Vite, Tailwind CSS, Radix UI primitives, Three.js, and a small VTracer WebAssembly binding. Vitest exercises validation, worker lifecycle, geometry, serialization, and a deterministic 1024 × 1024 semantic SVG round-trip quality gate. ESLint checks the TypeScript and React source, and the root GitHub Actions workflow runs the complete `npm run check` command.
 
 The Three.js preview is loaded on demand. Mesh construction and SVG tracing run in dedicated module workers. Interactive image processing uses a smaller heightfield and committed slider values; exports regenerate the design at full quality.
 

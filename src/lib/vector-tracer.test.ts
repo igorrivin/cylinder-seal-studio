@@ -35,7 +35,7 @@ describe('VTracer option adapter', () => {
 
     expect(result.cornerThreshold).toBeCloseTo(Math.PI / 3, 12)
     expect(result.spliceThreshold).toBeCloseTo(Math.PI / 4, 12)
-    expect(result.lengthThreshold).toBe(4)
+    expect(result.lengthThreshold).toBe(5)
     expect(result.filterSpeckle).toBe(16)
     expect(result.pathPrecision).toBe(2)
   })

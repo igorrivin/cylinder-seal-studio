@@ -51,6 +51,7 @@ The app rejects non-finite, out-of-range, geometrically impossible, or excessive
 | `npm run lint` | Check TypeScript and React source with ESLint |
 | `npm test` | Run the Vitest suite once |
 | `npm run test:watch` | Run tests while files change |
+| `npm run benchmark:svg` | Run the semantic SVG round-trip benchmark and refresh its review artifacts |
 | `npm run build` | Type-check and create a production build |
 | `npm run audit` | Check production dependencies for high-severity advisories |
 | `npm run check` | Run lint, tests, and the production build |
@@ -81,6 +82,7 @@ Use the deploy button near the top of this README, or import this GitHub reposit
 - `src/workers/mesh.worker.ts` builds preview meshes and STL files away from the main thread.
 - `src/workers/trace.worker.ts` traces processed artwork to smooth SVG paths in WebAssembly.
 - `src/components/ui/` contains the small set of shadcn/Radix primitives used by the page.
+- `benchmarks/svg-gold/` contains the semantic vector source, production-equivalent round-trip quality gate, and review artifacts.
 - Tests under `src/lib/` cover validation, worker lifecycle, tracing topology, geometry, and serialization.
 
 See [info.md](info.md) for implementation notes and project invariants.

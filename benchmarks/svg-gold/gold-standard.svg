@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1024 1024"
+  width="1024"
+  height="1024"
+  role="img"
+  aria-labelledby="gold-title gold-description"
+  shape-rendering="geometricPrecision"
+>
+  <title id="gold-title">Semantic Easter line-art gold standard</title>
+  <desc id="gold-description">
+    A hand-authored vector interpretation of the Cylinder Seal Studio sample.
+    Reusable bunny, egg, flower, heart, and leafy-branch symbols are instantiated
+    to form a seamless-looking monochrome pattern. This is the known vector source
+    for the raster-to-vector recovery benchmark.
+  </desc>
+
+  <metadata>
+    The artwork is intentionally expressed as semantic SVG primitives and reusable
+    symbol instances. It contains no embedded raster images, fonts, filters, masks,
+    or generated tracing paths.
+  </metadata>
+
+  <defs>
+    <style>
+      .fixed-stroke,
+      .fixed-stroke * {
+        vector-effect: non-scaling-stroke;
+      }
+    </style>
+
+    <symbol id="running-bunny" viewBox="0 0 240 200">
+      <title>Running bunny</title>
+      <g
+        fill="#fff"
+        stroke="#111"
+        stroke-width="3.2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <g data-part="tail">
+          <path d="M48 82c-5-5-4-12 1-15 2-7 10-9 15-5 6-2 13 3 13 9 6 4 4 12-1 15 0 7-9 10-14 5-7 5-15 1-14-9Z" />
+        </g>
+
+        <g data-part="ears">
+          <path d="M159 68c-2-21-12-42-31-56-6-5-10-4-10 2 1 19 10 39 27 56Z" />
+          <path d="M151 72c-13-13-33-16-48-30-8-7-15-18-11-23 4-5 17-2 29 6 20 13 31 29 38 45Z" />
+          <path fill="none" d="M103 26c12 5 31 20 42 33-15-3-32-13-42-24Z" />
+        </g>
+
+        <g data-part="far-legs">
+          <path d="M73 116c-16 1-25 9-35 20l-16 14c-6 5-14 5-16-1-3-5 2-12 9-16l23-21c10-9 20-9 31-5Z" />
+          <path d="M80 130c-18 2-28 11-38 20l-15 13c-6 5-14 6-17 1-4-6 1-13 9-18l25-19c11-8 22-9 33-7Z" />
+          <path d="M156 125c15 2 34 7 49 17 11 7 21 16 22 24 2 6-3 10-8 9-5-1-11-7-17-13 6 7 5 13 1 16-6 3-12-2-16-9l-17-18-19-7Z" />
+        </g>
+
+        <g data-part="body-and-head">
+          <path d="M50 93c16-12 38-11 56-3 7 3 14 8 20 13 0-15 5-30 17-39 11-9 27-10 41-4 15 6 25 18 28 32 2 9-1 21-7 29-7 9-18 14-28 13-7 0-13-3-19-7 2 8-1 16-7 22-9 9-22 11-35 5-13 9-33 10-48 2-12-7-19-18-22-31-3-13-2-24 4-32Z" />
+        </g>
+
+        <g data-part="near-foreleg">
+          <path d="M151 145c15 4 31 8 43 17l17 15c6 6 5 13-1 17-6 4-13 0-19-6l-17-13c-10-7-21-10-29-18Z" />
+        </g>
+
+        <g data-part="face" fill="none">
+          <ellipse cx="187" cy="88" rx="4.8" ry="7" fill="#111" stroke="none" />
+          <circle cx="188.5" cy="85.5" r="1.35" fill="#fff" stroke="none" />
+          <path d="M207 100c3-2 7-1 8 2 0 3-2 6-5 7-3-1-5-3-5-6 0-1 1-2 2-3Z" fill="#111" />
+          <path d="M210 108c0 7-4 12-11 15" />
+          <path d="M199 123c-10 5-21 3-29-3" />
+          <path d="M190 99c-10-1-18 0-26 3M191 106c-10 0-18 3-25 6M214 100l14-2M214 106l16 4" />
+        </g>
+      </g>
+    </symbol>
+
+    <symbol id="seated-bunny" viewBox="45 0 150 200">
+      <title>Seated front-facing bunny</title>
+      <g
+        class="fixed-stroke"
+        fill="#fff"
+        stroke="#111"
+        stroke-width="3.2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <g data-part="ears">
+          <path d="M105 64c-10-12-19-30-19-47 0-10 3-14 8-13 10 3 22 23 24 55Z" />
+          <path d="M124 59c2-21 13-45 23-53 5-4 8-1 7 7-3 20-11 38-18 51Z" />
+          <path fill="none" d="M103 52c-7-11-12-25-11-36 8 7 18 24 20 40M130 55c3-16 11-33 19-42-2 16-9 32-15 43" />
+        </g>
+
+        <g data-part="torso">
+          <path d="M97 109c-13 10-19 30-16 51 2 18 14 30 29 33h20c16-4 26-17 28-34 2-20-3-39-15-50Z" />
+        </g>
+
+        <g data-part="feet">
+          <path d="M84 149c-14-4-25 5-27 21-3 16 8 27 23 27 14 0 21-7 20-20-1-14-7-25-16-28Z" />
+          <path d="M156 149c14-4 25 5 27 21 3 16-8 27-23 27-14 0-21-7-20-20 1-14 7-25 16-28Z" />
+          <g fill="none" stroke-width="2.7">
+            <ellipse cx="80" cy="179" rx="9" ry="13" />
+            <ellipse cx="160" cy="179" rx="9" ry="13" />
+            <ellipse cx="68" cy="162" rx="3.2" ry="4.5" transform="rotate(-24 68 162)" />
+            <ellipse cx="76" cy="157" rx="3.2" ry="4.5" transform="rotate(-12 76 157)" />
+            <ellipse cx="85" cy="159" rx="3.2" ry="4.5" transform="rotate(10 85 159)" />
+            <ellipse cx="172" cy="162" rx="3.2" ry="4.5" transform="rotate(24 172 162)" />
+            <ellipse cx="164" cy="157" rx="3.2" ry="4.5" transform="rotate(12 164 157)" />
+            <ellipse cx="155" cy="159" rx="3.2" ry="4.5" transform="rotate(-10 155 159)" />
+          </g>
+        </g>
+
+        <g data-part="head">
+          <path d="M120 54c-24 0-40 13-43 34-3 19 10 33 28 38 9 3 21 3 31 0 18-4 30-18 27-37-3-20-19-35-43-35Z" />
+        </g>
+
+        <g data-part="chest-ruff">
+          <path d="M103 116c-4 3-4 9 1 12-3 5 1 11 6 11-1 7 5 13 10 17 5-4 11-10 10-17 6 0 9-6 6-11 5-3 5-8 1-12" />
+        </g>
+
+        <g data-part="forelegs" fill="none">
+          <path d="M100 143c-2 14 1 35 6 48M140 143c2 15-1 35-6 48" />
+          <path d="M116 157v32c0 5-4 7-8 4M124 157v32c0 5 4 7 8 4" />
+        </g>
+
+        <g data-part="face" fill="none">
+          <ellipse cx="101" cy="87" rx="4.8" ry="7" fill="#111" stroke="none" />
+          <ellipse cx="139" cy="87" rx="4.8" ry="7" fill="#111" stroke="none" />
+          <circle cx="102.5" cy="84.5" r="1.35" fill="#fff" stroke="none" />
+          <circle cx="140.5" cy="84.5" r="1.35" fill="#fff" stroke="none" />
+          <path d="M114 97c0-3 3-5 6-5s6 2 6 5c0 3-3 6-6 8-3-2-6-5-6-8Z" />
+          <path d="M120 105v6M120 111c-3 6-9 6-12 2M120 111c3 6 9 6 12 2" />
+          <path d="M84 91l-23-3M84 97l-24 1M86 103l-20 7M156 91l23-3M156 97l24 1M154 103l20 7" />
+        </g>
+      </g>
+    </symbol>
+
+    <path
+      id="egg-shell"
+      d="M54 4C34 4 13 40 8 78 3 116 20 144 54 144s51-28 46-66C95 40 74 4 54 4Z"
+      fill="#fff"
+      stroke="#111"
+      stroke-width="3.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <symbol id="egg-dots" viewBox="0 0 108 148">
+      <title>Zigzag and dot egg</title>
+      <use href="#egg-shell" />
+      <g fill="none" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 50 25 41 36 51 47 41 59 52 71 42 82 51 93 43" />
+        <path d="M9.5 70C30 78 77 78 98.5 70M8 91C29 98 78 98 100 91" />
+        <path d="M15 117 26 108 38 119 50 109 62 119 74 109 86 118 95 111" />
+      </g>
+      <g fill="#fff" stroke="#111" stroke-width="3.2">
+        <circle cx="28" cy="84" r="5.3" />
+        <circle cx="45.5" cy="86.5" r="5.3" />
+        <circle cx="63.5" cy="86.5" r="5.3" />
+        <circle cx="81" cy="84" r="5.3" />
+      </g>
+    </symbol>
+
+    <symbol id="egg-hearts" viewBox="0 0 108 148">
+      <title>Wave and heart egg</title>
+      <use href="#egg-shell" />
+      <g fill="none" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 48 28 40 39 51 51 40 63 52 75 41 88 50 95 45" />
+        <path d="M10 68C31 76 77 76 98 68M9 99C31 107 78 107 99 99" />
+        <path d="M14 120 25 112 37 122 49 113 61 122 73 112 85 121 95 114" />
+      </g>
+      <g fill="#fff" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 82c0-5 7-7 10-2.5 3-4.5 10-3 10 2.5 0 5.5-6 10-10 14-4-4-10-8.5-10-14Z" />
+        <path d="M44 82c0-5 7-7 10-2.5 3-4.5 10-3 10 2.5 0 5.5-6 10-10 14-4-4-10-8.5-10-14Z" />
+        <path d="M70 82c0-5 7-7 10-2.5 3-4.5 10-3 10 2.5 0 5.5-6 10-10 14-4-4-10-8.5-10-14Z" />
+      </g>
+    </symbol>
+
+    <symbol id="egg-waves" viewBox="0 0 108 148">
+      <title>Wavy stripe egg</title>
+      <use href="#egg-shell" />
+      <g fill="none" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 52 27 43 38 53 49 44 60 54 71 44 82 53 93 46" />
+        <path d="M10 72 21 64 32 74 43 65 54 75 65 65 76 74 87 64 98 71" />
+        <path d="M8 92 19 84 30 94 41 85 52 95 63 85 74 94 85 84 100 91" />
+        <path d="M13 113 25 104 37 115 49 105 61 115 73 105 85 114 96 107" />
+      </g>
+    </symbol>
+
+    <symbol id="flower" viewBox="0 0 72 72">
+      <title>Five-petal flower</title>
+      <g fill="#fff" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path id="flower-petal" d="M36 34C29 30 26 21 29 13 31 7 36 4 41 7 48 11 48 21 42 30 40 33 38 35 36 34Z" />
+        <use href="#flower-petal" transform="rotate(72 36 36)" />
+        <use href="#flower-petal" transform="rotate(144 36 36)" />
+        <use href="#flower-petal" transform="rotate(216 36 36)" />
+        <use href="#flower-petal" transform="rotate(288 36 36)" />
+        <circle cx="36" cy="36" r="8" />
+      </g>
+    </symbol>
+
+    <symbol id="heart" viewBox="0 0 60 56">
+      <title>Heart</title>
+      <path
+        d="M30 52C26 49 7 36 5 22 3.5 12 9 6 17 5 23 4.5 28 8 30 14 32 8 37 4.5 43 5 51 6 56.5 12 55 22 53 36 34 49 30 52Z"
+        fill="#fff"
+        stroke="#111"
+        stroke-width="3.2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </symbol>
+
+    <symbol id="leafy-branch" viewBox="0 0 76 148">
+      <title>Leafy branch</title>
+      <g fill="#fff" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 143C34 122 39 103 42 82 45 60 44 42 52 23 55 16 57 10 56 5" fill="none" />
+        <path d="M51 27C47 18 50 9 56 4 62 12 60 21 51 27Z" />
+        <path d="M45 53C48 40 58 32 70 31 68 43 58 51 45 53Z" />
+        <path d="M43 68C33 63 27 53 28 42 39 47 45 56 43 68Z" />
+        <path d="M40 88C45 75 56 68 68 69 64 81 53 88 40 88Z" />
+        <path d="M36 105C25 101 18 91 19 79 31 84 38 93 36 105Z" />
+        <path d="M31 124C37 113 48 108 59 111 54 122 43 127 31 124Z" />
+        <path d="M25 136C15 134 8 126 7 116 18 119 25 126 25 136Z" />
+      </g>
+    </symbol>
+  </defs>
+
+  <rect width="1024" height="1024" fill="#fff" />
+
+  <g id="pattern-layout">
+    <g id="bunnies">
+      <use href="#seated-bunny" x="65" y="10" width="190" height="250" />
+      <use href="#running-bunny" x="526" y="10" width="255" height="212" />
+      <use href="#running-bunny" x="238" y="259" width="260" height="202" transform="matrix(-1 0 0 1 736 0)" />
+      <use href="#seated-bunny" x="755" y="205" width="190" height="250" />
+      <use href="#seated-bunny" x="5" y="487" width="190" height="250" />
+      <use href="#running-bunny" x="592" y="456" width="245" height="202" transform="matrix(-1 0 0 1 1429 0)" />
+      <use href="#running-bunny" x="258" y="674" width="264" height="198" transform="matrix(-1 0 0 1 780 0)" />
+      <use href="#seated-bunny" x="755" y="672" width="190" height="250" />
+    </g>
+
+    <g id="eggs">
+      <use href="#egg-dots" x="393" y="67" width="125" height="158" />
+      <use href="#egg-hearts" x="801" y="18" width="116" height="159" />
+      <use href="#egg-dots" x="20" y="287" width="118" height="157" />
+      <use href="#egg-hearts" x="584" y="299" width="113" height="157" />
+      <use href="#egg-dots" x="243" y="499" width="113" height="157" />
+      <use href="#egg-dots" x="874" y="492" width="114" height="160" />
+      <use href="#egg-hearts" x="525" y="679" width="114" height="157" />
+      <use href="#egg-hearts" x="65" y="847" width="113" height="161" />
+      <use href="#egg-waves" x="429" y="897" width="99" height="137" />
+    </g>
+
+    <g id="flowers">
+      <use href="#flower" x="9" y="15" width="74" height="74" />
+      <use href="#flower" x="500" y="8" width="70" height="70" />
+      <use href="#flower" x="934" y="14" width="72" height="72" />
+      <use href="#flower" x="309" y="176" width="74" height="74" />
+      <use href="#flower" x="153" y="302" width="72" height="72" />
+      <use href="#flower" x="672" y="232" width="72" height="72" />
+      <use href="#flower" x="501" y="412" width="73" height="73" />
+      <use href="#flower" x="441" y="641" width="72" height="72" />
+      <use href="#flower" x="942" y="655" width="72" height="72" />
+      <use href="#flower" x="17" y="777" width="73" height="73" />
+      <use href="#flower" x="543" y="859" width="74" height="74" />
+      <use href="#flower" x="650" y="835" width="72" height="72" />
+      <use href="#flower" x="249" y="925" width="75" height="75" />
+      <use href="#flower" x="937" y="940" width="72" height="72" />
+    </g>
+
+    <g id="hearts">
+      <use href="#heart" x="397" y="16" width="59" height="55" />
+      <use href="#heart" x="744" y="12" width="54" height="51" />
+      <use href="#heart" x="250" y="204" width="50" height="47" />
+      <use href="#heart" x="603" y="210" width="56" height="53" />
+      <use href="#heart" x="431" y="246" width="54" height="51" />
+      <use href="#heart" x="945" y="231" width="58" height="55" />
+      <use href="#heart" x="2" y="458" width="54" height="51" />
+      <use href="#heart" x="345" y="453" width="57" height="53" />
+      <use href="#heart" x="557" y="486" width="50" height="47" />
+      <use href="#heart" x="796" y="493" width="57" height="53" />
+      <use href="#heart" x="966" y="449" width="55" height="52" />
+      <use href="#heart" x="8" y="550" width="49" height="46" />
+      <use href="#heart" x="190" y="548" width="43" height="41" />
+      <use href="#heart" x="662" y="656" width="56" height="53" />
+      <use href="#heart" x="925" y="742" width="56" height="53" />
+      <use href="#heart" x="136" y="779" width="55" height="52" />
+      <use href="#heart" x="367" y="831" width="51" height="48" />
+      <use href="#heart" x="3" y="947" width="54" height="51" />
+      <use href="#heart" x="700" y="921" width="54" height="51" />
+      <use href="#heart" x="757" y="955" width="55" height="52" />
+      <use href="#heart" x="856" y="954" width="52" height="49" />
+    </g>
+
+    <g id="leafy-branches">
+      <use href="#leafy-branch" x="276" y="16" width="80" height="151" transform="rotate(7 316 92)" />
+      <use href="#leafy-branch" x="3" y="122" width="76" height="151" transform="rotate(-25 41 198)" />
+      <use href="#leafy-branch" x="931" y="87" width="74" height="145" transform="rotate(18 968 160)" />
+      <use href="#leafy-branch" x="498" y="223" width="78" height="153" transform="rotate(-4 537 300)" />
+      <use href="#leafy-branch" x="690" y="305" width="77" height="145" transform="rotate(12 729 378)" />
+      <use href="#leafy-branch" x="955" y="296" width="68" height="148" transform="rotate(5 989 370)" />
+      <use href="#leafy-branch" x="169" y="404" width="75" height="125" transform="rotate(-11 207 467)" />
+      <use href="#leafy-branch" x="376" y="473" width="79" height="162" transform="rotate(16 416 554)" />
+      <use href="#leafy-branch" x="497" y="527" width="76" height="150" transform="rotate(-16 535 602)" />
+      <use href="#leafy-branch" x="190" y="665" width="75" height="146" transform="rotate(-16 228 738)" />
+      <use href="#leafy-branch" x="668" y="676" width="79" height="151" transform="rotate(14 708 752)" />
+      <use href="#leafy-branch" x="953" y="779" width="66" height="155" transform="rotate(13 986 857)" />
+      <use href="#leafy-branch" x="181" y="832" width="77" height="148" transform="rotate(-19 220 906)" />
+      <use href="#leafy-branch" x="330" y="879" width="80" height="150" transform="rotate(-18 370 954)" />
+      <use href="#leafy-branch" x="575" y="916" width="75" height="144" transform="rotate(52 613 988)" />
+    </g>
+  </g>
+</svg>

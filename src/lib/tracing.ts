@@ -17,8 +17,8 @@ export interface TraceSettings {
 export const DEFAULT_TRACE_SETTINGS: Readonly<TraceSettings> = Object.freeze({
   mode: 'spline',
   filterSpeckle: 16,
-  segmentLength: 4,
-  cornerThresholdDegrees: 60,
+  segmentLength: 5,
+  cornerThresholdDegrees: 45,
   spliceThresholdDegrees: 45,
   maxIterations: 10,
   pathPrecision: 2,

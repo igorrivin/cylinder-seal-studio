@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "raster": {
+    "width": 1024,
+    "height": 1024,
+    "metricBinaryThreshold": 128
+  },
+  "preprocessing": {
+    "threshold": 170,
+    "soften": 0,
+    "invert": false,
+    "mirror": false,
+    "seamBand": false
+  },
+  "physicalOutputMm": {
+    "width": 39.89823,
+    "height": 40
+  },
+  "traceSettings": {
+    "mode": "spline",
+    "filterSpeckle": 16,
+    "segmentLength": 5,
+    "cornerThresholdDegrees": 45,
+    "spliceThresholdDegrees": 45,
+    "maxIterations": 10,
+    "pathPrecision": 2
+  },
+  "deterministic": true,
+  "visual": {
+    "iou": 0.8485447585433653,
+    "precision": 0.9199200207140596,
+    "recall": 0.9162231280041835,
+    "disagreement": 0.02177143096923828,
+    "grayscaleMae": 0.026424632352941176,
+    "falsePositivePixels": 11134,
+    "falseNegativePixels": 11695
+  },
+  "topology": {
+    "processedGold": {
+      "foregroundComponents": 125,
+      "backgroundHoles": 528
+    },
+    "traced": {
+      "foregroundComponents": 123,
+      "backgroundHoles": 452
+    }
+  },
+  "svg": {
+    "gold": {
+      "bytes": 15643,
+      "paths": 50,
+      "subpaths": 65,
+      "closes": 30,
+      "cubicCurves": 57,
+      "commands": 173,
+      "sha256": "c1ff4a28d648e8e233202e58b5a457b9eaa7c49d3d134a07dc58040426bb6491"
+    },
+    "rawTrace": {
+      "bytes": 231958,
+      "paths": 125,
+      "subpaths": 548,
+      "closes": 548,
+      "cubicCurves": 6214,
+      "commands": 7310,
+      "sha256": "cc5bfb9bbe4dd4d4660585ad8d63df54040c4fc10641da301873621461b2fc06"
+    },
+    "normalizedTrace": {
+      "bytes": 218908,
+      "paths": 125,
+      "subpaths": 548,
+      "closes": 548,
+      "cubicCurves": 6214,
+      "commands": 7310,
+      "sha256": "ec4784bd507a60bf031ebb22dbcaabd2a39a2872a7767eb80c3d2970d23d73de"
+    }
+  },
+  "rasterHashes": {
+    "sourcePng": "66515f5d1174e8f07fa0121765f66d75d2b43c8859afd415d8d639ab100d0241",
+    "processedGoldRgba": "99c56e2f53215fd196520070ade1b0596b8b4c8daec061549ca52423ae8aecfc",
+    "processedGoldPng": "a71447514bc7d8706fcccb5ffbccf02530c0d25b1d390774595ea095f6e9687f",
+    "tracedPng": "e6c142014aa419822daa3cf31d531c88e3c6a410387936a53754e826ba142b2c"
+  },
+  "gates": {
+    "iou": true,
+    "precision": true,
+    "recall": true,
+    "disagreement": true,
+    "validSvg": true,
+    "semanticGold": true,
+    "deterministic": true,
+    "all": true
+  }
+}

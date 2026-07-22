@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Nominal display size: 108 x 148 units. -->
+    <symbol id="ornament-egg" viewBox="0 0 108 148">
+      <title>Decorated Easter egg</title>
+      <g
+        fill="#fff"
+        stroke="#111"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3.2"
+      >
+        <path
+          d="M54 4
+             C34 4 13 40 8 78
+             C3 116 20 144 54 144
+             C88 144 105 116 100 78
+             C95 40 74 4 54 4Z"
+        />
+
+        <g fill="none">
+          <path d="M15 50 25 41 36 51 47 41 59 52 71 42 82 51 93 43" />
+          <path d="M9.5 70 C30 78 77 78 98.5 70" />
+          <path d="M8 91 C29 98 78 98 100 91" />
+          <path d="M15 117 26 108 38 119 50 109 62 119 74 109 86 118 95 111" />
+        </g>
+
+        <g>
+          <circle cx="28" cy="84" r="5.3" />
+          <circle cx="45.5" cy="86.5" r="5.3" />
+          <circle cx="63.5" cy="86.5" r="5.3" />
+          <circle cx="81" cy="84" r="5.3" />
+        </g>
+      </g>
+    </symbol>
+
+    <!-- Nominal display size: 68 x 68 units. -->
+    <symbol id="ornament-flower" viewBox="0 0 72 72">
+      <title>Five-petal flower</title>
+      <g
+        fill="#fff"
+        stroke="#111"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3.2"
+      >
+        <g>
+          <path d="M36 34 C29 30 26 21 29 13 C31 7 36 4 41 7 C48 11 48 21 42 30 C40 33 38 35 36 34Z" />
+          <path d="M36 34 C29 30 26 21 29 13 C31 7 36 4 41 7 C48 11 48 21 42 30 C40 33 38 35 36 34Z" transform="rotate(72 36 36)" />
+          <path d="M36 34 C29 30 26 21 29 13 C31 7 36 4 41 7 C48 11 48 21 42 30 C40 33 38 35 36 34Z" transform="rotate(144 36 36)" />
+          <path d="M36 34 C29 30 26 21 29 13 C31 7 36 4 41 7 C48 11 48 21 42 30 C40 33 38 35 36 34Z" transform="rotate(216 36 36)" />
+          <path d="M36 34 C29 30 26 21 29 13 C31 7 36 4 41 7 C48 11 48 21 42 30 C40 33 38 35 36 34Z" transform="rotate(288 36 36)" />
+        </g>
+        <circle cx="36" cy="36" r="8" />
+      </g>
+    </symbol>
+
+    <!-- Nominal display size: 50 x 46 units. -->
+    <symbol id="ornament-heart" viewBox="0 0 60 56">
+      <title>Heart</title>
+      <path
+        d="M30 52
+           C26 49 7 36 5 22
+           C3.5 12 9 6 17 5
+           C23 4.5 28 8 30 14
+           C32 8 37 4.5 43 5
+           C51 6 56.5 12 55 22
+           C53 36 34 49 30 52Z"
+        fill="#fff"
+        stroke="#111"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3.2"
+      />
+    </symbol>
+
+    <!-- Nominal display size: 72 x 142 units. -->
+    <symbol id="ornament-leafy-branch" viewBox="0 0 76 148">
+      <title>Leafy branch</title>
+      <g
+        fill="#fff"
+        stroke="#111"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3.2"
+      >
+        <path
+          d="M20 143
+             C34 122 39 103 42 82
+             C45 60 44 42 52 23
+             C55 16 57 10 56 5"
+          fill="none"
+        />
+
+        <path
+          d="M51 27
+             C47 18 50 9 56 4
+             C62 12 60 21 51 27Z"
+        />
+        <path
+          d="M45 53
+             C48 40 58 32 70 31
+             C68 43 58 51 45 53Z"
+        />
+        <path
+          d="M43 68
+             C33 63 27 53 28 42
+             C39 47 45 56 43 68Z"
+        />
+        <path
+          d="M40 88
+             C45 75 56 68 68 69
+             C64 81 53 88 40 88Z"
+        />
+        <path
+          d="M36 105
+             C25 101 18 91 19 79
+             C31 84 38 93 36 105Z"
+        />
+        <path
+          d="M31 124
+             C37 113 48 108 59 111
+             C54 122 43 127 31 124Z"
+        />
+        <path
+          d="M25 136
+             C15 134 8 126 7 116
+             C18 119 25 126 25 136Z"
+        />
+      </g>
+    </symbol>
+  </defs>
+</svg>
