@@ -20,6 +20,7 @@ import {
   type SealParams,
 } from '@/lib/seal'
 import { formatFlatSvg } from '@/lib/svg'
+import { DEFAULT_TRACE_SETTINGS, traceRaster } from '@/lib/tracing'
 
 const ThreePreview = lazy(() => import('@/components/ThreePreview'))
 
@@ -156,6 +157,7 @@ export default function Home() {
   const pendingObjectUrlRef = useRef<string | null>(null)
   const previewWorkerRef = useRef<Worker | null>(null)
   const exportWorkerRef = useRef<Worker | null>(null)
+  const traceAbortRef = useRef<AbortController | null>(null)
   const workerRequestRef = useRef(0)
 
   const debouncedP = useDebouncedValue(p, 180)
@@ -263,6 +265,7 @@ export default function Home() {
     if (pendingObjectUrlRef.current) URL.revokeObjectURL(pendingObjectUrlRef.current)
     previewWorkerRef.current?.terminate()
     exportWorkerRef.current?.terminate()
+    traceAbortRef.current?.abort()
   }, [])
 
   useEffect(() => {
@@ -434,33 +437,23 @@ export default function Home() {
     if (!image || !validation.valid || exportKind) return
     const params = { ...p }
     const sourceImage = image
+    const traceController = new AbortController()
+    traceAbortRef.current?.abort()
+    traceAbortRef.current = traceController
     setExportKind('svg')
-    setExportStatus('Tracing the full-quality SVG…')
+    setExportStatus('Tracing a smooth, full-quality SVG…')
     setExportError('')
     try {
-      const { default: ImageTracer } = await import('imagetracerjs')
       await waitForPaint()
+      traceController.signal.throwIfAborted()
       const exportField = processImage(sourceImage, params, EXPORT_IMAGE_SIZE)
       const context = exportField.canvas.getContext('2d')
       if (!context) throw new Error('Could not access the image canvas.')
-      const rawSvg = ImageTracer.imagedataToSVG(
-        context.getImageData(0, 0, exportField.w, exportField.h),
-        {
-          numberofcolors: 2,
-          colorquantcycles: 1,
-          colorsampling: 0,
-          pal: [
-            { r: 0, g: 0, b: 0, a: 255 },
-            { r: 255, g: 255, b: 255, a: 255 },
-          ],
-          pathomit: 6,
-          ltres: 1,
-          qtres: 1,
-          scale: 1,
-          roundcoords: 2,
-          strokewidth: 0,
-          desc: false,
-        },
+      const imageData = context.getImageData(0, 0, exportField.w, exportField.h)
+      const rawSvg = await traceRaster(
+        { rgba: imageData.data, width: exportField.w, height: exportField.h },
+        DEFAULT_TRACE_SETTINGS,
+        { signal: traceController.signal },
       )
       const widthMm = Math.PI * params.diameterMm
       const svg = formatFlatSvg(rawSvg, exportField.w, exportField.h, widthMm, params.heightMm)
@@ -473,6 +466,7 @@ export default function Home() {
       setExportStatus('')
       setExportError(errorMessage(error, 'Could not generate the SVG.'))
     } finally {
+      if (traceAbortRef.current === traceController) traceAbortRef.current = null
       setExportKind(null)
     }
   }
@@ -806,7 +800,7 @@ export default function Home() {
                 {exportKind === 'stl' ? 'Preparing STL…' : 'Download STL'}
               </Button>
               <Button variant="outline" onClick={exportSVG} disabled={exportDisabled}>
-                {exportKind === 'svg' ? 'Preparing SVG…' : 'Download flat SVG'}
+                {exportKind === 'svg' ? 'Tracing SVG…' : 'Download smooth SVG'}
               </Button>
               <p className="self-center text-xs text-slate-500">
                 STL is manifold and uses millimetres. SVG size matches circumference &times; roller height.

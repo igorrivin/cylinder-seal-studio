@@ -51,10 +51,17 @@ function removeStrokeAttributes(path: string): string {
   return cleaned
 }
 
+function compactPath(path: string): string {
+  return removeStrokeAttributes(path)
+    .replace(/\s+/g, ' ')
+    .replace(/\s*\/>\s*$/, '/>')
+    .trim()
+}
+
 /**
- * Converts trusted ImageTracer output into a dimensionally accurate, fill-only
+ * Converts trusted tracer output into a dimensionally accurate, fill-only
  * fabrication SVG. Only traced paths are retained; white background paths and
- * all stroke styling are removed.
+ * all stroke styling are removed. Path-level transforms are preserved.
  */
 export function formatFlatSvg(
   rawSvg: string,
@@ -69,12 +76,12 @@ export function formatFlatSvg(
   requirePositiveFinite(heightMm, 'SVG physical height')
 
   const root = rawSvg.match(/<svg\b[^>]*>([\s\S]*?)<\/svg\s*>/i)
-  if (!root) throw new Error('ImageTracer output does not contain a complete SVG root element.')
+  if (!root) throw new Error('Tracer output does not contain a complete SVG root element.')
 
   const paths = root[1].match(/<path\b[^>]*(?:\/>|>[\s\S]*?<\/path\s*>)/gi) ?? []
   const foregroundPaths = paths
     .filter((path) => !isWhite(attributeValue(path, 'fill') ?? styleValue(path, 'fill')))
-    .map(removeStrokeAttributes)
+    .map(compactPath)
 
   const sourceWidth = formatNumber(widthPx)
   const sourceHeight = formatNumber(heightPx)

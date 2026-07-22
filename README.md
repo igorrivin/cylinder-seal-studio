@@ -12,9 +12,9 @@ The app can:
 - create raised or recessed relief;
 - generate solid, through-bore, or open-ended shell bodies;
 - preview the resulting mesh in 3D;
-- keep mesh and STL generation off the browser's main thread;
+- keep mesh, STL, and SVG tracing work off the browser's main thread;
 - export a manifold binary STL in millimetres; and
-- export a flat SVG sized to the cylinder circumference and height in millimetres.
+- export a smooth, compound-path SVG sized to the cylinder circumference and height in millimetres.
 
 ## Requirements
 
@@ -75,9 +75,14 @@ Use the deploy button near the top of this README, or import this GitHub reposit
 - `src/pages/Home.tsx` owns the editor state, validation feedback, lazy loading, and export actions.
 - `src/lib/seal.ts` contains image processing, geometry generation, validation, and STL serialization.
 - `src/lib/svg.ts` turns traced paths into dimensionally accurate, fill-only fabrication SVGs.
+- `src/lib/tracing.ts` owns the vendor-neutral SVG worker protocol, validation, cancellation, and lifecycle.
+- `src/lib/vector-tracer.ts` contains the narrow adapter to the VTracer WebAssembly binding.
 - `src/components/ThreePreview.tsx` renders the generated mesh with Three.js.
 - `src/workers/mesh.worker.ts` builds preview meshes and STL files away from the main thread.
+- `src/workers/trace.worker.ts` traces processed artwork to smooth SVG paths in WebAssembly.
 - `src/components/ui/` contains the small set of shadcn/Radix primitives used by the page.
-- `src/lib/seal.test.ts` and `src/lib/svg.test.ts` cover validation, geometry, and serialization behavior.
+- Tests under `src/lib/` cover validation, worker lifecycle, tracing topology, geometry, and serialization.
 
 See [info.md](info.md) for implementation notes and project invariants.
+Third-party license notices are collected in [public/THIRD_PARTY_NOTICES.md](public/THIRD_PARTY_NOTICES.md)
+and included in production builds.

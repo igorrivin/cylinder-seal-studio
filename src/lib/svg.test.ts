@@ -30,6 +30,30 @@ describe('formatFlatSvg', () => {
     expect(result).not.toContain('stroke')
   })
 
+  it('retains VTracer compound geometry and path-level translations', () => {
+    const raw = `<svg xmlns="http://www.w3.org/2000/svg" style="background:transparent">
+      <g transform="scale(1)">
+        <path
+          d="M0 0 C2 0 4 2 4 4 Z M1 1 L1 3 L3 3 Z"
+          transform="translate(12,18)"
+          fill="#000000"
+          fill-rule="evenodd"
+          stroke="none"
+        />
+        <path d="M0 0 L100 0 L100 100 Z" fill="#ffffff" />
+      </g>
+    </svg>`
+
+    const result = formatFlatSvg(raw, 100, 100, 50, 25)
+
+    expect(result).toContain('M0 0 C2 0 4 2 4 4 Z M1 1 L1 3 L3 3 Z')
+    expect(result).toContain('transform="translate(12,18)"')
+    expect(result).toContain('fill-rule="evenodd"')
+    expect(result).not.toContain('M0 0 L100 0')
+    expect(result).not.toContain('<g')
+    expect(result).not.toMatch(/\sstroke(?:-|=)/i)
+  })
+
   it('rejects malformed roots and non-positive dimensions', () => {
     expect(() => formatFlatSvg('<path/>', 10, 10, 10, 10)).toThrow(/complete SVG root/)
     expect(() => formatFlatSvg('<svg></svg>', 0, 10, 10, 10)).toThrow(/positive finite/)
