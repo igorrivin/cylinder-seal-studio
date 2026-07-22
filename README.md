@@ -84,5 +84,9 @@ Use the deploy button near the top of this README, or import this GitHub reposit
 - Tests under `src/lib/` cover validation, worker lifecycle, tracing topology, geometry, and serialization.
 
 See [info.md](info.md) for implementation notes and project invariants.
-Third-party license notices are collected in [public/THIRD_PARTY_NOTICES.md](public/THIRD_PARTY_NOTICES.md)
+
+## License
+
+Cylinder Seal Studio is available under the [MIT License](LICENSE). Third-party
+notices are collected in [public/THIRD_PARTY_NOTICES.md](public/THIRD_PARTY_NOTICES.md)
 and included in production builds.

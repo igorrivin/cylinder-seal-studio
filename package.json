@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "A browser-based raster-to-cylinder-relief generator for STL and SVG fabrication files.",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/igorrivin/cylinder-seal-studio.git"
