@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "procedural-003-flying-bird",
+  "generated_at": "2026-07-23T01:23:15.852Z",
+  "source_input": {
+    "path": "benchmarks/image-to-svg/inputs/procedural-003-flying-bird.png",
+    "sha256": "dc5331bfad1648bdafe18f88b5bf3eebd2d9b3d9d18026fb3661d3de7f56af4e",
+    "media_type": "image/png",
+    "bytes": 7977
+  },
+  "trace": {
+    "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/procedural-003-flying-bird/classical.svg",
+    "sha256": "ca0e6e1fb6cffa24bf51c496f47249b1d60781ebe3fbda6e2f892a1110006aa7",
+    "media_type": "image/svg+xml",
+    "bytes": 2200
+  },
+  "render": {
+    "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/procedural-003-flying-bird/render.png",
+    "sha256": "9f2a6f6b8a4990b3f96acd0326f3ebbd51986acc85d1cae2917d008fc2565b3c",
+    "media_type": "image/png",
+    "bytes": 8271
+  },
+  "generator": {
+    "adapter": "production-equivalent BinaryImageConverter + formatFlatSvg",
+    "vectortracer_version": "0.1.2",
+    "trace_settings": {
+      "mode": "spline",
+      "filterSpeckle": 16,
+      "segmentLength": 5,
+      "cornerThresholdDegrees": 45,
+      "spliceThresholdDegrees": 45,
+      "maxIterations": 10,
+      "pathPrecision": 2
+    },
+    "preprocessing_threshold": 170,
+    "physical_dimensions_mm": {
+      "width": 40,
+      "height": 40
+    },
+    "git_commit": "c361e39d60071d388c4124a71a582c57880f7c7d",
+    "worktree_dirty": true,
+    "runner_sha256": "2d2697ae92f386d13cfd9cdef8a0638b72be67803d3b2cfa3892447a6b71d653"
+  },
+  "renderer": {
+    "name": "@resvg/resvg-js",
+    "version": "2.6.2",
+    "width": 512,
+    "height": 512,
+    "background": "#ffffff",
+    "shape_rendering": 2
+  },
+  "reference_metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.9789219253560661,
+    "precision": 0.9814472209917399,
+    "recall": 0.9973784556720686,
+    "disagreement": 0.003093719482421875,
+    "grayscale_mae": 0.013042434991569816,
+    "false_positive_pixels": 712,
+    "false_negative_pixels": 99,
+    "reference_foreground_pixels": 37764,
+    "candidate_foreground_pixels": 38377,
+    "tolerant_precision_2px": 1,
+    "tolerant_recall_2px": 1,
+    "tolerant_f1_2px": 1
+  },
+  "input_metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.9789219253560661,
+    "precision": 0.9814472209917399,
+    "recall": 0.9973784556720686,
+    "disagreement": 0.003093719482421875,
+    "grayscale_mae": 0.013042434991569816,
+    "false_positive_pixels": 712,
+    "false_negative_pixels": 99,
+    "reference_foreground_pixels": 37764,
+    "candidate_foreground_pixels": 38377,
+    "tolerant_precision_2px": 1,
+    "tolerant_recall_2px": 1,
+    "tolerant_f1_2px": 1
+  },
+  "geometry": {
+    "candidate_bytes": 2200,
+    "element_count": 1,
+    "path_count": 1,
+    "group_count": 0,
+    "basic_shape_count": 0,
+    "command_count": 56,
+    "numeric_token_count": 316,
+    "maximum_nesting": 1
+  }
+}

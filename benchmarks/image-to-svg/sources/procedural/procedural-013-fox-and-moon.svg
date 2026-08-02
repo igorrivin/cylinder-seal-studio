@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-013-fox-and-moon-title procedural-013-fox-and-moon-description">
+  <title id="procedural-013-fox-and-moon-title">Fox beneath the moon</title>
+  <desc id="procedural-013-fox-and-moon-description">A stylized seated fox with a curled tail, ground tufts, stars, and a full moon.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="386" cy="118" r="66"/>
+  <path d="M 201 183 L 152 111 L 229 143 L 299 111 L 278 190 C 318 233 315 314 279 354 C 333 344 367 365 360 407 C 312 430 255 414 225 385 C 185 430 110 430 70 395 C 112 393 131 376 145 348 C 118 290 135 222 201 183 Z"/>
+  <path d="M 181 212 Q 203 230 225 212 M 249 212 Q 268 228 287 210 M 220 244 L 238 244 L 229 258 Z" fill="#111"/>
+  <path d="M 163 301 C 203 327 247 324 288 299 M 225 385 C 214 347 220 317 236 295"/>
+  <path d="M 66 404 L 50 374 M 88 403 L 95 370 M 383 408 L 373 378 M 406 407 L 421 380"/>
+  <circle cx="72" cy="111" r="6" fill="#111" stroke="none"/><circle cx="333" cy="69" r="6" fill="#111" stroke="none"/><circle cx="448" cy="205" r="7" fill="#111" stroke="none"/>
+</g>
+</svg>

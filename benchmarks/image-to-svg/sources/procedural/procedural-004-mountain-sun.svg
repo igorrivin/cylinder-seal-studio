@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-004-mountain-sun-title procedural-004-mountain-sun-description">
+  <title id="procedural-004-mountain-sun-title">Mountain sunrise</title>
+  <desc id="procedural-004-mountain-sun-description">Layered mountain ridges, a rising sun, and short radiating rays.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 51 393 L 186 198 L 251 286 L 315 163 L 462 393 Z"/>
+  <path d="M 140 264 L 186 198 L 222 247 L 250 216 L 278 236 L 315 163 L 357 222"/>
+  <path d="M 116 393 C 154 349 199 345 239 375 C 286 321 352 319 413 393"/>
+  <path d="M 98 184 A 72 72 0 0 1 234 166"/>
+  <path d="M 82 133 L 58 116 M 111 94 L 103 64 M 156 82 V 48 M 201 95 L 212 65 M 232 125 L 258 106" stroke-width="7"/>
+</g>
+</svg>

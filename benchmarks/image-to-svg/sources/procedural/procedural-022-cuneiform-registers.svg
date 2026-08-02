@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-022-cuneiform-registers-title procedural-022-cuneiform-registers-description">
+  <title id="procedural-022-cuneiform-registers-title">Cuneiform in three registers</title>
+  <desc id="procedural-022-cuneiform-registers-description">Three ruled registers contain varied clusters of wedge-shaped pseudo-cuneiform marks.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="6"><rect x="35" y="42" width="442" height="428" rx="18"/><path d="M 49 184 H 463 M 49 326 H 463"/></g>
+<g>
+  <path d="M 71 91 l 28 -7 l -20 16 z" fill="#111" transform="rotate(0 71 91)"/>
+<path d="M 112 113 l 22.400000000000002 -5.6000000000000005 l -16 12.8 z" fill="#111" transform="rotate(35 112 113)"/>
+<path d="M 155 84 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(90 155 84)"/>
+<path d="M 192 128 l 28 -7 l -20 16 z" fill="#111" transform="rotate(-15 192 128)"/>
+<path d="M 245 91 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(20 245 91)"/>
+<path d="M 286 126 l 28 -7 l -20 16 z" fill="#111" transform="rotate(90 286 126)"/>
+<path d="M 335 83 l 22.400000000000002 -5.6000000000000005 l -16 12.8 z" fill="#111" transform="rotate(-10 335 83)"/>
+<path d="M 373 120 l 28 -7 l -20 16 z" fill="#111" transform="rotate(40 373 120)"/>
+<path d="M 425 87 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(90 425 87)"/>
+<path d="M 68 229 l 28 -7 l -20 16 z" fill="#111" transform="rotate(90 68 229)"/>
+<path d="M 108 266 l 22.400000000000002 -5.6000000000000005 l -16 12.8 z" fill="#111" transform="rotate(15 108 266)"/>
+<path d="M 151 217 l 28 -7 l -20 16 z" fill="#111" transform="rotate(-20 151 217)"/>
+<path d="M 197 257 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(90 197 257)"/>
+<path d="M 238 218 l 28 -7 l -20 16 z" fill="#111" transform="rotate(30 238 218)"/>
+<path d="M 291 270 l 22.400000000000002 -5.6000000000000005 l -16 12.8 z" fill="#111" transform="rotate(-10 291 270)"/>
+<path d="M 330 224 l 28 -7 l -20 16 z" fill="#111" transform="rotate(90 330 224)"/>
+<path d="M 382 265 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(20 382 265)"/>
+<path d="M 425 220 l 28 -7 l -20 16 z" fill="#111" transform="rotate(0 425 220)"/>
+<path d="M 69 372 l 28 -7 l -20 16 z" fill="#111" transform="rotate(-10 69 372)"/>
+<path d="M 111 411 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(90 111 411)"/>
+<path d="M 159 365 l 22.400000000000002 -5.6000000000000005 l -16 12.8 z" fill="#111" transform="rotate(30 159 365)"/>
+<path d="M 199 421 l 28 -7 l -20 16 z" fill="#111" transform="rotate(0 199 421)"/>
+<path d="M 248 370 l 28 -7 l -20 16 z" fill="#111" transform="rotate(90 248 370)"/>
+<path d="M 291 411 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(-20 291 411)"/>
+<path d="M 337 369 l 28 -7 l -20 16 z" fill="#111" transform="rotate(15 337 369)"/>
+<path d="M 383 418 l 22.400000000000002 -5.6000000000000005 l -16 12.8 z" fill="#111" transform="rotate(90 383 418)"/>
+<path d="M 427 370 l 28 -7 l -20 16 z" fill="#111" transform="rotate(-10 427 370)"/>
+  <path d="M 82 142 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(0 82 142)"/>
+<path d="M 175 148 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(180 175 148)"/>
+<path d="M 267 148 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(0 267 148)"/>
+<path d="M 356 147 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(180 356 147)"/>
+<path d="M 445 144 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(0 445 144)"/>
+<path d="M 88 293 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(180 88 293)"/>
+<path d="M 179 286 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(0 179 286)"/>
+<path d="M 267 296 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(180 267 296)"/>
+<path d="M 356 289 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(0 356 289)"/>
+<path d="M 444 294 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(180 444 294)"/>
+<path d="M 88 448 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(0 88 448)"/>
+<path d="M 179 447 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(180 179 447)"/>
+<path d="M 269 450 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(0 269 450)"/>
+<path d="M 358 447 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(180 358 447)"/>
+<path d="M 444 447 l 15.400000000000002 -3.8500000000000005 l -11 8.8 z" fill="#111" transform="rotate(0 444 447)"/>
+</g>
+</svg>

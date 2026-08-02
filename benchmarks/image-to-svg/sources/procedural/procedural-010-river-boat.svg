@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-010-river-boat-title procedural-010-river-boat-description">
+  <title id="procedural-010-river-boat-title">River boat scene</title>
+  <desc id="procedural-010-river-boat-description">A small sailboat among layered waves beneath a sun and three distant birds.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="389" cy="112" r="49"/>
+  <path d="M 221 101 V 327 M 223 120 L 348 272 H 224 Z M 210 150 L 126 271 H 210 Z"/>
+  <path d="M 92 294 H 380 L 345 358 H 130 Z"/>
+  <path d="M -24 382 Q 24 345 72 382 T 168 382 T 264 382 T 360 382 T 456 382 T 552 382"/>
+  <path d="M -24 429 Q 24 392 72 429 T 168 429 T 264 429 T 360 429 T 456 429 T 552 429"/>
+  <path d="M 61 137 Q 78 119 95 137 Q 112 119 129 137 M 169 76 Q 185 60 201 76 Q 217 60 233 76 M 297 79 Q 311 65 325 79 Q 339 65 353 79" stroke-width="6"/>
+</g>
+</svg>

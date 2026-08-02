@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-008-scarab-title procedural-008-scarab-description">
+  <title id="procedural-008-scarab-title">Geometric scarab</title>
+  <desc id="procedural-008-scarab-description">A bilaterally symmetric scarab with segmented body, legs, and horn-like antennae.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <ellipse cx="256" cy="273" rx="92" ry="125"/>
+  <path d="M 256 151 V 398 M 179 215 H 333 M 168 280 H 344 M 187 348 H 325" stroke-width="7"/>
+  <path d="M 215 157 C 208 104 229 75 256 63 C 283 75 304 104 297 157"/>
+  <path d="M 195 193 L 130 144 L 91 157 M 175 258 L 107 243 L 72 273 M 177 324 L 120 356 L 102 397"/>
+  <path d="M 317 193 L 382 144 L 421 157 M 337 258 L 405 243 L 440 273 M 335 324 L 392 356 L 410 397"/>
+  <path d="M 229 73 L 198 51 M 283 73 L 314 51"/>
+</g>
+</svg>

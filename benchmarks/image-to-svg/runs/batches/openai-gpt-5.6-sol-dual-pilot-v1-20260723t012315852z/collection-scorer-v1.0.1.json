@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "collected_at": "2026-07-23T01:34:40.849Z",
+  "output_file": {
+    "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/batch-output.jsonl",
+    "sha256": "ad3c768d56a8a2a4f3508e2a60216ce074f660681f0cd268c5f7e7e84f39c419",
+    "media_type": "application/jsonl",
+    "bytes": 365870
+  },
+  "error_file": null,
+  "summary_json": {
+    "path": "benchmarks/image-to-svg/runs/summaries/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z-scorer-v1.0.1.json",
+    "sha256": "d80af96011ff54e822f50c49c0fde39d0461cc14df7750385ae47413a4ec81fa",
+    "media_type": "application/json",
+    "bytes": 19559
+  },
+  "summary_markdown": {
+    "path": "benchmarks/image-to-svg/runs/summaries/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z-scorer-v1.0.1.md",
+    "sha256": "d81677b8acd35cb3374f727c3736726fae5e646dcbc88c739e598f802c7c2b52",
+    "media_type": "text/markdown",
+    "bytes": 1907
+  },
+  "run_ids": [
+    "openai-gpt-5.6-sol-one-shot-v1.0.1-20260723t012315852z-procedural-003-flying-bird",
+    "openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-procedural-003-flying-bird",
+    "openai-gpt-5.6-sol-one-shot-v1.0.1-20260723t012315852z-external-openclipart-rabbit-line-art",
+    "openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-external-openclipart-rabbit-line-art",
+    "openai-gpt-5.6-sol-one-shot-v1.0.1-20260723t012315852z-existing-easter-bunny-gold",
+    "openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-existing-easter-bunny-gold"
+  ],
+  "collector_sha256": "fd3f59a30353ea3333027a20f2df6058ee328782ac8c4acff6a46eae734beef1",
+  "supersedes_collection": "collection.json"
+}

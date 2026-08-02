@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-016-wave-seam-title procedural-016-wave-seam-description">
+  <title id="procedural-016-wave-seam-title">Interlocking wave frieze</title>
+  <desc id="procedural-016-wave-seam-description">Two offset rows of curling waves continue through the left and right seams.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M -60 166 C -20 104 56 102 87 153 C 112 194 69 225 37 197 C 14 177 31 151 54 158 C 116 181 138 221 181 221 C 224 221 246 181 308 158 C 331 151 348 177 325 197 C 293 225 250 194 275 153 C 306 102 382 104 422 166 C 451 211 489 221 572 176"/>
+  <path d="M -60 346 C -20 284 56 282 87 333 C 112 374 69 405 37 377 C 14 357 31 331 54 338 C 116 361 138 401 181 401 C 224 401 246 361 308 338 C 331 331 348 357 325 377 C 293 405 250 374 275 333 C 306 282 382 284 422 346 C 451 391 489 401 572 356"/>
+  <path d="M -20 259 H 532" stroke-width="5"/>
+</g>
+</svg>

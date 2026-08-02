@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "external-openclipart-rabbit-line-art",
+  "run_id": "openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art",
+  "passed": true,
+  "policy": "fail-closed fallback to the exact production classical trace",
+  "triggering_failures": [
+    {
+      "code": "insufficient_coordinate_reduction",
+      "severity": "error",
+      "message": "Geometry numeric-token count 2004 exceeds 1697."
+    }
+  ],
+  "metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.8010004880429478,
+    "precision": 0.8452971093800297,
+    "recall": 0.9385946100507542,
+    "disagreement": 0.01244354248046875,
+    "grayscale_mae": 0.01582915362189621,
+    "false_positive_pixels": 2403,
+    "false_negative_pixels": 859,
+    "reference_foreground_pixels": 13989,
+    "candidate_foreground_pixels": 15533,
+    "tolerant_precision_2px": 0.997489216506792,
+    "tolerant_recall_2px": 0.9994281220959326,
+    "tolerant_f1_2px": 0.9984577280118029,
+    "input_iou": 0.824295010845987,
+    "input_tolerant_precision_2px": 0.9987767977853602,
+    "input_tolerant_recall_2px": 0.9994866529774127,
+    "input_tolerant_f1_2px": 0.9991315992983132,
+    "candidate_bytes": 14255,
+    "element_count": 7,
+    "path_count": 7,
+    "group_count": 0,
+    "basic_shape_count": 0,
+    "command_count": 377,
+    "numeric_token_count": 2122,
+    "maximum_nesting": 1
+  }
+}

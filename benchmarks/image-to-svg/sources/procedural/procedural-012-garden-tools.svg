@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-012-garden-tools-title procedural-012-garden-tools-description">
+  <title id="procedural-012-garden-tools-title">Garden tools and seedling</title>
+  <desc id="procedural-012-garden-tools-description">A watering can, hand trowel, and three-leaf seedling drawn as a small vignette.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 72 342 V 236 H 221 V 342 C 221 370 72 370 72 342 Z"/>
+  <path d="M 78 251 C 28 224 22 317 70 316 M 218 257 L 315 198 L 332 220 L 222 303 M 312 198 Q 343 180 367 187"/>
+  <path d="M 118 234 V 197 H 178 V 234 M 132 196 Q 148 170 165 196"/>
+  <path d="M 392 89 L 345 292 M 377 94 L 414 103 L 405 129 L 369 120 Z M 345 292 C 306 306 302 358 328 391 C 371 372 387 334 345 292 Z"/>
+  <path d="M 257 411 C 262 359 267 309 278 268 M 278 310 C 233 296 214 267 222 239 C 257 242 280 266 278 310 Z M 272 352 C 316 335 340 305 333 275 C 299 281 275 308 272 352 Z"/>
+  <path d="M 45 411 Q 256 394 467 411"/>
+</g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-007-leaf-sprig-title procedural-007-leaf-sprig-description">
+  <title id="procedural-007-leaf-sprig-title">Curving leaf sprig</title>
+  <desc id="procedural-007-leaf-sprig-description">A curved botanical stem carrying alternating almond-shaped leaves and berries.</desc>
+  
+  <path d="M 110 420 C 135 327 189 236 366 103" fill="none" stroke="#111" stroke-width="11" stroke-linecap="round"/>
+<g fill="#111">
+  <path d="M 157 335 C 98 322 81 282 89 245 C 137 257 168 284 157 335 Z"/>
+  <path d="M 190 282 C 184 223 215 191 253 181 C 258 228 239 266 190 282 Z"/>
+  <path d="M 236 229 C 180 211 168 169 182 135 C 226 153 251 184 236 229 Z"/>
+  <path d="M 284 184 C 281 128 313 96 352 89 C 353 135 332 171 284 184 Z"/>
+  <path d="M 126 382 C 83 377 59 351 60 317 C 99 320 129 341 126 382 Z"/>
+  <circle cx="324" cy="140" r="13"/><circle cx="373" cy="97" r="13"/><circle cx="142" cy="347" r="12"/>
+</g>
+</svg>

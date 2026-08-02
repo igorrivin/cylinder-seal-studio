@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-002-amphora-title procedural-002-amphora-description">
+  <title id="procedural-002-amphora-title">Symmetric amphora</title>
+  <desc id="procedural-002-amphora-description">An outlined two-handled amphora with neck, shoulder, and geometric bands.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 211 74 H 301 L 291 112 H 221 Z"/>
+  <path d="M 225 112 V 151 C 225 170 201 184 180 207 C 150 240 159 303 181 352 C 194 381 202 402 197 431 H 315 C 310 402 318 381 331 352 C 353 303 362 240 332 207 C 311 184 287 170 287 151 V 112"/>
+  <path d="M 193 196 C 123 184 119 288 173 303 M 319 196 C 389 184 393 288 339 303"/>
+  <path d="M 181 248 H 331 M 174 282 H 338 M 194 369 H 318"/>
+  <path d="M 203 264 L 225 282 L 247 264 L 269 282 L 291 264 L 313 282" stroke-width="7"/>
+</g>
+</svg>

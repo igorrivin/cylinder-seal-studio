@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art",
+  "recorded_at": "2026-07-22T22:13:13.269Z",
+  "immutable": true,
+  "benchmark": {
+    "corpus_id": "cylinder-seal-image-to-svg",
+    "corpus_version": "1.0.0",
+    "manifest_sha256": "08fa9c41caf5ca32de49fa9aa534038bc388a360887b103b646754c522fcad6b",
+    "case_id": "external-openclipart-rabbit-line-art",
+    "split": "development",
+    "input": {
+      "path": "benchmarks/image-to-svg/inputs/external-openclipart-rabbit-line-art.png",
+      "sha256": "6e7c367ad769f9724cffa04300519bb84f23d6796f393328505353e523ed8c79",
+      "media_type": "image/png",
+      "bytes": 41868
+    },
+    "reference": {
+      "path": "benchmarks/image-to-svg/sources/external/openclipart-rabbit-line-art.svg",
+      "sha256": "f079736736c4381578b0a846fed421b1459bf95695a8475c4761ef96d81be92d",
+      "media_type": "image/svg+xml",
+      "bytes": 67067
+    }
+  },
+  "pipeline": {
+    "name": "gemini-3.6-flash-one-shot",
+    "version": "1.0.0",
+    "git_commit": "c361e39d60071d388c4124a71a582c57880f7c7d",
+    "worktree_dirty": true,
+    "renderer": {
+      "name": "@resvg/resvg-js",
+      "version": "2.6.2",
+      "settings": {
+        "width": 512,
+        "height": 512,
+        "background": "#ffffff",
+        "shape_rendering": 2,
+        "reference_threshold": 170,
+        "candidate_threshold": 128
+      }
+    }
+  },
+  "attempts": [
+    {
+      "index": 0,
+      "kind": "generation",
+      "status": "completed",
+      "started_at": "2026-07-22T22:12:13.363Z",
+      "finished_at": "2026-07-22T22:13:13.269Z",
+      "latency_ms": 59906,
+      "model": {
+        "provider": "Google",
+        "id": "gemini-3.6-flash",
+        "version": "gemini-3.6-flash",
+        "settings": {
+          "api": "interactions",
+          "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+          "store": false,
+          "max_output_tokens": 32768,
+          "seed": 0,
+          "thinking_level": "medium",
+          "thinking_summaries": "none"
+        }
+      },
+      "prompt": {
+        "template_id": "semantic-image-to-svg-one-shot",
+        "template_version": "1.0.0",
+        "system": "You are an expert vector illustrator reconstructing fabrication-ready monochrome artwork from a raster reference.",
+        "user": "Recreate the attached monochrome line-art image as a clean, editable, self-contained SVG. Infer the intended vector design rather than tracing antialiased pixels or noise. Preserve every distinct object, its placement, proportions, overlaps, repeated motifs, line-weight hierarchy, silhouettes, negative spaces, and any artwork crossing an image edge. Use viewBox=\"0 0 512 512\", explicit black fills or strokes, and only basic SVG geometry such as paths, groups, circles, ellipses, polygons, polylines, lines, and rectangles. Prefer smooth, economical geometry, but do not omit meaningful small details. Do not embed the raster, use text, scripts, external resources, CSS, filters, gradients, masks, clip paths, or reusable external definitions. Return only one complete <svg xmlns=\"http://www.w3.org/2000/svg\">...</svg> document, with no Markdown or explanation.",
+        "sha256": "78be5e78a6ab25a674b5b2cbdb07c01bdf813421008968f28575395691bf7a25"
+      },
+      "usage": {
+        "input_tokens": 1302,
+        "cached_input_tokens": 0,
+        "output_tokens": 13403,
+        "reasoning_tokens": 11270,
+        "total_tokens": 14705
+      },
+      "cost": {
+        "usd": 0.1024755,
+        "estimated": true,
+        "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "artifacts": {
+        "provider_response": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art/provider-response.json",
+          "sha256": "dd674e1db6104001d97cfc6a16fbaac2325495f2fe8acd4249f795c4ad65bd49",
+          "media_type": "application/json",
+          "bytes": 38662
+        },
+        "raw_model_output": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art/model-output.txt",
+          "sha256": "0211d059bd4dd52d5f536e7b5e2c367495743559ed2e6d91e42fbc47f2b4be93",
+          "media_type": "text/plain",
+          "bytes": 3237
+        },
+        "validation_report": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art/validation.json",
+          "sha256": "f44675f218c3dee659a199e9a024f9c6b2bab13ca5ae24e248cadd8a56486129",
+          "media_type": "application/json",
+          "bytes": 1392
+        },
+        "candidate_svg": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art/candidate.svg",
+          "sha256": "d4a200438435c1ef347fe561f55f81a0f54b93289ac0964cb4044f65dc79b1ed",
+          "media_type": "image/svg+xml",
+          "bytes": 3226
+        },
+        "rendered_png": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art/render.png",
+          "sha256": "1d63f5fbe86d6d52a7b8d02303ed2429bcb2e8fe7b1e454a272092de30728a8a",
+          "media_type": "image/png",
+          "bytes": 23375
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [
+          {
+            "code": "extraneous_model_text",
+            "severity": "warning",
+            "message": "Text outside the SVG document was removed."
+          }
+        ],
+        "metrics": {
+          "metric_version": "1.0.0",
+          "iou": 0.1372475846912966,
+          "precision": 0.24631641613335317,
+          "recall": 0.2366144828079205,
+          "disagreement": 0.07937240600585938,
+          "grayscale_mae": 0.07468545951094836,
+          "false_positive_pixels": 10128,
+          "false_negative_pixels": 10679,
+          "reference_foreground_pixels": 13989,
+          "candidate_foreground_pixels": 13438,
+          "tolerant_precision_2px": 0.4181425807411817,
+          "tolerant_recall_2px": 0.3930945743083852,
+          "tolerant_f1_2px": 0.40523188257229503,
+          "candidate_bytes": 3226,
+          "element_count": 26,
+          "path_count": 24,
+          "group_count": 1,
+          "basic_shape_count": 1,
+          "baseline_iou": 0.8010004880429478,
+          "delta_iou_vs_classical": -0.6637529033516512
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "latency_ms": 59906,
+    "usage": {
+      "input_tokens": 1302,
+      "cached_input_tokens": 0,
+      "output_tokens": 13403,
+      "reasoning_tokens": 11270,
+      "total_tokens": 14705
+    },
+    "cost": {
+      "usd": 0.1024755,
+      "estimated": true,
+      "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "metrics": {
+      "metric_version": "1.0.0",
+      "iou": 0.1372475846912966,
+      "precision": 0.24631641613335317,
+      "recall": 0.2366144828079205,
+      "disagreement": 0.07937240600585938,
+      "grayscale_mae": 0.07468545951094836,
+      "false_positive_pixels": 10128,
+      "false_negative_pixels": 10679,
+      "reference_foreground_pixels": 13989,
+      "candidate_foreground_pixels": 13438,
+      "tolerant_precision_2px": 0.4181425807411817,
+      "tolerant_recall_2px": 0.3930945743083852,
+      "tolerant_f1_2px": 0.40523188257229503,
+      "candidate_bytes": 3226,
+      "element_count": 26,
+      "path_count": 24,
+      "group_count": 1,
+      "basic_shape_count": 1,
+      "baseline_iou": 0.8010004880429478,
+      "delta_iou_vs_classical": -0.6637529033516512
+    },
+    "ratings": {
+      "fidelity": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No human rating has been assigned."
+      },
+      "manufacturability": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No human rating has been assigned."
+      }
+    }
+  },
+  "outcome": {
+    "status": "accepted",
+    "accepted_attempt": 0,
+    "final_svg": {
+      "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art/candidate.svg",
+      "sha256": "d4a200438435c1ef347fe561f55f81a0f54b93289ac0964cb4044f65dc79b1ed",
+      "media_type": "image/svg+xml",
+      "bytes": 3226
+    },
+    "notes": "Accepted automatically after SVG safety checks, rendering, and metric computation; human quality rating remains pending."
+  },
+  "output_training_rights": {
+    "training_allowed": false,
+    "source": {
+      "cleared": true,
+      "basis": "asset_license",
+      "evidence_url": "https://openclipart.org/share",
+      "notes": "Corpus source is training-cleared under CC0-1.0."
+    },
+    "provider_output": {
+      "cleared": false,
+      "basis": "provider_terms",
+      "terms_url": "https://ai.google.dev/gemini-api/terms",
+      "terms_version": "Gemini API Additional Terms effective 2026-03-23; updated 2026-04-28",
+      "terms_effective_at": "2026-03-23",
+      "notes": "Not cleared for distillation: the provider terms restrict using the service to develop models that compete with Gemini. Retained for evaluation only."
+    },
+    "reviewed_at": "2026-07-22",
+    "notes": "Both source and provider-output rights must be cleared before training; provider-output rights are not cleared for this run."
+  }
+}

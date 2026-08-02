@@ -1,0 +1,747 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cylinderseal.studio/schemas/image-to-svg/run-record.schema.json",
+  "title": "Immutable image-to-SVG benchmark run record",
+  "description": "An append-only record of one case execution, including every generation or repair attempt.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "recorded_at",
+    "immutable",
+    "benchmark",
+    "pipeline",
+    "attempts",
+    "aggregate",
+    "outcome",
+    "output_training_rights"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "$ref": "#/$defs/identifier"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "immutable": {
+      "const": true
+    },
+    "benchmark": {
+      "$ref": "#/$defs/benchmark"
+    },
+    "pipeline": {
+      "$ref": "#/$defs/pipeline"
+    },
+    "attempts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/attempt"
+      }
+    },
+    "aggregate": {
+      "$ref": "#/$defs/aggregate"
+    },
+    "outcome": {
+      "$ref": "#/$defs/outcome"
+    },
+    "output_training_rights": {
+      "$ref": "#/$defs/trainingRights"
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$",
+      "maxLength": 160
+    },
+    "semanticVersion": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "gitObjectId": {
+      "type": "string",
+      "pattern": "^(?:[a-f0-9]{40}|[a-f0-9]{64})$"
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "media_type", "bytes"],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "media_type": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "benchmark": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "corpus_id",
+        "corpus_version",
+        "manifest_sha256",
+        "case_id",
+        "split",
+        "input",
+        "reference"
+      ],
+      "properties": {
+        "corpus_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "corpus_version": {
+          "$ref": "#/$defs/semanticVersion"
+        },
+        "manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "case_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "split": {
+          "enum": ["development", "validation", "test"]
+        },
+        "input": {
+          "$ref": "#/$defs/artifact"
+        },
+        "reference": {
+          "$ref": "#/$defs/artifact"
+        }
+      }
+    },
+    "pipeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "git_commit", "worktree_dirty", "renderer"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/identifier"
+        },
+        "version": {
+          "$ref": "#/$defs/semanticVersion"
+        },
+        "git_commit": {
+          "$ref": "#/$defs/gitObjectId"
+        },
+        "worktree_dirty": {
+          "type": "boolean"
+        },
+        "renderer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "version", "settings"],
+          "properties": {
+            "name": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "version": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "settings": {
+              "$ref": "#/$defs/jsonObject"
+            }
+          }
+        }
+      }
+    },
+    "jsonValue": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        },
+        {
+          "$ref": "#/$defs/jsonObject"
+        }
+      ]
+    },
+    "jsonObject": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/jsonValue"
+      }
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "id", "version", "settings"],
+      "properties": {
+        "provider": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "settings": {
+          "$ref": "#/$defs/jsonObject"
+        }
+      }
+    },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["template_id", "template_version", "system", "user", "sha256"],
+      "properties": {
+        "template_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "template_version": {
+          "$ref": "#/$defs/semanticVersion"
+        },
+        "system": {
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "input_tokens",
+        "cached_input_tokens",
+        "output_tokens",
+        "reasoning_tokens",
+        "total_tokens"
+      ],
+      "properties": {
+        "input_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cached_input_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "output_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reasoning_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_tokens": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["usd", "estimated", "pricing_source_url"],
+      "properties": {
+        "usd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "estimated": {
+          "type": "boolean"
+        },
+        "pricing_source_url": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "severity", "message"],
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/identifier"
+        },
+        "severity": {
+          "enum": ["warning", "error"]
+        },
+        "message": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "failures", "metrics"],
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "failures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/failure"
+          }
+        },
+        "metrics": {
+          "$ref": "#/$defs/jsonObject"
+        }
+      }
+    },
+    "attempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "index",
+        "kind",
+        "status",
+        "started_at",
+        "finished_at",
+        "latency_ms",
+        "model",
+        "prompt",
+        "usage",
+        "cost",
+        "artifacts"
+      ],
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "enum": ["generation", "repair", "fallback", "human_edit"]
+        },
+        "status": {
+          "enum": ["completed", "failed"]
+        },
+        "started_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "finished_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "latency_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "model": {
+          "$ref": "#/$defs/model"
+        },
+        "prompt": {
+          "$ref": "#/$defs/prompt"
+        },
+        "usage": {
+          "$ref": "#/$defs/usage"
+        },
+        "cost": {
+          "$ref": "#/$defs/cost"
+        },
+        "artifacts": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "provider_response": {
+              "$ref": "#/$defs/artifact"
+            },
+            "batch_request": {
+              "$ref": "#/$defs/artifact"
+            },
+            "raw_model_output": {
+              "$ref": "#/$defs/artifact"
+            },
+            "source_trace": {
+              "$ref": "#/$defs/artifact"
+            },
+            "candidate_svg": {
+              "$ref": "#/$defs/artifact"
+            },
+            "rendered_png": {
+              "$ref": "#/$defs/artifact"
+            },
+            "validation_report": {
+              "$ref": "#/$defs/artifact"
+            }
+          }
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
+        },
+        "error": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "completed"
+              }
+            }
+          },
+          "then": {
+            "type": "object",
+            "required": ["validation"],
+            "properties": {
+              "artifacts": {
+                "type": "object",
+                "required": ["candidate_svg", "rendered_png", "validation_report"]
+              }
+            }
+          },
+          "else": {
+            "type": "object",
+            "required": ["error"]
+          }
+        }
+      ]
+    },
+    "rating": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["score", "scale", "reviewer", "notes"],
+      "properties": {
+        "score": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 5
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scale": {
+          "const": "1-5"
+        },
+        "reviewer": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["latency_ms", "usage", "cost", "metrics", "ratings"],
+      "properties": {
+        "latency_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "usage": {
+          "$ref": "#/$defs/usage"
+        },
+        "cost": {
+          "$ref": "#/$defs/cost"
+        },
+        "metrics": {
+          "$ref": "#/$defs/jsonObject"
+        },
+        "ratings": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["fidelity", "manufacturability"],
+          "properties": {
+            "fidelity": {
+              "$ref": "#/$defs/rating"
+            },
+            "manufacturability": {
+              "$ref": "#/$defs/rating"
+            }
+          }
+        }
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "accepted_attempt", "final_svg", "notes"],
+      "properties": {
+        "status": {
+          "enum": ["accepted", "rejected", "error", "fallback"]
+        },
+        "accepted_attempt": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "final_svg": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/artifact"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": ["accepted", "fallback"]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "accepted_attempt": {
+                "type": "integer"
+              },
+              "final_svg": {
+                "$ref": "#/$defs/artifact"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "accepted_attempt": {
+                "type": "null"
+              },
+              "final_svg": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "sourceRightsDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cleared", "basis", "evidence_url", "notes"],
+      "properties": {
+        "cleared": {
+          "type": "boolean"
+        },
+        "basis": {
+          "enum": ["asset_license", "owner_permission", "unknown"]
+        },
+        "evidence_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "notes": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "if": {
+        "properties": {
+          "cleared": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "basis": {
+            "enum": ["asset_license", "owner_permission"]
+          },
+          "evidence_url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "providerRightsDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cleared",
+        "basis",
+        "terms_url",
+        "terms_version",
+        "terms_effective_at",
+        "notes"
+      ],
+      "properties": {
+        "cleared": {
+          "type": "boolean"
+        },
+        "basis": {
+          "enum": ["provider_terms", "owner_permission", "not_applicable", "unknown"]
+        },
+        "terms_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "terms_version": {
+          "type": ["string", "null"]
+        },
+        "terms_effective_at": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "notes": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "cleared": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "basis": {
+                "enum": ["provider_terms", "owner_permission", "not_applicable"]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "basis": {
+                "const": "provider_terms"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "terms_url": {
+                "type": "string"
+              },
+              "terms_version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "terms_effective_at": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "trainingRights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "training_allowed",
+        "source",
+        "provider_output",
+        "reviewed_at",
+        "notes"
+      ],
+      "properties": {
+        "training_allowed": {
+          "type": "boolean"
+        },
+        "source": {
+          "$ref": "#/$defs/sourceRightsDecision"
+        },
+        "provider_output": {
+          "$ref": "#/$defs/providerRightsDecision"
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "notes": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "if": {
+        "properties": {
+          "training_allowed": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "source": {
+            "type": "object",
+            "properties": {
+              "cleared": {
+                "const": true
+              }
+            }
+          },
+          "provider_output": {
+            "type": "object",
+            "properties": {
+              "cleared": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

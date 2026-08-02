@@ -1,0 +1,3056 @@
+{
+  "schema_version": "1.0.0",
+  "corpus": {
+    "id": "cylinder-seal-image-to-svg",
+    "version": "1.0.0",
+    "title": "Cylinder Seal Studio image-to-SVG evaluation corpus",
+    "description": "Rights-tracked vector-oracle and expert-reconstruction cases for evaluating semantic raster-to-SVG systems.",
+    "created_at": "2026-07-22T00:00:00Z",
+    "case_count": 40
+  },
+  "split_policy": {
+    "strategy": "frozen",
+    "frozen_at": "2026-07-22T00:00:00Z",
+    "test_is_sealed": true,
+    "counts": {
+      "development": 24,
+      "validation": 8,
+      "test": 8
+    }
+  },
+  "cases": [
+    {
+      "id": "existing-easter-bunny-gold",
+      "title": "Existing Easter bunny semantic gold",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "ornament"
+      ],
+      "tags": [
+        "dense",
+        "existing-gold",
+        "multi-object",
+        "ornament",
+        "repeated-motif"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/existing-easter-bunny-gold.png",
+        "media_type": "image/png",
+        "sha256": "29cc99ec305b9671a8f82c685132a511684e3f2a318131d064f7d2dc29ca98aa",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 105659,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "expert_reconstruction",
+        "path": "benchmarks/svg-gold/gold-standard.svg",
+        "sha256": "c1ff4a28d648e8e233202e58b5a457b9eaa7c49d3d134a07dc58040426bb6491",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 15643,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/existing-easter-bunny-gold.png",
+          "sha256": "29cc99ec305b9671a8f82c685132a511684e3f2a318131d064f7d2dc29ca98aa",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 105659
+        }
+      },
+      "source": {
+        "kind": "model_assisted_existing_gold",
+        "title": "Existing Easter bunny semantic gold",
+        "creator": "Cylinder Seal Studio contributors with OpenAI Codex assistance",
+        "group_id": "project-existing-model-assisted-gold",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "c1ff4a28d648e8e233202e58b5a457b9eaa7c49d3d134a07dc58040426bb6491",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "MIT",
+        "license_url": "https://opensource.org/license/mit",
+        "attribution": "Cylinder Seal Studio contributors with OpenAI Codex assistance — Existing Easter bunny semantic gold",
+        "license_evidence_url": "https://opensource.org/license/mit",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only unless provider-output training rights are separately cleared."
+      },
+      "notes": ""
+    },
+    {
+      "id": "external-lucide-castle",
+      "title": "Castle icon",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "icon"
+      ],
+      "tags": [
+        "architecture",
+        "castle",
+        "icon",
+        "line-art",
+        "sparse",
+        "symmetry",
+        "uniform-stroke"
+      ],
+      "difficulty": "easy",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-lucide-castle.png",
+        "media_type": "image/png",
+        "sha256": "33245bf45460a25bc72eae61193d224760acc12310f010066f1715bb117187a6",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 8673,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/lucide-castle.svg",
+        "sha256": "c92bc44063e022641bae88c8f6215758ae1294ba09d8834a6b254253e44597ff",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 523,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-lucide-castle.png",
+          "sha256": "33245bf45460a25bc72eae61193d224760acc12310f010066f1715bb117187a6",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 8673
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Castle icon",
+        "creator": "Lucide Icons and Contributors",
+        "group_id": "lucide-lucide-icons-and-contributors",
+        "page_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/icons/castle.svg",
+        "direct_url": "https://raw.githubusercontent.com/lucide-icons/lucide/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/icons/castle.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "7d113110d40fde4fe6eecb84fc5a1b177acba7d47ad6c811b0dd304be25487db",
+        "transformation": "Recolored to monochrome and fitted to a self-contained 512x512 canvas; original geometry is unchanged."
+      },
+      "rights": {
+        "license_spdx": "ISC",
+        "license_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/LICENSE",
+        "attribution": "Copyright (c) 2026 Lucide Icons and Contributors; Lucide Icons and Contributors — Castle icon",
+        "license_evidence_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/LICENSE",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A clean architectural outline with repeated battlements, doorway, and rectangular openings."
+    },
+    {
+      "id": "external-lucide-circuit-board",
+      "title": "Circuit board icon",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "icon"
+      ],
+      "tags": [
+        "circuit",
+        "icon",
+        "line-art",
+        "orthogonal",
+        "sparse",
+        "technology",
+        "uniform-stroke"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-lucide-circuit-board.png",
+        "media_type": "image/png",
+        "sha256": "74338479073bd74a36ac99825fea892e78a7ff9295a9a5ad10cf7a0b20ba0ba0",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 10552,
+        "profile": "speckled",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/lucide-circuit-board.svg",
+        "sha256": "eb2179a2911c2b03726b87a3d44a3a67baf12bd9cb7e0eced4baf1b38fc5163f",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 500,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-lucide-circuit-board.png",
+          "sha256": "86becb1b03ebeab97088532bcb4956fc669e1f5e238762986cfd0b6859bbbc33",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 11098
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Circuit board icon",
+        "creator": "Lucide Icons and Contributors",
+        "group_id": "lucide-lucide-icons-and-contributors",
+        "page_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/icons/circuit-board.svg",
+        "direct_url": "https://raw.githubusercontent.com/lucide-icons/lucide/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/icons/circuit-board.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "30abef5cc7eaa8fe6121ae4a281c0144cb47e5b73d4ef6b265634c85757f4a66",
+        "transformation": "Recolored to monochrome and fitted to a self-contained 512x512 canvas; original geometry is unchanged."
+      },
+      "rights": {
+        "license_spdx": "ISC",
+        "license_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/LICENSE",
+        "attribution": "Copyright (c) 2026 Lucide Icons and Contributors; Lucide Icons and Contributors — Circuit board icon",
+        "license_evidence_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/LICENSE",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A rounded rectangular board containing orthogonal traces and circular terminals."
+    },
+    {
+      "id": "external-lucide-flower-2",
+      "title": "Flower icon",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "botanical",
+        "icon"
+      ],
+      "tags": [
+        "botanical",
+        "flower",
+        "icon",
+        "line-art",
+        "radial-symmetry",
+        "sparse",
+        "uniform-stroke"
+      ],
+      "difficulty": "easy",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-lucide-flower-2.png",
+        "media_type": "image/png",
+        "sha256": "8cc749b55fd7b8e1d07725db2eef293e12835f481b43ff79ef9ae5fdd6ae6187",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 13442,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/lucide-flower-2.svg",
+        "sha256": "3ac6e096762eb852bac583cb0948e4fbac43d301635fd605c81f3133c685b19e",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 595,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-lucide-flower-2.png",
+          "sha256": "8cc749b55fd7b8e1d07725db2eef293e12835f481b43ff79ef9ae5fdd6ae6187",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 13442
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Flower icon",
+        "creator": "Lucide Icons and Contributors",
+        "group_id": "lucide-lucide-icons-and-contributors",
+        "page_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/icons/flower-2.svg",
+        "direct_url": "https://raw.githubusercontent.com/lucide-icons/lucide/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/icons/flower-2.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "692f8bf23db876d6b9526b6e4335cfec6a3227a32bdc52db2704a01a0f259a9e",
+        "transformation": "Recolored to monochrome and fitted to a self-contained 512x512 canvas; original geometry is unchanged."
+      },
+      "rights": {
+        "license_spdx": "ISC",
+        "license_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/LICENSE",
+        "attribution": "Copyright (c) 2026 Lucide Icons and Contributors; Lucide Icons and Contributors — Flower icon",
+        "license_evidence_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/LICENSE",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A clean five-petal flower with a stem and two outlined leaves."
+    },
+    {
+      "id": "external-lucide-origami",
+      "title": "Origami bird icon",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "icon"
+      ],
+      "tags": [
+        "angular",
+        "bird",
+        "icon",
+        "line-art",
+        "origami",
+        "sparse",
+        "uniform-stroke"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-lucide-origami.png",
+        "media_type": "image/png",
+        "sha256": "eb3ab2dffdacc972a63ed41d7b38aa64c9eb45fbb8d3505d66d503345e226b29",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 6387,
+        "profile": "pixelated",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/lucide-origami.svg",
+        "sha256": "6dcf148f6aa022587c939a550b75f564e15c5ece2a9df61779e40d2b3ecdd343",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 646,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-lucide-origami.png",
+          "sha256": "3335334313d7acd9cd190c61e5f1ca51ef1db6c26c032c2516fe371be55d077e",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 11550
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Origami bird icon",
+        "creator": "Lucide Icons and Contributors",
+        "group_id": "lucide-lucide-icons-and-contributors",
+        "page_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/icons/origami.svg",
+        "direct_url": "https://raw.githubusercontent.com/lucide-icons/lucide/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/icons/origami.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "b79724cf03bccfbe1b367911fa04922fa4088522d5e2ccf889dde2b3e38cd1d3",
+        "transformation": "Recolored to monochrome and fitted to a self-contained 512x512 canvas; original geometry is unchanged."
+      },
+      "rights": {
+        "license_spdx": "ISC",
+        "license_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/LICENSE",
+        "attribution": "Copyright (c) 2026 Lucide Icons and Contributors; Lucide Icons and Contributors — Origami bird icon",
+        "license_evidence_url": "https://github.com/lucide-icons/lucide/blob/4e2efb9350fac7dbcb94caae9ccac5654bdcc050/LICENSE",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "An angular folded-paper bird composed of overlapping polygonal contours."
+    },
+    {
+      "id": "external-open-doodles-ballet",
+      "title": "Ballet pose",
+      "split": "validation",
+      "split_frozen": true,
+      "categories": [
+        "character"
+      ],
+      "tags": [
+        "character",
+        "dynamic-pose",
+        "freehand",
+        "human",
+        "line-art",
+        "medium-density"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-open-doodles-ballet.png",
+        "media_type": "image/png",
+        "sha256": "8cf9a263c06595a9a997e2035fa1614f9c68fe492cf6b5549e32066ce6e5c7e2",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 17529,
+        "profile": "speckled",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/open-doodles-ballet.svg",
+        "sha256": "12e04f2618c6c6d5c7f996dbb058c9a65743de42d0364d44645d2ea40babb425",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 54420,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-open-doodles-ballet.png",
+          "sha256": "cc9d8c0727a4f365f2d52204e5377fedd244aaa50f185a7c52c94afbca589724",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 22151
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Ballet pose",
+        "creator": "Pablo Stanley",
+        "group_id": "open-doodles-pablo-stanley",
+        "page_url": "https://www.opendoodles.com/",
+        "direct_url": "https://opendoodles.s3-us-west-1.amazonaws.com/ballet.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "9e9446cdad7b39b76dff2111a9b7352c8cb432b96ef93e92798902bcf0091d2d",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of non-rendering metadata."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Pablo Stanley — Ballet pose",
+        "license_evidence_url": "https://www.opendoodles.com/about",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A dynamic hand-drawn figure leaping in a ballet pose."
+    },
+    {
+      "id": "external-open-doodles-coffee",
+      "title": "Giant coffee cup",
+      "split": "validation",
+      "split_frozen": true,
+      "categories": [
+        "character"
+      ],
+      "tags": [
+        "character",
+        "cup",
+        "dense",
+        "freehand",
+        "human",
+        "line-art",
+        "splash"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-open-doodles-coffee.png",
+        "media_type": "image/png",
+        "sha256": "d5cfcc39be298a773da6dd83192c286d0e21a4ded417cb18dc86b27ca23dd9d9",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 22412,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/open-doodles-coffee.svg",
+        "sha256": "f90e02af360903fe39ce83eedbc73a1d40e86404dd5951613eeb4f99b97428cb",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 41719,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-open-doodles-coffee.png",
+          "sha256": "d5cfcc39be298a773da6dd83192c286d0e21a4ded417cb18dc86b27ca23dd9d9",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 22412
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Giant coffee cup",
+        "creator": "Pablo Stanley",
+        "group_id": "open-doodles-pablo-stanley",
+        "page_url": "https://www.opendoodles.com/",
+        "direct_url": "https://opendoodles.s3-us-west-1.amazonaws.com/coffee.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "b3d514f21436095dcb0a82673f43d347b428515c141acbaf47f98d2142ad69d6",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of non-rendering metadata."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Pablo Stanley — Giant coffee cup",
+        "license_evidence_url": "https://www.opendoodles.com/about",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A hand-drawn figure carrying an oversized cup with a liquid splash."
+    },
+    {
+      "id": "external-open-doodles-ice-cream",
+      "title": "Giant ice cream cone",
+      "split": "validation",
+      "split_frozen": true,
+      "categories": [
+        "character"
+      ],
+      "tags": [
+        "character",
+        "food",
+        "freehand",
+        "human",
+        "line-art",
+        "medium-density",
+        "occlusion"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-open-doodles-ice-cream.png",
+        "media_type": "image/png",
+        "sha256": "80043785b30e0ff4751e509695685813c36189a1cbb833457ae71d912a1a3e24",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 19332,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/open-doodles-ice-cream.svg",
+        "sha256": "b7a3a02de730c36397281b63771d69015204245fa4fa8baa1fb52f9a2886952c",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 42393,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-open-doodles-ice-cream.png",
+          "sha256": "80043785b30e0ff4751e509695685813c36189a1cbb833457ae71d912a1a3e24",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 19332
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Giant ice cream cone",
+        "creator": "Pablo Stanley",
+        "group_id": "open-doodles-pablo-stanley",
+        "page_url": "https://www.opendoodles.com/",
+        "direct_url": "https://opendoodles.s3-us-west-1.amazonaws.com/ice-cream.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "3a0d637d9e17b8e7d212f6d0c4586d0b62da5cd90610f598bee39967866f2820",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of non-rendering metadata."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Pablo Stanley — Giant ice cream cone",
+        "license_evidence_url": "https://www.opendoodles.com/about",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A hand-drawn figure walking while embracing an oversized ice cream cone."
+    },
+    {
+      "id": "external-open-doodles-selfie",
+      "title": "Selfie pose",
+      "split": "validation",
+      "split_frozen": true,
+      "categories": [
+        "character"
+      ],
+      "tags": [
+        "character",
+        "dynamic-pose",
+        "freehand",
+        "human",
+        "line-art",
+        "phone",
+        "sparse"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-open-doodles-selfie.png",
+        "media_type": "image/png",
+        "sha256": "ca3b3e39c9059c70474e7d9e09357eedb6000dd27398ab8a91a0935b91c6ee98",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 18377,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/open-doodles-selfie.svg",
+        "sha256": "14bc5075d9c8be89e023bb49ae416a91307e13887be608103967368dc45de1c3",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 50692,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-open-doodles-selfie.png",
+          "sha256": "ca3b3e39c9059c70474e7d9e09357eedb6000dd27398ab8a91a0935b91c6ee98",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 18377
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Selfie pose",
+        "creator": "Pablo Stanley",
+        "group_id": "open-doodles-pablo-stanley",
+        "page_url": "https://www.opendoodles.com/",
+        "direct_url": "https://opendoodles.s3-us-west-1.amazonaws.com/selfie.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "54865e02673b21f88e4ff1ad60d3eeb4e67c137ec586ee57d02bb7b0ce94ddc9",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of non-rendering metadata."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Pablo Stanley — Selfie pose",
+        "license_evidence_url": "https://www.opendoodles.com/about",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A sparse hand-drawn figure posing dynamically while holding a phone."
+    },
+    {
+      "id": "external-openclipart-bicycle",
+      "title": "Bicycle line art",
+      "split": "test",
+      "split_frozen": true,
+      "categories": [
+        "vehicle"
+      ],
+      "tags": [
+        "bicycle",
+        "circles",
+        "line-art",
+        "mechanical",
+        "sparse",
+        "vehicle"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-openclipart-bicycle.png",
+        "media_type": "image/png",
+        "sha256": "63982c8af26ab9ef221cb8d5cd27b60d90566b9646dc211a4ffbacda6d074717",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 29163,
+        "profile": "softened",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/openclipart-bicycle.svg",
+        "sha256": "3a6f98d229537353bd6873111465cb2edbec2c410a7d2d89e68c6a055a128c07",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 4574,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-openclipart-bicycle.png",
+          "sha256": "ef364925dcaa13a7d9af22a86fbc7e48d313a488ac58108f39682f6d391cd22d",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 15928
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Bicycle line art",
+        "creator": "PrinterKiller",
+        "group_id": "openclipart-printerkiller",
+        "page_url": "https://openclipart.org/detail/21320/bicycle",
+        "direct_url": "https://openclipart.org/download/21320/PrinterKiller-Bicycle.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "ff72200b7ae7debfc191d3b27b459197b86b40ef3d129cc483f8e01b026239a0",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of editor metadata."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "PrinterKiller — Bicycle line art",
+        "license_evidence_url": "https://openclipart.org/share",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A compact side-view bicycle assembled from curves, circles, and angular frame lines."
+    },
+    {
+      "id": "external-openclipart-butterfly-line-art",
+      "title": "Butterfly line art",
+      "split": "test",
+      "split_frozen": true,
+      "categories": [
+        "animal"
+      ],
+      "tags": [
+        "animal",
+        "bilateral-symmetry",
+        "dense",
+        "fine-lines",
+        "insect",
+        "line-art"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-openclipart-butterfly-line-art.png",
+        "media_type": "image/png",
+        "sha256": "eb6b45d85b190cdd33ce125213aac8310df03d3bc5bff426c5016b8cd64d4fdf",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 7867,
+        "profile": "pixelated",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/openclipart-butterfly-line-art.svg",
+        "sha256": "d8239bce603c95d369786b30592f2376e055435801700662fe12963abfca47cb",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 152505,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-openclipart-butterfly-line-art.png",
+          "sha256": "80a191ab1828667086c0002b83f2d7f6163ed277bac0237d3071731891d73f2e",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 25856
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Butterfly line art",
+        "creator": "Child_of_Light",
+        "group_id": "openclipart-child-of-light",
+        "page_url": "https://openclipart.org/detail/178542/butterfly-line-art",
+        "direct_url": "https://openclipart.org/download/178542/butterfly-outline.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "a11f9279b42dba536364b7dfd5784ab9f676738f9a438f83e9dc049324e79369",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of editor metadata."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Child_of_Light — Butterfly line art",
+        "license_evidence_url": "https://openclipart.org/share",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A symmetrical butterfly with fine wing venation and body detail."
+    },
+    {
+      "id": "external-openclipart-can-lineart",
+      "title": "Open can line art",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "object"
+      ],
+      "tags": [
+        "container",
+        "cylinder",
+        "line-art",
+        "medium-density",
+        "object",
+        "parallel-lines"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-openclipart-can-lineart.png",
+        "media_type": "image/png",
+        "sha256": "471e03e8e9714aa74d725703c5196134d2cdce49fe0d5e20ea40568d701e4ace",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 42179,
+        "profile": "softened",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/openclipart-can-lineart.svg",
+        "sha256": "ff2860ee2e85c1ba9d7ffef32d068d3e7d738063b87d2eca2bae79ed29fd98c4",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 27324,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-openclipart-can-lineart.png",
+          "sha256": "4a9543a8bcd731b507594d728f15fc1bf818121f5b3f090af63e19d2f8a06908",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 19971
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Open can line art",
+        "creator": "frankes",
+        "group_id": "openclipart-frankes",
+        "page_url": "https://openclipart.org/detail/246207/can-lineart",
+        "direct_url": "https://openclipart.org/download/246207/Dose-lineart.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "8a32d8c9a4820789b08e98a443558c15d755b7fae5af38117622a0f16607ecf0",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of editor metadata and unused paint definitions."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "frankes — Open can line art",
+        "license_evidence_url": "https://openclipart.org/share",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "An opened cylindrical can combining bold contours with many parallel bands."
+    },
+    {
+      "id": "external-openclipart-decorative-line-frame",
+      "title": "Decorative line-art frame",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "ornament"
+      ],
+      "tags": [
+        "dense",
+        "frame",
+        "line-art",
+        "ornament",
+        "radial-symmetry",
+        "repetition"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-openclipart-decorative-line-frame.png",
+        "media_type": "image/png",
+        "sha256": "c7c0fd78e1828abf314305d7de25685ba0a0a037d060beed65be49ccd6517d04",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 45178,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/openclipart-decorative-line-frame.svg",
+        "sha256": "177ba6e1330cdbd2b7c6b1a9f605893600e05108fd706367c6eeb7e504e103ec",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 148030,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-openclipart-decorative-line-frame.png",
+          "sha256": "c7c0fd78e1828abf314305d7de25685ba0a0a037d060beed65be49ccd6517d04",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 45178
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Decorative line-art frame",
+        "creator": "GDJ",
+        "group_id": "openclipart-gdj",
+        "page_url": "https://openclipart.org/detail/228180/decorative-line-art-frame-4",
+        "direct_url": "https://openclipart.org/download/228180/Decorative-Line-Art-Frame-4.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "dfe37187d83c2599447f7307e1d646597f86ddfb929dd66d7979b2cc499d2ff0",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of editor metadata."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "GDJ — Decorative line-art frame",
+        "license_evidence_url": "https://openclipart.org/share",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A dense circular frame built from mirrored ornamental flourishes."
+    },
+    {
+      "id": "external-openclipart-flower-lineart",
+      "title": "Flower line art",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "botanical"
+      ],
+      "tags": [
+        "botanical",
+        "flower",
+        "line-art",
+        "medium-density",
+        "nested-detail",
+        "organic"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-openclipart-flower-lineart.png",
+        "media_type": "image/png",
+        "sha256": "e9dae643a6bc46c89e9d040d25b2a4aaa5e0fb40a44e72c35c2c823f4efdcbb3",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 24753,
+        "profile": "speckled",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/openclipart-flower-lineart.svg",
+        "sha256": "8464623190206c6f30160f3b6926a43d4b12bfe7eeffa759a299b742ed19120a",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 79793,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-openclipart-flower-lineart.png",
+          "sha256": "7a13f5fd615ec059ddd13c4996be676783ff5d4ea472efcf75b3092830fbef9b",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 33282
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Flower line art",
+        "creator": "frankes",
+        "group_id": "openclipart-frankes",
+        "page_url": "https://openclipart.org/detail/214395/flower-lineart",
+        "direct_url": "https://openclipart.org/download/214395/Blume-linart.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "eecaf48bd4a711325480f2d9d22f395a7e37cf7e153fcf3582e3479b9f89dc46",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of editor metadata and unused paint definitions."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "frankes — Flower line art",
+        "license_evidence_url": "https://openclipart.org/share",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A flower head with many nested petals, leaves, and a curved stem."
+    },
+    {
+      "id": "external-openclipart-geometric-lines",
+      "title": "Geometric line weave",
+      "split": "test",
+      "split_frozen": true,
+      "categories": [
+        "abstract"
+      ],
+      "tags": [
+        "abstract",
+        "geometric",
+        "line-art",
+        "overlap",
+        "straight-lines",
+        "very-dense"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-openclipart-geometric-lines.png",
+        "media_type": "image/png",
+        "sha256": "252b316d2740ccc8a83c6e9f8e340c37e817893c8f4f80acfbb94aebd213d1ee",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 232714,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/openclipart-geometric-lines.svg",
+        "sha256": "49eccefce39bf42210a3a49cf582e9e09549f3009765bfbc082dd72c4c9ce0b3",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 37318,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-openclipart-geometric-lines.png",
+          "sha256": "252b316d2740ccc8a83c6e9f8e340c37e817893c8f4f80acfbb94aebd213d1ee",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 232714
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Geometric line weave",
+        "creator": "Siddymcbill",
+        "group_id": "openclipart-siddymcbill",
+        "page_url": "https://openclipart.org/detail/191405/line-art",
+        "direct_url": "https://openclipart.org/download/191405/lineart.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "f950b9d1bfea037b5463f4c36725708cc8d150ea83619c07758f60b819d9a507",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of editor metadata."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Siddymcbill — Geometric line weave",
+        "license_evidence_url": "https://openclipart.org/share",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A highly dense abstract composition of hundreds of crossing straight lines."
+    },
+    {
+      "id": "external-openclipart-rabbit-line-art",
+      "title": "Rabbit line art",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "animal"
+      ],
+      "tags": [
+        "animal",
+        "line-art",
+        "medium-density",
+        "organic",
+        "outline",
+        "rabbit"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-openclipart-rabbit-line-art.png",
+        "media_type": "image/png",
+        "sha256": "6e7c367ad769f9724cffa04300519bb84f23d6796f393328505353e523ed8c79",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 41868,
+        "profile": "softened",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/openclipart-rabbit-line-art.svg",
+        "sha256": "f079736736c4381578b0a846fed421b1459bf95695a8475c4761ef96d81be92d",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 67067,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-openclipart-rabbit-line-art.png",
+          "sha256": "7c94c4f51e58736726a62e2a5a815d3c84e74079ba22737676d4f5e59c6baa7b",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 25310
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Rabbit line art",
+        "creator": "GDJ",
+        "group_id": "openclipart-gdj",
+        "page_url": "https://openclipart.org/detail/233815/rabbit-line-art",
+        "direct_url": "https://openclipart.org/download/233815/Rabbit-Line-Art.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "183db1d87464eb97eb58c1088f16316702e09ec9053e6e5b783a6dbda4fdc956",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of editor metadata."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "GDJ — Rabbit line art",
+        "license_evidence_url": "https://openclipart.org/share",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "An outlined seated rabbit with internal anatomical and fur details."
+    },
+    {
+      "id": "external-openclipart-tree-lineart",
+      "title": "Tree line art",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "botanical"
+      ],
+      "tags": [
+        "botanical",
+        "line-art",
+        "medium-density",
+        "organic",
+        "silhouette-detail",
+        "tree"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/external-openclipart-tree-lineart.png",
+        "media_type": "image/png",
+        "sha256": "00a25047f681aa1d3f4d3879857c2cbbf43ae8bbc90afa26d4c779e26ec2ceaf",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 19654,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/external/openclipart-tree-lineart.svg",
+        "sha256": "5fd44b2ef9dd614c4517ce883e86e6afc25b767b1874f41693c9abb63d5ba3c5",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 26641,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/external-openclipart-tree-lineart.png",
+          "sha256": "00a25047f681aa1d3f4d3879857c2cbbf43ae8bbc90afa26d4c779e26ec2ceaf",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 19654
+        }
+      },
+      "source": {
+        "kind": "external",
+        "title": "Tree line art",
+        "creator": "frankes",
+        "group_id": "openclipart-frankes",
+        "page_url": "https://openclipart.org/detail/213774/tree-lineart",
+        "direct_url": "https://openclipart.org/download/213774/Baum-lineart.svg",
+        "accessed_at": "2026-07-22",
+        "sha256": "061b3c925711f6621dcc45abf905e4c63a6bb62f4e5df31b81db1bc14619f4f9",
+        "transformation": "Converted to monochrome, fitted to a self-contained 512x512 canvas, and stripped of editor metadata and unused paint definitions."
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "frankes — Tree line art",
+        "license_evidence_url": "https://openclipart.org/share",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": true,
+        "notes": ""
+      },
+      "notes": "A stylized broad-canopy tree with an irregular organic outline and solid trunk."
+    },
+    {
+      "id": "procedural-001-crescent-star",
+      "title": "Crescent and eight-pointed star",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "icon"
+      ],
+      "tags": [
+        "celestial",
+        "filled",
+        "icon",
+        "silhouette",
+        "symmetry"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-001-crescent-star.png",
+        "media_type": "image/png",
+        "sha256": "faa59afab545c8dba1171a6078cfb9c25174f10149ca7f6730d024209f24b43b",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 168646,
+        "profile": "faint-scan",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-001-crescent-star.svg",
+        "sha256": "9ef56fa64b84472147dcc83ca21019a208251ca750b5b3df20049c0f35947946",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1039,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-001-crescent-star.png",
+          "sha256": "76205165495578960e04e6cf1693488e307123c2527a4c1eeb82e0bb0d48bad5",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 9071
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Crescent and eight-pointed star",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "9ef56fa64b84472147dcc83ca21019a208251ca750b5b3df20049c0f35947946",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Crescent and eight-pointed star",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A bold crescent silhouette facing an eight-pointed star."
+    },
+    {
+      "id": "procedural-002-amphora",
+      "title": "Symmetric amphora",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "icon"
+      ],
+      "tags": [
+        "ancient",
+        "icon",
+        "outline",
+        "symmetry",
+        "vessel"
+      ],
+      "difficulty": "easy",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-002-amphora.png",
+        "media_type": "image/png",
+        "sha256": "4ba831832f3c4c08f8c301bce408f0b249df1136d9738da1ad00abd2e4c696f3",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 11043,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-002-amphora.svg",
+        "sha256": "40c7dfd0abc17b025ef61f1e047e646c4123505e3334105663ac23d922957c5c",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1058,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-002-amphora.png",
+          "sha256": "4ba831832f3c4c08f8c301bce408f0b249df1136d9738da1ad00abd2e4c696f3",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 11043
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Symmetric amphora",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "40c7dfd0abc17b025ef61f1e047e646c4123505e3334105663ac23d922957c5c",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Symmetric amphora",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "An outlined two-handled amphora with neck, shoulder, and geometric bands."
+    },
+    {
+      "id": "procedural-003-flying-bird",
+      "title": "Bird in flight",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "animal",
+        "icon"
+      ],
+      "tags": [
+        "animal",
+        "bird",
+        "icon",
+        "organic",
+        "silhouette"
+      ],
+      "difficulty": "easy",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-003-flying-bird.png",
+        "media_type": "image/png",
+        "sha256": "dc5331bfad1648bdafe18f88b5bf3eebd2d9b3d9d18026fb3661d3de7f56af4e",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 7977,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-003-flying-bird.svg",
+        "sha256": "772761ce949892647fbffe6934084d09fb88c72aa312a94898d881df8ead0110",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 842,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-003-flying-bird.png",
+          "sha256": "dc5331bfad1648bdafe18f88b5bf3eebd2d9b3d9d18026fb3661d3de7f56af4e",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 7977
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Bird in flight",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "772761ce949892647fbffe6934084d09fb88c72aa312a94898d881df8ead0110",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Bird in flight",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A sweeping filled bird silhouette with a small incised wing detail."
+    },
+    {
+      "id": "procedural-004-mountain-sun",
+      "title": "Mountain sunrise",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "icon"
+      ],
+      "tags": [
+        "icon",
+        "landscape",
+        "mountain",
+        "outline",
+        "sun"
+      ],
+      "difficulty": "easy",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-004-mountain-sun.png",
+        "media_type": "image/png",
+        "sha256": "509b5160efd1f87ed8992a0bff5e999803fba89c2ae9037a26b0efd17ad0bb19",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 15643,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-004-mountain-sun.svg",
+        "sha256": "e7148ec7174b12a5afb7e5b101eecd48457214cffd9be0035fe087a6202f369e",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 973,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-004-mountain-sun.png",
+          "sha256": "509b5160efd1f87ed8992a0bff5e999803fba89c2ae9037a26b0efd17ad0bb19",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 15643
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Mountain sunrise",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "e7148ec7174b12a5afb7e5b101eecd48457214cffd9be0035fe087a6202f369e",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Mountain sunrise",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "Layered mountain ridges, a rising sun, and short radiating rays."
+    },
+    {
+      "id": "procedural-005-fish",
+      "title": "Patterned fish",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "animal",
+        "icon"
+      ],
+      "tags": [
+        "animal",
+        "fish",
+        "icon",
+        "internal-detail",
+        "outline"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-005-fish.png",
+        "media_type": "image/png",
+        "sha256": "4b8fdc5e3421a85a1fece65277b89d468f75e531645727bee75314340d4f74ee",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 7836,
+        "profile": "pixelated",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-005-fish.svg",
+        "sha256": "86adb6e7dc05a4e8c1a8dac497c82f69700d7d8aa0b479f32a30797f06b3489a",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1030,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-005-fish.png",
+          "sha256": "8188be55a8c7077af6d4d4698088f3c99f21f186249631889d55f3a33204d1e3",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 15259
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Patterned fish",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "86adb6e7dc05a4e8c1a8dac497c82f69700d7d8aa0b479f32a30797f06b3489a",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Patterned fish",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A fish outline with a triangular tail, circular eye, scales, and fin marks."
+    },
+    {
+      "id": "procedural-006-ceremonial-key",
+      "title": "Ceremonial key",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "icon",
+        "object"
+      ],
+      "tags": [
+        "geometric",
+        "icon",
+        "key",
+        "object",
+        "outline"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-006-ceremonial-key.png",
+        "media_type": "image/png",
+        "sha256": "ecea38f6ddd187922cac0ede473da94b1c3c3b1e06dc2b43fbdb5b4d90b6f099",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 20589,
+        "profile": "softened",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-006-ceremonial-key.svg",
+        "sha256": "65a33e51ceb430cd660ee5e6b3a8d72c4d019536ce7ef4c48d76db15f1a76685",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 947,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-006-ceremonial-key.png",
+          "sha256": "b004503e95a2f6f541e57a38040faa3ade081fec46b50eb03b4f22bfa4a95b43",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 11860
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Ceremonial key",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "65a33e51ceb430cd660ee5e6b3a8d72c4d019536ce7ef4c48d76db15f1a76685",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Ceremonial key",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "An ornate diagonal key with a quatrefoil bow and stepped teeth."
+    },
+    {
+      "id": "procedural-007-leaf-sprig",
+      "title": "Curving leaf sprig",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "botanical",
+        "icon"
+      ],
+      "tags": [
+        "botanical",
+        "icon",
+        "leaf",
+        "mixed-fill-stroke",
+        "organic"
+      ],
+      "difficulty": "easy",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-007-leaf-sprig.png",
+        "media_type": "image/png",
+        "sha256": "d3abae6985e3fa6f56b2543122a07e425cbf7a38ad6846fb7093d98a8e1108b2",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 9267,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-007-leaf-sprig.svg",
+        "sha256": "50910aae707a0e8cc84b8f51a8ea6bbf703e78b9f1a61e5247e3252147b9b6e2",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1069,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-007-leaf-sprig.png",
+          "sha256": "d3abae6985e3fa6f56b2543122a07e425cbf7a38ad6846fb7093d98a8e1108b2",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 9267
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Curving leaf sprig",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "50910aae707a0e8cc84b8f51a8ea6bbf703e78b9f1a61e5247e3252147b9b6e2",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Curving leaf sprig",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A curved botanical stem carrying alternating almond-shaped leaves and berries."
+    },
+    {
+      "id": "procedural-008-scarab",
+      "title": "Geometric scarab",
+      "split": "test",
+      "split_frozen": true,
+      "categories": [
+        "animal",
+        "icon"
+      ],
+      "tags": [
+        "ancient",
+        "animal",
+        "icon",
+        "scarab",
+        "symmetry"
+      ],
+      "difficulty": "easy",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-008-scarab.png",
+        "media_type": "image/png",
+        "sha256": "7082120900515a273ad101ef5b7a4418268cd36ff173bb92a17f2540861ab43e",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 16249,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-008-scarab.svg",
+        "sha256": "27c04dba0e4a9c2812822448ccea706ce6638396c9f5ff1c7200cd3edd714266",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1049,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-008-scarab.png",
+          "sha256": "7082120900515a273ad101ef5b7a4418268cd36ff173bb92a17f2540861ab43e",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 16249
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Geometric scarab",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "27c04dba0e4a9c2812822448ccea706ce6638396c9f5ff1c7200cd3edd714266",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Geometric scarab",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A bilaterally symmetric scarab with segmented body, legs, and horn-like antennae."
+    },
+    {
+      "id": "procedural-009-tea-table",
+      "title": "Tea table still life",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "scene"
+      ],
+      "tags": [
+        "domestic",
+        "freehand",
+        "multi-object",
+        "scene",
+        "still-life"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-009-tea-table.png",
+        "media_type": "image/png",
+        "sha256": "cb3ee11f09eb6f752851a0f61423137be7835ef8a95c2e9fa0ea9db0823ec7b5",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 168414,
+        "profile": "faint-scan",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-009-tea-table.svg",
+        "sha256": "ae6186ee31c99fdd7e79cfe3dac96fffa306c6c257809bbc809524e57f1da7cb",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1325,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-009-tea-table.png",
+          "sha256": "cf0def39997bce6d178b64d5f7906d72ab95a4510d997fc0521d0a2a11ce495f",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 15018
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Tea table still life",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "ae6186ee31c99fdd7e79cfe3dac96fffa306c6c257809bbc809524e57f1da7cb",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Tea table still life",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A loose line drawing of a teapot, cup, vase, flower, and small table."
+    },
+    {
+      "id": "procedural-010-river-boat",
+      "title": "River boat scene",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "scene"
+      ],
+      "tags": [
+        "boat",
+        "freehand",
+        "multi-object",
+        "scene",
+        "water"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-010-river-boat.png",
+        "media_type": "image/png",
+        "sha256": "4b9e79465f9f5596769b6c7e24015a68bec05765549e9d3dcadf62370e482564",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 15272,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-010-river-boat.svg",
+        "sha256": "832633fc4535e62985f13420cebf34a15122dd5909212b2ce38746fb0f192649",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1092,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-010-river-boat.png",
+          "sha256": "4b9e79465f9f5596769b6c7e24015a68bec05765549e9d3dcadf62370e482564",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 15272
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "River boat scene",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "832633fc4535e62985f13420cebf34a15122dd5909212b2ce38746fb0f192649",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — River boat scene",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A small sailboat among layered waves beneath a sun and three distant birds."
+    },
+    {
+      "id": "procedural-011-night-camp",
+      "title": "Night camp",
+      "split": "validation",
+      "split_frozen": true,
+      "categories": [
+        "scene"
+      ],
+      "tags": [
+        "camp",
+        "landscape",
+        "mixed-detail",
+        "multi-object",
+        "scene"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-011-night-camp.png",
+        "media_type": "image/png",
+        "sha256": "6dfb1c652a88062d030cc0d3bb2953b98d936b7615e4d13d76416c662131d1b1",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 29642,
+        "profile": "softened",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-011-night-camp.svg",
+        "sha256": "f384bc2363f8633ca38fd9d14cb048e4e3f2dd639c3c14a8c162d44e64a3d23d",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1278,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-011-night-camp.png",
+          "sha256": "b5dd9f26e3aeb6441a1ec365a5f18690a8c48d0dc93d477871525874b11a1977",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 19043
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Night camp",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "f384bc2363f8633ca38fd9d14cb048e4e3f2dd639c3c14a8c162d44e64a3d23d",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Night camp",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A tent, pine tree, campfire, crescent moon, and stones in a compact outdoor scene."
+    },
+    {
+      "id": "procedural-012-garden-tools",
+      "title": "Garden tools and seedling",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "scene"
+      ],
+      "tags": [
+        "garden",
+        "multi-object",
+        "outline",
+        "scene",
+        "tools"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-012-garden-tools.png",
+        "media_type": "image/png",
+        "sha256": "7e2032c2db0503365eecba9df80eaa0dfd08f2a55418c9373c96cddac5674653",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 12937,
+        "profile": "speckled",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-012-garden-tools.svg",
+        "sha256": "13f3676d2ecb4d04e527c31da3583827fee8c3ebcebf1962e1ed3cdba46dc285",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1215,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-012-garden-tools.png",
+          "sha256": "648e72cd532763eecd423555efccfe07629516f1f16023debc624fa34ed78c80",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 16261
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Garden tools and seedling",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "13f3676d2ecb4d04e527c31da3583827fee8c3ebcebf1962e1ed3cdba46dc285",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Garden tools and seedling",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A watering can, hand trowel, and three-leaf seedling drawn as a small vignette."
+    },
+    {
+      "id": "procedural-013-fox-and-moon",
+      "title": "Fox beneath the moon",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "animal",
+        "scene"
+      ],
+      "tags": [
+        "animal",
+        "fox",
+        "night",
+        "organic",
+        "scene"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-013-fox-and-moon.png",
+        "media_type": "image/png",
+        "sha256": "95eab9e9efcb431861ca8db4600e0a5c774e583bd78ed8efd2668500ec233c0d",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 9328,
+        "profile": "pixelated",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-013-fox-and-moon.svg",
+        "sha256": "4acd7d044ae9c82313e5a8093c00d62374f0dd227e10541f045944667b0f0b12",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1328,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-013-fox-and-moon.png",
+          "sha256": "2fac4823e0c715078ffc31bd9cb350f57be82334c5f3e3c40a2e5265cc5e4731",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 17612
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Fox beneath the moon",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "4acd7d044ae9c82313e5a8093c00d62374f0dd227e10541f045944667b0f0b12",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Fox beneath the moon",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A stylized seated fox with a curled tail, ground tufts, stars, and a full moon."
+    },
+    {
+      "id": "procedural-014-workshop-tools",
+      "title": "Workshop tools",
+      "split": "test",
+      "split_frozen": true,
+      "categories": [
+        "scene"
+      ],
+      "tags": [
+        "geometric",
+        "multi-object",
+        "overlap",
+        "scene",
+        "tools"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-014-workshop-tools.png",
+        "media_type": "image/png",
+        "sha256": "a1184a496f940f6d96f92a68fcf75087bd08f7c3454fea17549f2154cc6b7b7b",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 21004,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-014-workshop-tools.svg",
+        "sha256": "cb406b406ee2a51e03cfdf39fe8d441f8e4c63c72371b42626203deaf36135dd",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1241,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-014-workshop-tools.png",
+          "sha256": "a1184a496f940f6d96f92a68fcf75087bd08f7c3454fea17549f2154cc6b7b7b",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 21004
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Workshop tools",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "cb406b406ee2a51e03cfdf39fe8d441f8e4c63c72371b42626203deaf36135dd",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Workshop tools",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A crossed hammer and chisel above a hand saw and coiled measuring cord."
+    },
+    {
+      "id": "procedural-015-meander-seam",
+      "title": "Seam-crossing meander",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "frieze"
+      ],
+      "tags": [
+        "frieze",
+        "geometric",
+        "meander",
+        "repeat",
+        "seam-crossing"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-015-meander-seam.png",
+        "media_type": "image/png",
+        "sha256": "596b0f9991de41bbece393da2dd9a137f49cbe2ef5333e44034fb8d3789d8783",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 160635,
+        "profile": "faint-scan",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-015-meander-seam.svg",
+        "sha256": "bd753403bafb596d8d7c94b90e2442097ef64737c30d070032128b4b30c024a1",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 907,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-015-meander-seam.png",
+          "sha256": "4e2f01c753a19ba749fba5fed6440d1f11535e99d2c7f837d516451cdb4e2cac",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 4089
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Seam-crossing meander",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "bd753403bafb596d8d7c94b90e2442097ef64737c30d070032128b4b30c024a1",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Seam-crossing meander",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A continuous Greek-key meander whose horizontal rails and corner fragments cross both edges."
+    },
+    {
+      "id": "procedural-016-wave-seam",
+      "title": "Interlocking wave frieze",
+      "split": "validation",
+      "split_frozen": true,
+      "categories": [
+        "frieze"
+      ],
+      "tags": [
+        "frieze",
+        "organic",
+        "repeat",
+        "seam-crossing",
+        "wave"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-016-wave-seam.png",
+        "media_type": "image/png",
+        "sha256": "81e686eefe22ce254b789de1a7160af861b0b886b2144fffb994e0b6fcd9f164",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 167910,
+        "profile": "faint-scan",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-016-wave-seam.svg",
+        "sha256": "6c60be8e79edb8e1e59d669d16521c7149bb849750111b2b4e096580105156c6",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1139,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-016-wave-seam.png",
+          "sha256": "ec7fb67de4bb5abedf05a6eaa0231ed7f0805d100e37da5761d11a9b348d7458",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 15047
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Interlocking wave frieze",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "6c60be8e79edb8e1e59d669d16521c7149bb849750111b2b4e096580105156c6",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Interlocking wave frieze",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "Two offset rows of curling waves continue through the left and right seams."
+    },
+    {
+      "id": "procedural-017-rosette-beads",
+      "title": "Rosette and bead band",
+      "split": "test",
+      "split_frozen": true,
+      "categories": [
+        "frieze"
+      ],
+      "tags": [
+        "beads",
+        "frieze",
+        "repeat",
+        "rosette",
+        "symmetry"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-017-rosette-beads.png",
+        "media_type": "image/png",
+        "sha256": "9f3e249eb415763c78a613b451c8a23aad628419685b9a56b1d06c8ed1f35d6b",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 169450,
+        "profile": "faint-scan",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-017-rosette-beads.svg",
+        "sha256": "e89b666a785e5abda75e912c50b1854d3a1c2050122835347a01f25e875b7cd4",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 4384,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-017-rosette-beads.png",
+          "sha256": "fd882f23909954f18ca7a4b66fbb551872ab6fe93e76868b5ddfbe99844f34bf",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 9837
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Rosette and bead band",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "e89b666a785e5abda75e912c50b1854d3a1c2050122835347a01f25e875b7cd4",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Rosette and bead band",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "Four outlined rosettes alternate with bead triplets between double horizontal rules."
+    },
+    {
+      "id": "procedural-018-palmette-band",
+      "title": "Alternating palmette band",
+      "split": "validation",
+      "split_frozen": true,
+      "categories": [
+        "botanical",
+        "frieze"
+      ],
+      "tags": [
+        "alternating",
+        "botanical",
+        "frieze",
+        "palmette",
+        "repeat"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-018-palmette-band.png",
+        "media_type": "image/png",
+        "sha256": "1c5018a3926ffa5c8fe5a1704962112bf85669f3856dfd6c84aa123976c5a2ee",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 6986,
+        "profile": "pixelated",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-018-palmette-band.svg",
+        "sha256": "cb70edcff1fb0b4ee71cc2efba8b1e8404dab82d95e249462db716d8a4d0f0f1",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1973,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-018-palmette-band.png",
+          "sha256": "83c04d35f6f6f63733b41243d5ebb38f94e088bd2f359851c792812026491866",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 16308
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Alternating palmette band",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "cb70edcff1fb0b4ee71cc2efba8b1e8404dab82d95e249462db716d8a4d0f0f1",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Alternating palmette band",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "Upright and inverted fan-shaped palmettes alternate along a bounded ornamental band."
+    },
+    {
+      "id": "procedural-019-braid-seam",
+      "title": "Seam-crossing braided ribbon",
+      "split": "test",
+      "split_frozen": true,
+      "categories": [
+        "frieze"
+      ],
+      "tags": [
+        "braid",
+        "frieze",
+        "interlace",
+        "repeat",
+        "seam-crossing"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-019-braid-seam.png",
+        "media_type": "image/png",
+        "sha256": "3634cc052f6fdcc2b8676c9d2760dc91f1b25356c2df8cdac9e19c0907eb4955",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 12815,
+        "profile": "speckled",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-019-braid-seam.svg",
+        "sha256": "fca5d2fd08a1677121fb03e426feddf49e1e984cd436bd8fc94e42b3d4ec2062",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 1107,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-019-braid-seam.png",
+          "sha256": "ea35c00fd0cbbbee286a57dac7fb92544ca64a73f4538c59b34c36d8e63eb624",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 14760
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Seam-crossing braided ribbon",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "fca5d2fd08a1677121fb03e426feddf49e1e984cd436bd8fc94e42b3d4ec2062",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Seam-crossing braided ribbon",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "Three interlaced diagonal ribbons form a wide braid that exits and re-enters at both edges."
+    },
+    {
+      "id": "procedural-020-gazelle-chase-seam",
+      "title": "Gazelle chase cylinder frieze",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "animal",
+        "frieze"
+      ],
+      "tags": [
+        "animal",
+        "frieze",
+        "gazelle",
+        "procession",
+        "seam-crossing"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-020-gazelle-chase-seam.png",
+        "media_type": "image/png",
+        "sha256": "af03961e99b549a6ac3386ed2d177f292fbb75ab5d162b1d481ad79af5f0b8d6",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 12605,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-020-gazelle-chase-seam.svg",
+        "sha256": "467ab9fb8bf63392bc588f12b7393466adcfa566892123844d67be9d5840d12d",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 2428,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-020-gazelle-chase-seam.png",
+          "sha256": "af03961e99b549a6ac3386ed2d177f292fbb75ab5d162b1d481ad79af5f0b8d6",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 12605
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Gazelle chase cylinder frieze",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "467ab9fb8bf63392bc588f12b7393466adcfa566892123844d67be9d5840d12d",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Gazelle chase cylinder frieze",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "A repeated running gazelle motif forms a chase scene, with partial animals at both seams."
+    },
+    {
+      "id": "procedural-021-procession-seam",
+      "title": "Seam-crossing offering procession",
+      "split": "test",
+      "split_frozen": true,
+      "categories": [
+        "frieze"
+      ],
+      "tags": [
+        "figures",
+        "frieze",
+        "narrative",
+        "procession",
+        "seam-crossing"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-021-procession-seam.png",
+        "media_type": "image/png",
+        "sha256": "e77ffd049bd2bc29a44af7708471621db82ddfaa14e7e06859c51f0d8b76f021",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 12773,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-021-procession-seam.svg",
+        "sha256": "4af1a99abcf2ea3e25bb6875b63644534fd118c09024ef9b889f88f5260c9723",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 2095,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-021-procession-seam.png",
+          "sha256": "e77ffd049bd2bc29a44af7708471621db82ddfaa14e7e06859c51f0d8b76f021",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 12773
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Seam-crossing offering procession",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "4af1a99abcf2ea3e25bb6875b63644534fd118c09024ef9b889f88f5260c9723",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Seam-crossing offering procession",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "Four simplified human figures carry bowls and staffs in a cylinder-seal-style procession."
+    },
+    {
+      "id": "procedural-022-cuneiform-registers",
+      "title": "Cuneiform in three registers",
+      "split": "development",
+      "split_frozen": true,
+      "categories": [
+        "cuneiform",
+        "inscription"
+      ],
+      "tags": [
+        "cuneiform",
+        "dense",
+        "inscription",
+        "registers",
+        "wedge"
+      ],
+      "difficulty": "hard",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-022-cuneiform-registers.png",
+        "media_type": "image/png",
+        "sha256": "573d6f4fcd750812d461314edef0fae8325d27c15a78134bb4d66918665a6dee",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 11599,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-022-cuneiform-registers.svg",
+        "sha256": "a7f14f2ff5afae32921d12f1d123995d961c3cffcea4ab4d6e9799c8febfe3fd",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 4975,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-022-cuneiform-registers.png",
+          "sha256": "573d6f4fcd750812d461314edef0fae8325d27c15a78134bb4d66918665a6dee",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 11599
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Cuneiform in three registers",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "a7f14f2ff5afae32921d12f1d123995d961c3cffcea4ab4d6e9799c8febfe3fd",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Cuneiform in three registers",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "Three ruled registers contain varied clusters of wedge-shaped pseudo-cuneiform marks."
+    },
+    {
+      "id": "procedural-023-cuneiform-seal",
+      "title": "Circular seal inscription",
+      "split": "validation",
+      "split_frozen": true,
+      "categories": [
+        "cuneiform"
+      ],
+      "tags": [
+        "cuneiform",
+        "radial",
+        "seal",
+        "symmetry",
+        "wedge"
+      ],
+      "difficulty": "medium",
+      "input": {
+        "path": "benchmarks/image-to-svg/inputs/procedural-023-cuneiform-seal.png",
+        "media_type": "image/png",
+        "sha256": "42e38c04c0a4e78e4f11816a891e52f619b0439af57aa0394531f5a23b131657",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "px"
+        },
+        "bytes": 26176,
+        "profile": "clean",
+        "profile_version": "1.0.0"
+      },
+      "reference": {
+        "kind": "vector_oracle",
+        "path": "benchmarks/image-to-svg/sources/procedural/procedural-023-cuneiform-seal.svg",
+        "sha256": "4496744023c651070f4b0201f2695351e82e482aeb632aecffa2fd8e4638be9c",
+        "media_type": "image/svg+xml",
+        "dimensions": {
+          "width": 512,
+          "height": 512,
+          "unit": "viewBox"
+        },
+        "bytes": 3445,
+        "render": {
+          "path": "benchmarks/image-to-svg/reference-renders/procedural-023-cuneiform-seal.png",
+          "sha256": "42e38c04c0a4e78e4f11816a891e52f619b0439af57aa0394531f5a23b131657",
+          "media_type": "image/png",
+          "dimensions": {
+            "width": 512,
+            "height": 512,
+            "unit": "px"
+          },
+          "bytes": 26176
+        }
+      },
+      "source": {
+        "kind": "procedural",
+        "title": "Circular seal inscription",
+        "creator": "Cylinder Seal Studio contributors",
+        "group_id": "project-procedural",
+        "page_url": null,
+        "direct_url": null,
+        "accessed_at": "2026-07-22",
+        "sha256": "4496744023c651070f4b0201f2695351e82e482aeb632aecffa2fd8e4638be9c",
+        "transformation": null
+      },
+      "rights": {
+        "license_spdx": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Cylinder Seal Studio contributors — Circular seal inscription",
+        "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_allowed": true,
+        "adaptation_allowed": true,
+        "training_allowed": false,
+        "notes": "Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+      },
+      "notes": "Radial pseudo-cuneiform wedges surround a central eight-pointed star inside a double seal border."
+    }
+  ]
+}

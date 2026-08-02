@@ -1,0 +1,46 @@
+{
+  "retrieved_at": "2026-07-23T01:34:40.841Z",
+  "local_batch_id": "openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z",
+  "response": {
+    "id": "batch_6a616d2e413481909e26e845193024c9",
+    "object": "batch",
+    "endpoint": "/v1/responses",
+    "model": "gpt-5.6-sol",
+    "errors": null,
+    "input_file_id": "file-ATbMPxAT2QF43m9YmGS4qD",
+    "completion_window": "24h",
+    "status": "completed",
+    "output_file_id": "file-LusYuumrSuFB6j6U3XUQr6",
+    "error_file_id": null,
+    "created_at": 1784769838,
+    "in_progress_at": 1784769900,
+    "expires_at": 1784856238,
+    "finalizing_at": 1784770283,
+    "completed_at": 1784770284,
+    "failed_at": null,
+    "expired_at": null,
+    "cancelling_at": null,
+    "cancelled_at": null,
+    "request_counts": {
+      "total": 6,
+      "completed": 6,
+      "failed": 0
+    },
+    "usage": {
+      "input_tokens": 113487,
+      "output_tokens": 81318,
+      "total_tokens": 194805,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 40669
+      }
+    },
+    "metadata": {
+      "evaluation": "cylinder-seal-image-to-svg",
+      "version": "1.0.0",
+      "local_batch_id": "openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z"
+    }
+  }
+}

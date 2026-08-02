@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-021-procession-seam-title procedural-021-procession-seam-description">
+  <title id="procedural-021-procession-seam-title">Seam-crossing offering procession</title>
+  <desc id="procedural-021-procession-seam-description">Four simplified human figures carry bowls and staffs in a cylinder-seal-style procession.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M -18 430 H 530 M -18 82 H 530"/>
+  <g transform="translate(-76 0)">
+    <circle cx="52" cy="145" r="28"/>
+    <path d="M 51 174 L 39 302 L 13 403 M 42 302 L 79 403 M 45 212 L 5 265 M 48 218 L 103 246"/>
+    <path d="M 98 230 H 146 Q 132 272 110 265 Z"/>
+    <path d="M 35 193 Q 52 180 69 193" stroke-width="5"/>
+  </g>
+<g transform="translate(69 0)">
+    <circle cx="52" cy="145" r="28"/>
+    <path d="M 51 174 L 39 302 L 13 403 M 42 302 L 79 403 M 45 212 L 5 265 M 48 218 L 103 246"/>
+    <path d="M 102 247 V 130 M 93 130 H 111"/>
+    <path d="M 35 193 Q 52 180 69 193" stroke-width="5"/>
+  </g>
+<g transform="translate(214 0)">
+    <circle cx="52" cy="145" r="28"/>
+    <path d="M 51 174 L 39 302 L 13 403 M 42 302 L 79 403 M 45 212 L 5 265 M 48 218 L 103 246"/>
+    <path d="M 98 230 H 146 Q 132 272 110 265 Z"/>
+    <path d="M 35 193 Q 52 180 69 193" stroke-width="5"/>
+  </g>
+<g transform="translate(359 0)">
+    <circle cx="52" cy="145" r="28"/>
+    <path d="M 51 174 L 39 302 L 13 403 M 42 302 L 79 403 M 45 212 L 5 265 M 48 218 L 103 246"/>
+    <path d="M 102 247 V 130 M 93 130 H 111"/>
+    <path d="M 35 193 Q 52 180 69 193" stroke-width="5"/>
+  </g>
+<g transform="translate(504 0)">
+    <circle cx="52" cy="145" r="28"/>
+    <path d="M 51 174 L 39 302 L 13 403 M 42 302 L 79 403 M 45 212 L 5 265 M 48 218 L 103 246"/>
+    <path d="M 98 230 H 146 Q 132 272 110 265 Z"/>
+    <path d="M 35 193 Q 52 180 69 193" stroke-width="5"/>
+  </g>
+</g>
+</svg>

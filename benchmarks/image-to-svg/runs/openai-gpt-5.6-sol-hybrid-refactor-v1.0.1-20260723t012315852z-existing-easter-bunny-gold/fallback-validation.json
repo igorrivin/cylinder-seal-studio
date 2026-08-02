@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "existing-easter-bunny-gold",
+  "run_id": "openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-existing-easter-bunny-gold",
+  "passed": true,
+  "policy": "fail-closed fallback to the exact production classical trace",
+  "triggering_failures": [
+    {
+      "code": "input_tolerant_precision_regression",
+      "severity": "error",
+      "message": "Input 2px-tolerant precision 0.749292 is below 0.985000."
+    },
+    {
+      "code": "input_tolerant_recall_regression",
+      "severity": "error",
+      "message": "Input 2px-tolerant recall 0.706353 is below 0.985000."
+    },
+    {
+      "code": "input_tolerant_f1_regression",
+      "severity": "error",
+      "message": "Input 2px-tolerant F1 0.727189 is below 0.993411."
+    },
+    {
+      "code": "reference_iou_regression",
+      "severity": "error",
+      "message": "Reference IoU 0.204207 is below 0.750310."
+    },
+    {
+      "code": "reference_tolerant_precision_regression",
+      "severity": "error",
+      "message": "Reference 2px-tolerant precision 0.749292 is below 0.985000."
+    },
+    {
+      "code": "reference_tolerant_recall_regression",
+      "severity": "error",
+      "message": "Reference 2px-tolerant recall 0.706353 is below 0.985000."
+    },
+    {
+      "code": "stroke_geometry_forbidden",
+      "severity": "error",
+      "message": "Active stroke count 192 exceeds 0."
+    }
+  ],
+  "metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.7603098227907522,
+    "precision": 0.8637212030716723,
+    "recall": 0.8639515655838268,
+    "disagreement": 0.0389556884765625,
+    "grayscale_mae": 0.05140799728095995,
+    "false_positive_pixels": 5111,
+    "false_negative_pixels": 5101,
+    "reference_foreground_pixels": 37494,
+    "candidate_foreground_pixels": 37504,
+    "tolerant_precision_2px": 0.9999466723549488,
+    "tolerant_recall_2px": 0.9968795007201152,
+    "tolerant_f1_2px": 0.9984107309139019,
+    "input_iou": 0.7603098227907522,
+    "input_tolerant_precision_2px": 0.9999466723549488,
+    "input_tolerant_recall_2px": 0.9968795007201152,
+    "input_tolerant_f1_2px": 0.9984107309139019,
+    "candidate_bytes": 150328,
+    "element_count": 93,
+    "path_count": 93,
+    "group_count": 0,
+    "basic_shape_count": 0,
+    "command_count": 5776,
+    "numeric_token_count": 29026,
+    "maximum_nesting": 1
+  }
+}

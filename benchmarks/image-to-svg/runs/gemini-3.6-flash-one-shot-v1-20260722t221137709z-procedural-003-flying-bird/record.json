@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird",
+  "recorded_at": "2026-07-22T22:12:13.314Z",
+  "immutable": true,
+  "benchmark": {
+    "corpus_id": "cylinder-seal-image-to-svg",
+    "corpus_version": "1.0.0",
+    "manifest_sha256": "08fa9c41caf5ca32de49fa9aa534038bc388a360887b103b646754c522fcad6b",
+    "case_id": "procedural-003-flying-bird",
+    "split": "development",
+    "input": {
+      "path": "benchmarks/image-to-svg/inputs/procedural-003-flying-bird.png",
+      "sha256": "dc5331bfad1648bdafe18f88b5bf3eebd2d9b3d9d18026fb3661d3de7f56af4e",
+      "media_type": "image/png",
+      "bytes": 7977
+    },
+    "reference": {
+      "path": "benchmarks/image-to-svg/sources/procedural/procedural-003-flying-bird.svg",
+      "sha256": "772761ce949892647fbffe6934084d09fb88c72aa312a94898d881df8ead0110",
+      "media_type": "image/svg+xml",
+      "bytes": 842
+    }
+  },
+  "pipeline": {
+    "name": "gemini-3.6-flash-one-shot",
+    "version": "1.0.0",
+    "git_commit": "c361e39d60071d388c4124a71a582c57880f7c7d",
+    "worktree_dirty": true,
+    "renderer": {
+      "name": "@resvg/resvg-js",
+      "version": "2.6.2",
+      "settings": {
+        "width": 512,
+        "height": 512,
+        "background": "#ffffff",
+        "shape_rendering": 2,
+        "reference_threshold": 170,
+        "candidate_threshold": 128
+      }
+    }
+  },
+  "attempts": [
+    {
+      "index": 0,
+      "kind": "generation",
+      "status": "completed",
+      "started_at": "2026-07-22T22:11:37.721Z",
+      "finished_at": "2026-07-22T22:12:13.314Z",
+      "latency_ms": 35593,
+      "model": {
+        "provider": "Google",
+        "id": "gemini-3.6-flash",
+        "version": "gemini-3.6-flash",
+        "settings": {
+          "api": "interactions",
+          "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+          "store": false,
+          "max_output_tokens": 32768,
+          "seed": 0,
+          "thinking_level": "medium",
+          "thinking_summaries": "none"
+        }
+      },
+      "prompt": {
+        "template_id": "semantic-image-to-svg-one-shot",
+        "template_version": "1.0.0",
+        "system": "You are an expert vector illustrator reconstructing fabrication-ready monochrome artwork from a raster reference.",
+        "user": "Recreate the attached monochrome line-art image as a clean, editable, self-contained SVG. Infer the intended vector design rather than tracing antialiased pixels or noise. Preserve every distinct object, its placement, proportions, overlaps, repeated motifs, line-weight hierarchy, silhouettes, negative spaces, and any artwork crossing an image edge. Use viewBox=\"0 0 512 512\", explicit black fills or strokes, and only basic SVG geometry such as paths, groups, circles, ellipses, polygons, polylines, lines, and rectangles. Prefer smooth, economical geometry, but do not omit meaningful small details. Do not embed the raster, use text, scripts, external resources, CSS, filters, gradients, masks, clip paths, or reusable external definitions. Return only one complete <svg xmlns=\"http://www.w3.org/2000/svg\">...</svg> document, with no Markdown or explanation.",
+        "sha256": "78be5e78a6ab25a674b5b2cbdb07c01bdf813421008968f28575395691bf7a25"
+      },
+      "usage": {
+        "input_tokens": 1302,
+        "cached_input_tokens": 0,
+        "output_tokens": 7864,
+        "reasoning_tokens": 7487,
+        "total_tokens": 9166
+      },
+      "cost": {
+        "usd": 0.060933,
+        "estimated": true,
+        "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "artifacts": {
+        "provider_response": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird/provider-response.json",
+          "sha256": "e00f4994c5d3ca27de48bd119f1db226c3e911d4fc93abee22bcb920a3f0cb13",
+          "media_type": "application/json",
+          "bytes": 27450
+        },
+        "raw_model_output": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird/model-output.txt",
+          "sha256": "5f87c9710e617d9acf58ea82d4fc7e84d65634476d7b940a4abdcd9658c9dde1",
+          "media_type": "text/plain",
+          "bytes": 512
+        },
+        "validation_report": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird/validation.json",
+          "sha256": "4b391ebc405fb7328e12f01761d2e5d94c101398d5a6e90ff7df062616382b66",
+          "media_type": "application/json",
+          "bytes": 1367
+        },
+        "candidate_svg": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird/candidate.svg",
+          "sha256": "c927ed2429e5cf2e38f4d7876378ded002c63dda5376d585d22af03c8d68f092",
+          "media_type": "image/svg+xml",
+          "bytes": 501
+        },
+        "rendered_png": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird/render.png",
+          "sha256": "d10515d7fcb72d9e973212d9a4be4a50b3bc74e16edd76c28a91225be8d8c9ea",
+          "media_type": "image/png",
+          "bytes": 8230
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [
+          {
+            "code": "extraneous_model_text",
+            "severity": "warning",
+            "message": "Text outside the SVG document was removed."
+          }
+        ],
+        "metrics": {
+          "metric_version": "1.0.0",
+          "iou": 0.6860719402759973,
+          "precision": 0.9311227100603827,
+          "recall": 0.7227518271369558,
+          "disagreement": 0.047641754150390625,
+          "grayscale_mae": 0.05157515581914632,
+          "false_positive_pixels": 2019,
+          "false_negative_pixels": 10470,
+          "reference_foreground_pixels": 37764,
+          "candidate_foreground_pixels": 29313,
+          "tolerant_precision_2px": 0.9646914338348174,
+          "tolerant_recall_2px": 0.7639815697489672,
+          "tolerant_f1_2px": 0.8526846597552998,
+          "candidate_bytes": 501,
+          "element_count": 2,
+          "path_count": 2,
+          "group_count": 0,
+          "basic_shape_count": 0,
+          "baseline_iou": 0.9789219253560661,
+          "delta_iou_vs_classical": -0.2928499850800689
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "latency_ms": 35593,
+    "usage": {
+      "input_tokens": 1302,
+      "cached_input_tokens": 0,
+      "output_tokens": 7864,
+      "reasoning_tokens": 7487,
+      "total_tokens": 9166
+    },
+    "cost": {
+      "usd": 0.060933,
+      "estimated": true,
+      "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "metrics": {
+      "metric_version": "1.0.0",
+      "iou": 0.6860719402759973,
+      "precision": 0.9311227100603827,
+      "recall": 0.7227518271369558,
+      "disagreement": 0.047641754150390625,
+      "grayscale_mae": 0.05157515581914632,
+      "false_positive_pixels": 2019,
+      "false_negative_pixels": 10470,
+      "reference_foreground_pixels": 37764,
+      "candidate_foreground_pixels": 29313,
+      "tolerant_precision_2px": 0.9646914338348174,
+      "tolerant_recall_2px": 0.7639815697489672,
+      "tolerant_f1_2px": 0.8526846597552998,
+      "candidate_bytes": 501,
+      "element_count": 2,
+      "path_count": 2,
+      "group_count": 0,
+      "basic_shape_count": 0,
+      "baseline_iou": 0.9789219253560661,
+      "delta_iou_vs_classical": -0.2928499850800689
+    },
+    "ratings": {
+      "fidelity": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No human rating has been assigned."
+      },
+      "manufacturability": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No human rating has been assigned."
+      }
+    }
+  },
+  "outcome": {
+    "status": "accepted",
+    "accepted_attempt": 0,
+    "final_svg": {
+      "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird/candidate.svg",
+      "sha256": "c927ed2429e5cf2e38f4d7876378ded002c63dda5376d585d22af03c8d68f092",
+      "media_type": "image/svg+xml",
+      "bytes": 501
+    },
+    "notes": "Accepted automatically after SVG safety checks, rendering, and metric computation; human quality rating remains pending."
+  },
+  "output_training_rights": {
+    "training_allowed": false,
+    "source": {
+      "cleared": false,
+      "basis": "unknown",
+      "evidence_url": null,
+      "notes": "Corpus source is evaluation-only: Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+    },
+    "provider_output": {
+      "cleared": false,
+      "basis": "provider_terms",
+      "terms_url": "https://ai.google.dev/gemini-api/terms",
+      "terms_version": "Gemini API Additional Terms effective 2026-03-23; updated 2026-04-28",
+      "terms_effective_at": "2026-03-23",
+      "notes": "Not cleared for distillation: the provider terms restrict using the service to develop models that compete with Gemini. Retained for evaluation only."
+    },
+    "reviewed_at": "2026-07-22",
+    "notes": "Both source and provider-output rights must be cleared before training; provider-output rights are not cleared for this run."
+  }
+}

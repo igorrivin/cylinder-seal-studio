@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-011-night-camp-title procedural-011-night-camp-description">
+  <title id="procedural-011-night-camp-title">Night camp</title>
+  <desc id="procedural-011-night-camp-description">A tent, pine tree, campfire, crescent moon, and stones in a compact outdoor scene.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 132 394 L 256 168 L 380 394 Z M 256 168 L 278 394 M 256 278 L 192 394"/>
+  <path d="M 80 380 V 179 M 80 179 L 20 263 H 54 L 11 324 H 55 L 16 377 H 143 L 107 324 H 146 L 105 263 H 137 Z"/>
+  <path d="M 375 403 C 338 371 363 337 393 304 C 398 338 421 349 421 376 C 421 402 399 416 375 403 Z"/>
+  <path d="M 392 403 C 374 386 385 368 397 352 C 399 375 410 383 392 403 Z" fill="#111"/>
+  <path d="M 328 419 Q 393 438 454 418 M 346 420 L 326 438 M 436 420 L 457 438"/>
+  <path d="M 384 72 A 60 60 0 1 0 445 155 A 48 48 0 0 1 384 72 Z" fill="#111" stroke="none"/>
+  <circle cx="282" cy="84" r="6" fill="#111" stroke="none"/><circle cx="328" cy="127" r="7" fill="#111" stroke="none"/>
+</g>
+</svg>

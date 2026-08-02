@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "procedural-003-flying-bird",
+  "run_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird",
+  "passed": true,
+  "failures": [
+    {
+      "code": "extraneous_model_text",
+      "severity": "warning",
+      "message": "Text outside the SVG document was removed."
+    }
+  ],
+  "metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.6860719402759973,
+    "precision": 0.9311227100603827,
+    "recall": 0.7227518271369558,
+    "disagreement": 0.047641754150390625,
+    "grayscale_mae": 0.05157515581914632,
+    "false_positive_pixels": 2019,
+    "false_negative_pixels": 10470,
+    "reference_foreground_pixels": 37764,
+    "candidate_foreground_pixels": 29313,
+    "tolerant_precision_2px": 0.9646914338348174,
+    "tolerant_recall_2px": 0.7639815697489672,
+    "tolerant_f1_2px": 0.8526846597552998,
+    "candidate_bytes": 501,
+    "element_count": 2,
+    "path_count": 2,
+    "group_count": 0,
+    "basic_shape_count": 0,
+    "baseline_iou": 0.9789219253560661,
+    "delta_iou_vs_classical": -0.2928499850800689
+  },
+  "provider": {
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+    "interaction_id": null,
+    "model": "gemini-3.6-flash",
+    "status": "completed"
+  },
+  "thresholds": {
+    "reference_luminance": 170,
+    "candidate_luminance": 128
+  }
+}

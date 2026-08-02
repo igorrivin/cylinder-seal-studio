@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "recorded_at": "2026-07-23T01:34:40.849Z",
+  "affected_collection": "collection.json",
+  "affected_summary": "benchmarks/image-to-svg/runs/summaries/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z.json",
+  "issue": "Scorer 1.0.0 did not parse newlines inside quoted SVG attributes, undercounting path commands and numeric geometry tokens. It also did not resolve inherited stroke/fill paint for the hybrid fill-only gate.",
+  "impact": "Pixel metrics and API usage/cost were unaffected. Hybrid complexity and paint gates required versioned rescoring; no provider calls were repeated.",
+  "corrected_collection": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/collection-scorer-v1.0.1.json",
+  "corrected_summary": "benchmarks/image-to-svg/runs/summaries/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z-scorer-v1.0.1.json",
+  "corrected_pipeline_version": "1.0.1",
+  "prior_run_ids": [
+    "openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-procedural-003-flying-bird",
+    "openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-procedural-003-flying-bird",
+    "openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-external-openclipart-rabbit-line-art",
+    "openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art",
+    "openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-existing-easter-bunny-gold",
+    "openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-existing-easter-bunny-gold"
+  ],
+  "corrected_run_ids": [
+    "openai-gpt-5.6-sol-one-shot-v1.0.1-20260723t012315852z-procedural-003-flying-bird",
+    "openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-procedural-003-flying-bird",
+    "openai-gpt-5.6-sol-one-shot-v1.0.1-20260723t012315852z-external-openclipart-rabbit-line-art",
+    "openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-external-openclipart-rabbit-line-art",
+    "openai-gpt-5.6-sol-one-shot-v1.0.1-20260723t012315852z-existing-easter-bunny-gold",
+    "openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-existing-easter-bunny-gold"
+  ]
+}

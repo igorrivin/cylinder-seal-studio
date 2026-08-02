@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-005-fish-title procedural-005-fish-description">
+  <title id="procedural-005-fish-title">Patterned fish</title>
+  <desc id="procedural-005-fish-description">A fish outline with a triangular tail, circular eye, scales, and fin marks.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 75 257 C 145 161 302 163 380 257 C 302 351 145 353 75 257 Z"/>
+  <path d="M 380 257 L 459 182 L 445 257 L 459 332 Z"/>
+  <circle cx="137" cy="238" r="12" fill="#111"/>
+  <path d="M 183 201 Q 208 224 183 247 Q 208 270 183 293 M 226 188 Q 253 216 226 244 Q 253 272 226 318 M 273 190 Q 299 217 273 244 Q 299 271 273 316 M 317 207 Q 340 232 317 257 Q 340 282 317 307" stroke-width="6"/>
+  <path d="M 245 179 L 275 129 L 304 190 M 242 333 L 274 382 L 302 322"/>
+</g>
+</svg>

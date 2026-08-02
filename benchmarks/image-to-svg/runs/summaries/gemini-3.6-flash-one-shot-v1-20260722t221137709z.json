@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z",
+  "pipeline": "gemini-3.6-flash-one-shot@1.0.0",
+  "model": "gemini-3.6-flash",
+  "policy": "one model call per case; no repair loop; test split excluded",
+  "cases": 3,
+  "accepted": 3,
+  "estimated_cost_usd": 0.399609,
+  "total_latency_ms": 208083,
+  "usage": {
+    "input_tokens": 3906,
+    "cached_input_tokens": 0,
+    "output_tokens": 52500,
+    "reasoning_tokens": 27224,
+    "total_tokens": 56406
+  },
+  "metrics": {
+    "mean_iou": 0.3408929326230179,
+    "mean_precision": 0.4916324949905193,
+    "mean_recall": 0.4453733079521452,
+    "mean_disagreement": 0.11447525024414062,
+    "mean_delta_iou_vs_classical": -0.5058511461069041
+  },
+  "results": [
+    {
+      "run_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird",
+      "case_id": "procedural-003-flying-bird",
+      "split": "development",
+      "profile": "clean",
+      "difficulty": "easy",
+      "accepted": true,
+      "latency_ms": 35593,
+      "usage": {
+        "input_tokens": 1302,
+        "cached_input_tokens": 0,
+        "output_tokens": 7864,
+        "reasoning_tokens": 7487,
+        "total_tokens": 9166
+      },
+      "estimated_cost_usd": 0.060933,
+      "metrics": {
+        "metric_version": "1.0.0",
+        "iou": 0.6860719402759973,
+        "precision": 0.9311227100603827,
+        "recall": 0.7227518271369558,
+        "disagreement": 0.047641754150390625,
+        "grayscale_mae": 0.05157515581914632,
+        "false_positive_pixels": 2019,
+        "false_negative_pixels": 10470,
+        "reference_foreground_pixels": 37764,
+        "candidate_foreground_pixels": 29313,
+        "tolerant_precision_2px": 0.9646914338348174,
+        "tolerant_recall_2px": 0.7639815697489672,
+        "tolerant_f1_2px": 0.8526846597552998,
+        "candidate_bytes": 501,
+        "element_count": 2,
+        "path_count": 2,
+        "group_count": 0,
+        "basic_shape_count": 0,
+        "baseline_iou": 0.9789219253560661,
+        "delta_iou_vs_classical": -0.2928499850800689
+      },
+      "artifacts": {
+        "record": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird/record.json",
+        "render": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-procedural-003-flying-bird/render.png"
+      }
+    },
+    {
+      "run_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art",
+      "case_id": "external-openclipart-rabbit-line-art",
+      "split": "development",
+      "profile": "softened",
+      "difficulty": "medium",
+      "accepted": true,
+      "latency_ms": 59906,
+      "usage": {
+        "input_tokens": 1302,
+        "cached_input_tokens": 0,
+        "output_tokens": 13403,
+        "reasoning_tokens": 11270,
+        "total_tokens": 14705
+      },
+      "estimated_cost_usd": 0.1024755,
+      "metrics": {
+        "metric_version": "1.0.0",
+        "iou": 0.1372475846912966,
+        "precision": 0.24631641613335317,
+        "recall": 0.2366144828079205,
+        "disagreement": 0.07937240600585938,
+        "grayscale_mae": 0.07468545951094836,
+        "false_positive_pixels": 10128,
+        "false_negative_pixels": 10679,
+        "reference_foreground_pixels": 13989,
+        "candidate_foreground_pixels": 13438,
+        "tolerant_precision_2px": 0.4181425807411817,
+        "tolerant_recall_2px": 0.3930945743083852,
+        "tolerant_f1_2px": 0.40523188257229503,
+        "candidate_bytes": 3226,
+        "element_count": 26,
+        "path_count": 24,
+        "group_count": 1,
+        "basic_shape_count": 1,
+        "baseline_iou": 0.8010004880429478,
+        "delta_iou_vs_classical": -0.6637529033516512
+      },
+      "artifacts": {
+        "record": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art/record.json",
+        "render": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art/render.png"
+      }
+    },
+    {
+      "run_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold",
+      "case_id": "existing-easter-bunny-gold",
+      "split": "development",
+      "profile": "clean",
+      "difficulty": "hard",
+      "accepted": true,
+      "latency_ms": 112584,
+      "usage": {
+        "input_tokens": 1302,
+        "cached_input_tokens": 0,
+        "output_tokens": 31233,
+        "reasoning_tokens": 8467,
+        "total_tokens": 32535
+      },
+      "estimated_cost_usd": 0.2362005,
+      "metrics": {
+        "metric_version": "1.0.0",
+        "iou": 0.1993592729017599,
+        "precision": 0.29745835877782223,
+        "recall": 0.3767536139115592,
+        "disagreement": 0.21641159057617188,
+        "grayscale_mae": 0.19996987137140515,
+        "false_positive_pixels": 33363,
+        "false_negative_pixels": 23368,
+        "reference_foreground_pixels": 37494,
+        "candidate_foreground_pixels": 47489,
+        "tolerant_precision_2px": 0.664659184232138,
+        "tolerant_recall_2px": 0.654771430095482,
+        "tolerant_f1_2px": 0.6596782579697087,
+        "candidate_bytes": 39117,
+        "element_count": 453,
+        "path_count": 285,
+        "group_count": 47,
+        "basic_shape_count": 121,
+        "baseline_iou": 0.7603098227907522,
+        "delta_iou_vs_classical": -0.5609505498889923
+      },
+      "artifacts": {
+        "record": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold/record.json",
+        "render": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold/render.png"
+      }
+    }
+  ]
+}

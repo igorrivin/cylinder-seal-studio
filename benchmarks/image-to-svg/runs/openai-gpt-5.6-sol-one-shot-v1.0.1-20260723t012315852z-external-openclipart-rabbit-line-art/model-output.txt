@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect x="0" y="0" width="512" height="512" fill="#ffffff"/>
+
+  <!-- Rear foot -->
+  <path d="M154 401
+           C170 417 184 442 200 451
+           C211 458 229 455 238 447
+           C245 440 243 428 234 417
+           C222 405 202 398 181 397
+           C170 397 160 398 154 401Z"
+        fill="#ffffff" stroke="#000000" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Lower forefoot -->
+  <path d="M252 414
+           C258 429 264 448 276 459
+           C286 469 307 469 323 464
+           C330 461 326 453 322 447
+           C317 438 306 431 294 426
+           C279 420 264 416 252 414Z"
+        fill="#ffffff" stroke="#000000" stroke-width="2.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Forward paw -->
+  <path d="M360 438
+           C370 433 379 425 389 425
+           C399 425 406 433 406 442
+           C406 451 399 456 389 455
+           C380 454 376 450 371 445
+           C367 442 363 440 360 438Z"
+        fill="#ffffff" stroke="#000000" stroke-width="2.7"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Tail -->
+  <path d="M116 296
+           C108 308 96 318 86 320
+           C81 321 79 316 75 319
+           C69 323 72 338 77 351
+           C82 368 91 382 100 388
+           C108 392 123 386 137 384
+           C125 362 118 333 116 296Z"
+        fill="#ffffff" stroke="#000000" stroke-width="4.2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Body mass -->
+  <path d="M245 175
+           C184 177 138 218 119 281
+           C113 300 114 320 119 339
+           C125 366 139 395 161 414
+           C176 427 194 433 208 425
+           C224 416 232 404 234 390
+           C237 411 249 426 265 432
+           C282 439 300 436 312 426
+           C327 438 347 440 366 435
+           C386 429 399 408 400 386
+           C401 350 382 307 354 266
+           C327 225 289 176 245 175Z"
+        fill="#ffffff"/>
+
+  <!-- Visible body outline -->
+  <path d="M245 175
+           C184 177 138 218 119 281
+           C115 294 114 306 116 319
+           C118 343 125 365 137 384"
+        fill="none" stroke="#000000" stroke-width="4.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M158 391
+           C171 409 188 423 204 423
+           C220 422 231 412 234 396"
+        fill="none" stroke="#000000" stroke-width="4.8"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Head, chest and upright ear -->
+  <path d="M225 332
+           C219 307 221 283 230 264
+           C240 245 260 237 282 240
+           C297 241 308 247 317 253
+           C329 242 343 221 350 207
+           C347 184 342 148 344 108
+           C346 76 357 45 369 44
+           C385 42 394 80 399 113
+           C405 149 402 179 386 209
+           C385 215 384 221 385 225
+           C410 236 426 258 431 289
+           C433 303 432 310 437 319
+           C444 332 440 347 431 359
+           C424 368 415 372 401 372
+           C404 391 396 410 381 425
+           C375 431 369 434 359 436
+           C342 440 324 435 312 427
+           C299 436 281 438 264 432
+           C244 425 232 412 234 395
+           C237 374 232 351 225 332Z"
+        fill="#ffffff"/>
+
+  <!-- Main head and ear silhouette -->
+  <path d="M317 253
+           C329 242 343 221 350 207
+           C347 184 342 148 344 108
+           C346 76 357 45 369 44
+           C385 42 394 80 399 113
+           C405 149 402 179 386 209
+           C385 215 384 221 385 225
+           C410 236 426 258 431 289
+           C433 303 432 310 437 319
+           C444 332 440 347 431 359
+           C424 368 415 372 401 372
+           C404 391 396 410 381 425
+           C375 431 369 434 359 436
+           C342 440 324 435 312 427
+           C299 436 281 438 264 432
+           C244 425 232 412 234 395"
+        fill="none" stroke="#000000" stroke-width="4.3"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Swept-back ear -->
+  <path d="M318 253
+           C293 231 268 200 248 170
+           C229 141 216 109 212 91
+           C210 82 214 77 221 79
+           C245 84 270 98 286 115
+           C307 137 315 164 319 191
+           C322 214 321 237 318 253Z"
+        fill="#ffffff" stroke="#000000" stroke-width="4.1"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Ear interiors -->
+  <path d="M222 94
+           C245 101 267 114 282 133
+           C299 155 306 184 312 216
+           C314 229 316 241 318 250"
+        fill="none" stroke="#000000" stroke-width="2.3"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M359 85
+           C354 101 351 115 351 130
+           C352 146 358 157 366 171
+           C374 185 380 198 383 211"
+        fill="none" stroke="#000000" stroke-width="2.4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Hindquarter and shoulder details -->
+  <path d="M225 267
+           C217 287 216 316 222 342"
+        fill="none" stroke="#000000" stroke-width="4.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M288 259
+           C274 257 258 264 248 276"
+        fill="none" stroke="#000000" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M267 273
+           C253 272 241 287 237 306"
+        fill="none" stroke="#000000" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Belly and chest contours -->
+  <path d="M234 396
+           C232 414 244 427 264 432
+           C282 438 301 435 312 426"
+        fill="none" stroke="#000000" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M312 426
+           C325 435 345 439 365 436"
+        fill="none" stroke="#000000" stroke-width="3.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M273 462
+           C288 467 307 467 323 463"
+        fill="none" stroke="#000000" stroke-width="3.2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Eye brow -->
+  <path d="M340 273
+           C348 278 358 276 366 281"
+        fill="none" stroke="#000000" stroke-width="3.1"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Eye -->
+  <path d="M353 282
+           C359 280 369 282 374 288
+           C378 293 375 298 367 298
+           C359 298 355 294 353 282Z"
+        fill="#000000" stroke="#000000" stroke-width="1.3"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M359 284
+           C363 285 365 288 365 293
+           C362 294 359 291 359 287Z"
+        fill="#ffffff"/>
+  <circle cx="368" cy="286" r="1.5" fill="#ffffff"/>
+
+  <!-- Cheek -->
+  <path d="M313 313
+           C308 326 313 337 325 346
+           C336 354 350 359 365 363"
+        fill="none" stroke="#000000" stroke-width="4.7"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Nose and mouth -->
+  <path d="M409 337
+           C414 338 419 340 422 343
+           C425 340 428 338 431 337"
+        fill="none" stroke="#000000" stroke-width="2.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M422 343
+           C423 350 420 355 414 357"
+        fill="none" stroke="#000000" stroke-width="2.3"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M397 366
+           C405 369 415 365 420 358"
+        fill="none" stroke="#000000" stroke-width="2.1"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

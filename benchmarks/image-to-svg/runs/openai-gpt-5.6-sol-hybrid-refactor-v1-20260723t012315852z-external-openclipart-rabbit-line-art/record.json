@@ -1,0 +1,414 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art",
+  "recorded_at": "2026-07-23T01:32:01.527Z",
+  "immutable": true,
+  "benchmark": {
+    "corpus_id": "cylinder-seal-image-to-svg",
+    "corpus_version": "1.0.0",
+    "manifest_sha256": "08fa9c41caf5ca32de49fa9aa534038bc388a360887b103b646754c522fcad6b",
+    "case_id": "external-openclipart-rabbit-line-art",
+    "split": "development",
+    "input": {
+      "path": "benchmarks/image-to-svg/inputs/external-openclipart-rabbit-line-art.png",
+      "sha256": "6e7c367ad769f9724cffa04300519bb84f23d6796f393328505353e523ed8c79",
+      "media_type": "image/png",
+      "bytes": 41868
+    },
+    "reference": {
+      "path": "benchmarks/image-to-svg/sources/external/openclipart-rabbit-line-art.svg",
+      "sha256": "f079736736c4381578b0a846fed421b1459bf95695a8475c4761ef96d81be92d",
+      "media_type": "image/svg+xml",
+      "bytes": 67067
+    }
+  },
+  "pipeline": {
+    "name": "openai-gpt-5.6-sol-hybrid-refactor",
+    "version": "1.0.0",
+    "git_commit": "c361e39d60071d388c4124a71a582c57880f7c7d",
+    "worktree_dirty": true,
+    "renderer": {
+      "name": "@resvg/resvg-js",
+      "version": "2.6.2",
+      "settings": {
+        "width": 512,
+        "height": 512,
+        "background": "#ffffff",
+        "shape_rendering": 2,
+        "reference_threshold": 170,
+        "candidate_threshold": 128,
+        "metric_version": "1.0.0",
+        "collector_sha256": "e0017fd388a196490022b98bb08f34265607b21a9efaf30b9535bdf669a0f245"
+      }
+    }
+  },
+  "attempts": [
+    {
+      "index": 0,
+      "kind": "generation",
+      "status": "completed",
+      "started_at": "2026-07-23T01:25:00.000Z",
+      "finished_at": "2026-07-23T01:31:24.000Z",
+      "latency_ms": 384000,
+      "model": {
+        "provider": "OpenAI",
+        "id": "gpt-5.6-sol",
+        "version": "gpt-5.6-sol",
+        "settings": {
+          "api": "responses-batch",
+          "endpoint": "/v1/responses",
+          "delivery": "batch",
+          "remote_batch_id": "batch_6a616d2e413481909e26e845193024c9",
+          "reasoning_effort": "high",
+          "max_output_tokens": 65536,
+          "image_detail": "original",
+          "image_count": 2,
+          "store": false,
+          "strategy": "hybrid",
+          "batch_discount_percent": 50,
+          "latency_scope": "shared_batch_wall_clock_not_model_latency",
+          "baseline_trace_sha256": "64aa000554ff575ee8f27b5df5b01b62c153ac0c084411f43e6685c99ad3e198"
+        }
+      },
+      "prompt": {
+        "template_id": "trace-constrained-svg-refactor",
+        "template_version": "1.0.0",
+        "system": "You are an expert SVG refactoring engineer preserving fabrication geometry exactly while simplifying editable monochrome artwork.",
+        "user": "You are refactoring an existing production SVG, not redrawing or restyling an image.\n\nInputs, in order:\n1. ORIGINAL_IMAGE: the intended monochrome artwork.\n2. BASELINE_RENDER: the rendering currently produced by the application.\n3. BASELINE_SVG: the exact editable source of BASELINE_RENDER, included below.\n\nProduce a smaller, cleaner, semantically organized SVG while preserving the rendered design.\n\nNon-negotiable requirements:\n- Preserve every object, overlap, negative space, edge crossing, repeated motif, relative placement, proportion, and line-weight hierarchy.\n- Do not add, omit, reinterpret, or stylize details.\n- Treat BASELINE_SVG as the authoritative geometry. Use ORIGINAL_IMAGE only to understand which contours and shapes belong together.\n- At 512x512, no meaningful foreground boundary may move by more than two pixels.\n- If uncertain about any geometry, retain the baseline geometry.\n- Prefer fewer smooth Bezier segments and basic geometric shapes.\n- Group clearly related parts with stable descriptive kebab-case IDs where useful, but do not add metadata merely to satisfy this request.\n- Use viewBox=\"0 0 512 512\" and explicit black filled geometry.\n- Use only svg, g, path, circle, ellipse, polygon, polyline, line, and rect elements.\n- Do not use raster images, text, CSS or style attributes, links, scripts, animation, external resources, defs/use, filters, gradients, masks, or clip paths.\n- Return exactly one complete SVG document, with no Markdown or explanation.\n\nThe result is automatically rejected unless it preserves the image within a strict two-pixel fidelity tolerance and materially reduces geometric complexity.\n\n<BASELINE_SVG sha256=\"64aa000554ff575ee8f27b5df5b01b62c153ac0c084411f43e6685c99ad3e198\">\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40mm\" height=\"40mm\" viewBox=\"0 0 512 512\" preserveAspectRatio=\"none\">\n  <path d=\"M0 0 C4.53 1.13 7.16 3.17 10 6.75 C31.14 43.03 40.7 100.98 30.81 141.38 C28.35 150.24 24.89 158.43 21 166.75 C19.2 170.62 18.73 173.6 18.75 177.88 C18.74 178.91 18.74 179.94 18.73 181.01 C18.8 183.97 18.8 183.97 21 186.75 C23.09 187.81 25.23 188.8 27.38 189.75 C42.4 197.08 51.82 209 57.88 224.34 C60.17 231.33 61.52 238.55 63 245.75 C64.97 254.88 66.93 263.33 71 271.75 C74.18 283.86 69.87 296.62 64.1 307.24 C62.15 310.48 60.12 313.62 58 316.75 C57.46 317.56 56.92 318.37 56.36 319.2 C51.39 326.26 46.47 329.26 38 330.75 C34.65 330.89 31.36 330.84 28 330.75 C28.42 331.77 28.42 331.77 28.84 332.8 C33.26 344.17 34.42 354.26 29.77 365.8 C26.6 372.49 22.73 378.07 18 383.75 C20.32 383.66 20.32 383.66 22.69 383.56 C27.01 383.57 29.61 383.86 33 386.75 C37.59 391.97 38.42 395.12 38.34 401.98 C37.82 406.16 36.13 408.03 33 410.75 C27.47 414.76 20.64 414.87 14 414.75 C6.12 412.84 0.87 408.72 -3.44 401.88 C-3.95 400.84 -4.47 399.81 -5 398.75 C-6.4 399.39 -7.81 400.03 -9.25 400.69 C-14.35 403.01 -18.7 403.87 -24.3 403.85 C-25.5 403.84 -26.71 403.84 -27.95 403.84 C-29.2 403.83 -30.46 403.82 -31.75 403.81 C-33.02 403.81 -34.29 403.8 -35.6 403.8 C-38.73 403.79 -41.87 403.77 -45 403.75 C-44.34 405.07 -43.68 406.39 -43 407.75 C-42.36 412.77 -42.19 417.25 -44.62 421.75 C-55 430.49 -71.15 429.76 -84 428.75 C-92.46 426.7 -98.25 422.92 -103.03 415.67 C-106.4 409.89 -109.38 403.98 -112.25 397.94 C-117.22 387.79 -124.17 378.93 -130.87 369.87 C-133 366.75 -133 366.75 -133 364.75 C-133.66 364.75 -134.32 364.75 -135 364.75 C-135.66 367.39 -136.32 370.03 -137 372.75 C-136.11 373.12 -135.23 373.49 -134.31 373.88 C-129.68 376.5 -126.69 379.67 -125 384.75 C-124.37 393.98 -126.14 400.5 -131.31 408.19 C-137.88 414.45 -146.09 415.07 -154.75 414.96 C-169.43 414.01 -178.84 407.71 -188.36 396.88 C-191.46 393.21 -194.48 389.47 -197.5 385.73 C-201.64 380.8 -206.08 376.15 -210.5 371.48 C-213.69 368.09 -216.82 364.65 -219.94 361.19 C-228.32 351.71 -228.32 351.71 -240 347.75 C-245.03 348.22 -250.01 349 -255 349.75 C-262.25 350.49 -266.99 348.62 -273 344.75 C-287.84 332.18 -296.66 310.54 -300 291.75 C-300.41 286.26 -299.54 282.64 -297 277.75 C-293.05 273.8 -293.05 273.8 -289.19 273.62 C-286.32 273.74 -283.79 274.15 -281 274.75 C-263.46 263.71 -256.41 252.08 -251.33 232.22 C-242.37 197.86 -220.64 168.63 -190.5 149.94 C-171.43 138.88 -150.16 132.31 -128 132.75 C-128.53 131.86 -129.07 130.97 -129.62 130.06 C-143.01 107.1 -159.37 75.42 -159.25 48.5 C-159.26 46.73 -159.26 46.73 -159.27 44.92 C-159 41.75 -159 41.75 -157 37.75 C-152.8 34.7 -149.16 34.27 -144.05 35 C-114.66 42.19 -85.93 60.16 -70.04 85.93 C-60.32 102.35 -53.12 120.22 -49.56 139 C-48.26 144.88 -45.7 148.09 -41 151.75 C-39.65 152.89 -39.65 152.89 -38.27 154.06 C-31.01 160.89 -31.01 160.89 -22 163.75 C-20.65 156.35 -21.39 149.52 -22.18 142.12 C-22.31 140.81 -22.44 139.5 -22.58 138.15 C-23 133.97 -23.44 129.8 -23.88 125.62 C-24.3 121.47 -24.73 117.32 -25.15 113.17 C-25.41 110.59 -25.68 108.01 -25.95 105.43 C-28.78 78.02 -28.7 53.25 -20.12 26.88 C-19.81 25.9 -19.49 24.92 -19.17 23.91 C-15.94 14.52 -10.45 2.61 0 0 Z M-5.06 9.69 C-22.08 29.32 -24.26 63.99 -22.65 88.5 C-22.27 93.83 -21.84 99.16 -21.4 104.49 C-21.12 107.93 -20.85 111.38 -20.58 114.82 C-19.81 124.79 -19.01 134.76 -18.11 144.72 C-17.89 147.46 -17.66 150.2 -17.44 152.94 C-17.32 154.14 -17.19 155.34 -17.07 156.58 C-16.47 164.28 -17.57 168.37 -22 174.75 C-22.66 175.41 -23.32 176.07 -24 176.75 C-23.34 175.43 -22.68 174.11 -22 172.75 C-21.32 171.09 -20.65 169.42 -20 167.75 C-21.18 167.53 -22.36 167.31 -23.58 167.09 C-28.47 165.61 -30.96 163.76 -34.75 160.38 C-35.84 159.42 -36.93 158.46 -38.05 157.48 C-40.42 155.28 -42.74 153.06 -45 150.75 C-45.66 151.08 -46.32 151.41 -47 151.75 C-45.69 155.38 -44.38 159 -43.06 162.62 C-42.69 163.66 -42.32 164.69 -41.93 165.75 C-41.57 166.74 -41.22 167.73 -40.85 168.74 C-40.52 169.65 -40.19 170.56 -39.85 171.5 C-39.05 173.74 -39.05 173.74 -38 175.75 C-38.66 176.08 -39.32 176.41 -40 176.75 C-40.1 176.09 -40.21 175.43 -40.32 174.75 C-41.18 170.94 -42.55 167.46 -43.94 163.81 C-46.7 156.51 -49.2 149.14 -51.61 141.71 C-61.66 110.77 -75.35 75.01 -105.76 58.89 C-107.16 58.18 -108.56 57.48 -110 56.75 C-111.94 55.75 -113.87 54.74 -115.8 53.73 C-117.91 52.65 -120.02 51.58 -122.12 50.5 C-123.11 49.99 -124.1 49.48 -125.12 48.96 C-133.36 44.83 -141.67 40.75 -151 40.75 C-154.84 45.87 -154.15 48.1 -153.52 54.21 C-152.47 63.73 -152.47 63.73 -148 71.75 C-147.34 71.75 -146.68 71.75 -146 71.75 C-145.55 72.8 -145.1 73.85 -144.63 74.93 C-135.26 96.34 -124.91 117.48 -113.38 137.81 C-112.93 138.61 -112.48 139.4 -112.02 140.22 C-107.07 148.75 -100.92 156.02 -94.12 163.12 C-89.31 168.21 -84.72 173.38 -80.35 178.86 C-77.42 182.46 -74.37 185.95 -71.31 189.44 C-66.98 194.39 -62.83 199.39 -59 204.75 C-58.34 204.42 -57.68 204.09 -57 203.75 C-57.39 202.77 -57.39 202.77 -57.78 201.76 C-60.39 194.87 -62.23 188.05 -63.73 180.85 C-64.23 178.57 -64.72 176.28 -65.21 174 C-65.46 172.83 -65.71 171.65 -65.97 170.44 C-74.71 122.65 -74.71 122.65 -96 79.75 C-96.58 78.98 -97.16 78.21 -97.76 77.41 C-108.87 63.81 -126.12 55.52 -143 51.75 C-143.99 51.75 -144.98 51.75 -146 51.75 C-146 51.09 -146 50.43 -146 49.75 C-130.82 52.88 -117.24 56.98 -105 66.75 C-104.22 67.37 -103.44 67.98 -102.63 68.62 C-74.02 92.56 -68.97 142.14 -62.38 176.31 C-60.13 187.94 -57.51 198.77 -53 209.75 C-52.32 211.74 -51.65 213.74 -51 215.75 C-59.47 209.63 -67.6 203.07 -74 194.75 C-74.66 194.75 -75.32 194.75 -76 194.75 C-76.66 193.43 -77.32 192.11 -78 190.75 C-79.98 188.52 -82.01 186.34 -84.06 184.19 C-88.83 179.15 -93.36 174 -97.7 168.58 C-100.36 165.31 -103.11 162.13 -105.88 158.94 C-111.05 152.93 -115.97 146.79 -120.82 140.52 C-122.88 137.79 -122.88 137.79 -125 135.75 C-153.12 138.05 -181.85 152.62 -203 170.75 C-203.68 171.3 -204.36 171.85 -205.07 172.41 C-210.86 177.2 -215.43 182.81 -220 188.75 C-220.59 189.5 -221.17 190.24 -221.77 191.01 C-232.25 205.1 -238.77 221.14 -244 237.75 C-244.5 239.32 -244.99 240.88 -245.5 242.5 C-246.37 245.25 -247.22 248 -248.05 250.76 C-249 253.75 -249 253.75 -250 255.75 C-252.06 284.65 -248.64 320.8 -231 344.75 C-228.9 346.85 -228.9 346.85 -226.56 348.75 C-217.24 356.9 -209.03 366.33 -201 375.75 C-200.17 376.71 -199.34 377.67 -198.49 378.66 C-193.76 384.18 -189.26 389.74 -185 395.62 C-177.64 405.24 -168.94 410.01 -157 411.75 C-149.73 412.46 -142.65 411.99 -136 408.75 C-129.92 403.55 -127.9 397.51 -127 389.75 C-127.48 384.35 -128.07 381.79 -131.69 377.75 C-135.54 375.42 -137.48 374.6 -142 374.75 C-144.61 375.84 -147.04 377.12 -149.53 378.47 C-157.45 382.57 -166.43 382.9 -174.94 380.62 C-189.63 375.66 -204.4 364.3 -211.75 350.45 C-212.17 349.56 -212.58 348.67 -213 347.75 C-211.92 348.6 -210.85 349.44 -209.74 350.31 C-188.1 368.12 -188.1 368.12 -161.57 373.5 C-154.57 372.31 -148.18 370.43 -143.56 364.75 C-141.15 360.13 -140.86 356.16 -140.79 351.04 C-140.76 349.73 -140.73 348.42 -140.7 347.08 C-140.65 344.33 -140.61 341.58 -140.57 338.83 C-140.27 326.14 -140.27 326.14 -137 320.75 C-136.34 320.42 -135.68 320.09 -135 319.75 C-135.33 320.74 -135.66 321.73 -136 322.75 C-136.94 335.45 -137.57 353.92 -130.96 365.24 C-128.44 367.94 -125.77 370.31 -123 372.75 C-113.21 384.2 -105.52 396.52 -98.64 409.88 C-95.07 416.13 -91.73 418.98 -85 421.75 C-77.99 422.89 -70.9 423.21 -63.81 423.56 C-62.65 423.64 -61.49 423.72 -60.29 423.79 C-59.17 423.85 -58.05 423.9 -56.89 423.96 C-55.88 424.01 -54.87 424.07 -53.83 424.13 C-50.2 423.64 -48.61 422.26 -46 419.75 C-44.2 416.15 -44.74 412.68 -45 408.75 C-47.27 404.29 -50.05 401.74 -54 398.75 C-54.33 398.09 -54.66 397.43 -55 396.75 C-53.53 396.71 -52.05 396.67 -50.54 396.63 C-45.05 396.48 -39.56 396.3 -34.08 396.12 C-31.71 396.04 -29.34 395.97 -26.97 395.91 C-23.55 395.81 -20.13 395.7 -16.72 395.58 C-15.14 395.54 -15.14 395.54 -13.53 395.51 C-5.58 395.19 0.2 393.55 6 387.75 C6.72 385.14 6.72 385.14 7 382.75 C8.32 382.09 9.64 381.43 11 380.75 C20.29 369.97 25.39 358.97 25.19 344.69 C25.19 343.82 25.19 342.94 25.19 342.04 C25.15 337.51 24.91 333.19 24 328.75 C24.91 328.71 25.81 328.68 26.75 328.64 C38.79 328.32 38.79 328.32 49 322.75 C48.67 321.43 48.34 320.11 48 318.75 C47.36 319.04 46.72 319.33 46.06 319.62 C42.12 321.07 38.11 321.89 34 322.75 C34 322.09 34 321.43 34 320.75 C34.87 320.83 35.73 320.92 36.62 321 C40.84 320.69 42.75 319.41 46 316.75 C47.93 312.88 48.23 311.6 48.12 307.5 C48.06 305.15 48.06 305.15 48 302.75 C45.03 300.28 42.49 298.49 39 296.75 C38.67 296.09 38.34 295.43 38 294.75 C43.23 295.76 47.62 296.64 52 299.75 C52.99 298.76 53.98 297.77 55 296.75 C55.99 296.42 56.98 296.09 58 295.75 C57.34 296.7 56.68 297.65 56 298.62 C53.82 301.41 53.82 301.41 54 303.75 C52.68 304.41 51.36 305.07 50 305.75 C49.67 309.71 49.34 313.67 49 317.75 C50.32 317.75 51.64 317.75 53 317.75 C60.59 305.19 69.13 291.04 67 275.75 C66.19 273.6 65.31 271.48 64.38 269.38 C61.18 262.01 59.57 254.67 58 246.81 C53.31 223.68 45.72 205.85 25.56 192.19 C22.66 190.31 20.28 188.84 17 187.75 C16.32 185.44 15.63 183.13 14.95 180.82 C13.95 177.59 12.88 174.39 11.81 171.19 C11 168.76 10.24 166.31 9.48 163.85 C5.03 149.66 -0.53 136.07 -6.54 122.47 C-19.11 93.91 -21.08 73.99 -13 43.75 C-12.34 43.75 -11.68 43.75 -11 43.75 C-11.28 44.82 -11.55 45.9 -11.84 47 C-12.2 48.43 -12.56 49.85 -12.94 51.31 C-13.3 52.72 -13.66 54.12 -14.03 55.57 C-15.7 62.78 -16.26 69.79 -16.38 77.19 C-16.41 78.07 -16.45 78.95 -16.49 79.87 C-16.69 95.39 -8.97 110.13 -2.94 124.12 C-1.87 126.62 -0.81 129.11 0.26 131.61 C1.25 133.95 2.25 136.28 3.25 138.62 C5.24 143.31 7.14 148.01 9 152.75 C9.66 152.75 10.32 152.75 11 152.75 C32.16 115.24 25.29 72.99 14.12 32.62 C11.38 23.15 7.93 14.66 2 6.75 C-2.23 6.29 -2.23 6.29 -5.06 9.69 Z M-147 76.75 C-145.7 83.06 -144.03 89.11 -141.88 95.19 C-141.57 96.05 -141.27 96.91 -140.96 97.79 C-137.76 106.67 -134.04 115.23 -130 123.75 C-129.52 124.78 -129.04 125.8 -128.55 126.86 C-123.77 136.35 -116.58 144.37 -109 151.75 C-110.28 148.36 -111.75 145.27 -113.58 142.14 C-114.1 141.26 -114.61 140.37 -115.14 139.45 C-115.69 138.5 -116.24 137.55 -116.81 136.56 C-127.86 117.23 -137.54 97.34 -146 76.75 C-146.33 76.75 -146.66 76.75 -147 76.75 Z M26 120.75 C25.66 121.88 25.32 123 24.97 124.16 C17.3 148.45 17.3 148.45 11 154.75 C11.66 162.3 11.66 162.3 13 169.75 C17.9 167.3 19.35 157.65 21 152.75 C24.28 142.22 26.78 131.83 27 120.75 C26.67 120.75 26.34 120.75 26 120.75 Z M-101 160.75 C-96.48 169.79 -88.8 177.18 -81.97 184.54 C-80 186.75 -80 186.75 -79 188.75 C-78.34 188.75 -77.68 188.75 -77 188.75 C-76.34 190.07 -75.68 191.39 -75 192.75 C-73.51 194.38 -71.96 195.96 -70.38 197.5 C-69.15 198.7 -69.15 198.7 -67.9 199.92 C-67.27 200.53 -66.65 201.13 -66 201.75 C-66 197.62 -67.62 196.7 -70.44 193.75 C-74.01 189.94 -77.42 186.08 -80.69 182 C-84.23 177.61 -87.98 173.7 -92 169.75 C-93.28 168.3 -94.55 166.84 -95.81 165.38 C-98.53 161.83 -98.53 161.83 -101 160.75 Z M-257 265.75 C-257.95 266.76 -258.9 267.77 -259.88 268.81 C-265.71 274.66 -273.52 281.54 -282 281.94 C-286 281.75 -286 281.75 -290 280.75 C-292.57 283.32 -292.72 285.54 -293.02 289.08 C-292.87 306.36 -282.41 327.24 -271 339.75 C-265.99 343.56 -261.34 345.14 -255.06 344.62 C-253.04 344.35 -251.02 344.06 -249 343.75 C-246.92 343.55 -244.83 343.36 -242.75 343.19 C-240.4 342.97 -240.4 342.97 -238 342.75 C-238 338.77 -239.52 337.06 -241.62 333.69 C-253.85 312.57 -255.65 289.58 -255 265.75 C-255.66 265.75 -256.32 265.75 -257 265.75 Z M17.45 388.76 C8.71 389.03 3.78 390.16 -3 395.75 C-1.67 401.67 1.65 405.68 6 409.75 C12.79 413.14 19.42 413.25 26.7 411.54 C30.34 410.29 32.49 408.65 35 405.75 C36.58 401.09 36.12 399.07 34.38 394.44 C32.36 390.75 32.36 390.75 29.62 389.25 C25.58 388.48 21.55 388.75 17.45 388.76 Z \" transform=\"translate(370,41.25)\" fill=\"#000000\"/>\n  <path d=\"M0 0 C1.12 -0.01 2.25 -0.03 3.41 -0.04 C6.5 0.19 6.5 0.19 10.5 2.19 C10.17 3.84 9.84 5.49 9.5 7.19 C5.87 8.08 3.12 8.13 -0.56 7.56 C-10.59 6.55 -18.74 9.86 -27.22 14.98 C-29.5 16.19 -29.5 16.19 -32.5 16.19 C-32.5 15.53 -32.5 14.87 -32.5 14.19 C-12.99 0.07 -12.99 0.07 0 0 Z \" transform=\"translate(280.5,255.8125)\" fill=\"#000000\"/>\n  <path d=\"M0 0 C1.32 0.33 2.64 0.66 4 1 C3.46 7.39 2.29 13.38 0.72 19.59 C-0.86 27.09 -1.16 34.55 -1.12 42.19 C-1.12 43.57 -1.12 43.57 -1.12 44.97 C-1.08 51.28 -0.76 57.53 -0.22 63.82 C0.13 68.88 0.08 73.93 0 79 C-5.24 73.76 -5.56 66.09 -7 59 C-7.23 57.87 -7.46 56.74 -7.7 55.57 C-10.41 39.82 -11.23 20.97 -5 6 C-2.36 2.57 -2.36 2.57 0 0 Z \" transform=\"translate(224,265)\" fill=\"#000000\"/>\n  <path d=\"M0 0 C-0.33 1.65 -0.66 3.3 -1 5 C-1.92 5.47 -2.84 5.95 -3.78 6.43 C-17.68 13.92 -23.5 21.73 -30 36 C-30.66 35.67 -31.32 35.34 -32 35 C-31.23 22.82 -26.36 14.16 -17.62 5.75 C-7.2 -2.16 -7.2 -2.16 0 0 Z \" transform=\"translate(269,271)\" fill=\"#000000\"/>\n  <path d=\"M0 0 C1.29 0.46 2.58 0.92 3.9 1.39 C8.72 3 13.55 3.92 18.56 4.81 C30.36 7.15 36.33 12.08 43 22 C43.66 23.32 44.32 24.64 45 26 C42 26 42 26 38 24 C37.01 24.66 36.02 25.32 35 26 C28.14 27.91 22.25 27.49 16 24 C12.31 19.8 11.93 14.35 11 9 C10.29 8.6 9.58 8.2 8.85 7.79 C7.93 7.26 7.01 6.73 6.06 6.19 C5.15 5.67 4.23 5.14 3.29 4.61 C1 3 1 3 0 0 Z M26 13 C26.33 14.98 26.66 16.96 27 19 C28.32 19 29.64 19 31 19 C30.67 17.35 30.34 15.7 30 14 C28.68 13.67 27.36 13.34 26 13 Z \" transform=\"translate(339,272)\" fill=\"#000000\"/>\n  <path d=\"M0 0 C0.66 0 1.32 0 2 0 C2.18 1.17 2.36 2.34 2.55 3.54 C2.8 5.08 3.05 6.61 3.31 8.19 C3.56 9.71 3.8 11.23 4.05 12.79 C5.88 20.89 10.3 24.99 17.28 29.46 C19.81 30.95 22.36 32.39 24.94 33.81 C25.85 34.33 26.77 34.84 27.71 35.37 C32.09 37.84 36.48 40.27 40.89 42.67 C42.33 43.46 43.77 44.25 45.25 45.06 C46.53 45.75 47.82 46.45 49.14 47.16 C52 49 52 49 53 52 C34.12 50.18 14.84 41.02 1.56 27.5 C-2.77 21.59 -3.55 16.23 -3 9 C-2.17 5.91 -1.13 3.01 0 0 Z \" transform=\"translate(312,311)\" fill=\"#000000\"/>\n  <path d=\"M0 0 C0.66 0 1.32 0 2 0 C2.38 0.72 2.75 1.45 3.14 2.2 C9.21 13.67 15.24 19.59 27.12 24.81 C40.14 28.65 54.8 27.82 67 21.81 C75.17 16.06 78.11 9.25 81 0 C81.66 0 82.32 0 83 0 C83.64 8.78 80.56 16.24 75 23 C62.8 32.69 51.21 33.7 36 33 C25.39 31.6 16.1 27.12 9 19 C8.15 18.09 7.31 17.19 6.44 16.25 C2.7 11.27 0 6.36 0 0 Z \" transform=\"translate(253,404)\" fill=\"#000000\"/>\n</svg>\n</BASELINE_SVG>",
+        "sha256": "e5e636bd06a3d448506803662d7532087a133689c488192bd86a158d445c4f22"
+      },
+      "usage": {
+        "input_tokens": 9442,
+        "cached_input_tokens": 0,
+        "output_tokens": 17758,
+        "reasoning_tokens": 10032,
+        "total_tokens": 27200
+      },
+      "cost": {
+        "usd": 0.289975,
+        "estimated": true,
+        "pricing_source_url": "https://developers.openai.com/api/docs/guides/batch"
+      },
+      "artifacts": {
+        "provider_response": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art/provider-response.json",
+          "sha256": "bf8707bd9c79517c7ca3c5565a0e3610e6099ec4502ea8333d96106827770c82",
+          "media_type": "application/json",
+          "bytes": 86112
+        },
+        "batch_request": {
+          "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/batch-request.jsonl",
+          "sha256": "a01e78ae22ace7c2bd3a5e94688c25496112c35b3bae4d56659aee6a3af4e53c",
+          "media_type": "application/jsonl",
+          "bytes": 769848
+        },
+        "raw_model_output": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art/model-output.txt",
+          "sha256": "45c34e0aee81bb74ebb7da87011f251ccb424109b83bf2359e9d07d916f014fb",
+          "media_type": "text/plain",
+          "bytes": 12566
+        },
+        "validation_report": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art/validation.json",
+          "sha256": "33542be0135efce3b7b28f0d504ab93ff57809b389601da99019e1120e6823b1",
+          "media_type": "application/json",
+          "bytes": 2834
+        },
+        "source_trace": {
+          "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/external-openclipart-rabbit-line-art/classical.svg",
+          "sha256": "64aa000554ff575ee8f27b5df5b01b62c153ac0c084411f43e6685c99ad3e198",
+          "media_type": "image/svg+xml",
+          "bytes": 14255
+        },
+        "candidate_svg": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art/candidate.svg",
+          "sha256": "45c34e0aee81bb74ebb7da87011f251ccb424109b83bf2359e9d07d916f014fb",
+          "media_type": "image/svg+xml",
+          "bytes": 12566
+        },
+        "rendered_png": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art/render.png",
+          "sha256": "bdbcdc1563950541a3883529c67841eff2abe0786809be8eb7e98ea5167aa8ec",
+          "media_type": "image/png",
+          "bytes": 26123
+        }
+      },
+      "validation": {
+        "passed": false,
+        "failures": [
+          {
+            "code": "insufficient_coordinate_reduction",
+            "severity": "error",
+            "message": "Geometry numeric-token count 2004 exceeds 1697."
+          }
+        ],
+        "metrics": {
+          "metric_version": "1.0.0",
+          "iou": 0.8008174719375305,
+          "precision": 0.8452672247263361,
+          "recall": 0.9383801558367288,
+          "disagreement": 0.012454986572265625,
+          "grayscale_mae": 0.01582632625804051,
+          "false_positive_pixels": 2403,
+          "false_negative_pixels": 862,
+          "reference_foreground_pixels": 13989,
+          "candidate_foreground_pixels": 15530,
+          "tolerant_precision_2px": 0.9974887314874437,
+          "tolerant_recall_2px": 0.9994281220959326,
+          "tolerant_f1_2px": 0.9984574850309119,
+          "input_iou": 0.8241191299759629,
+          "input_precision": 0.9051513200257566,
+          "input_recall": 0.9020148870636551,
+          "input_tolerant_precision_2px": 0.9987765614938828,
+          "input_tolerant_recall_2px": 0.9994866529774127,
+          "input_tolerant_f1_2px": 0.9991314810686065,
+          "candidate_bytes": 12566,
+          "element_count": 10,
+          "path_count": 7,
+          "group_count": 3,
+          "basic_shape_count": 0,
+          "command_count": 79,
+          "numeric_token_count": 2004,
+          "maximum_nesting": 3,
+          "active_stroke_count": 0,
+          "non_black_paint_count": 0,
+          "baseline_iou": 0.8010004880429478,
+          "delta_iou_vs_classical": -0.00018301610541726632,
+          "baseline_input_tolerant_f1_2px": 0.9991315992983132,
+          "byte_ratio_vs_classical": 0.8815152578042792,
+          "command_ratio_vs_classical": 0.20954907161803712,
+          "numeric_token_ratio_vs_classical": 0.944392082940622
+        }
+      }
+    },
+    {
+      "index": 1,
+      "kind": "fallback",
+      "status": "completed",
+      "started_at": "2026-07-23T01:31:24.000Z",
+      "finished_at": "2026-07-23T01:31:24.000Z",
+      "latency_ms": 0,
+      "model": {
+        "provider": "local",
+        "id": "vectortracer",
+        "version": "0.1.2",
+        "settings": {
+          "deterministic": true,
+          "preprocessing_threshold": 170,
+          "trace_settings": {
+            "mode": "spline",
+            "filterSpeckle": 16,
+            "segmentLength": 5,
+            "cornerThresholdDegrees": 45,
+            "spliceThresholdDegrees": 45,
+            "maxIterations": 10,
+            "pathPrecision": 2
+          },
+          "policy": "retain_precomputed_production_trace"
+        }
+      },
+      "prompt": {
+        "template_id": "classical-trace-fallback",
+        "template_version": "1.0.0",
+        "system": "",
+        "user": "Retain the exact production classical trace because the model refactor failed one or more hard acceptance gates.",
+        "sha256": "672ad0ca9b851910c6c5ea502a02952e7a5bfd02b2902286bd8c54f7ca142001"
+      },
+      "usage": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_tokens": 0,
+        "total_tokens": 0
+      },
+      "cost": {
+        "usd": 0,
+        "estimated": false,
+        "pricing_source_url": null
+      },
+      "artifacts": {
+        "source_trace": {
+          "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/external-openclipart-rabbit-line-art/classical.svg",
+          "sha256": "64aa000554ff575ee8f27b5df5b01b62c153ac0c084411f43e6685c99ad3e198",
+          "media_type": "image/svg+xml",
+          "bytes": 14255
+        },
+        "candidate_svg": {
+          "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/external-openclipart-rabbit-line-art/classical.svg",
+          "sha256": "64aa000554ff575ee8f27b5df5b01b62c153ac0c084411f43e6685c99ad3e198",
+          "media_type": "image/svg+xml",
+          "bytes": 14255
+        },
+        "rendered_png": {
+          "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/external-openclipart-rabbit-line-art/render.png",
+          "sha256": "e4425ca4121e8e82e1aa5060fbf895817454407341617bb331d4a037846ae86b",
+          "media_type": "image/png",
+          "bytes": 26125
+        },
+        "validation_report": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art/fallback-validation.json",
+          "sha256": "bad784975a0b3589ba5c804c839c288a60a39c9b656b1a52a4da9e0e20be6535",
+          "media_type": "application/json",
+          "bytes": 1409
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "metric_version": "1.0.0",
+          "iou": 0.8010004880429478,
+          "precision": 0.8452971093800297,
+          "recall": 0.9385946100507542,
+          "disagreement": 0.01244354248046875,
+          "grayscale_mae": 0.01582915362189621,
+          "false_positive_pixels": 2403,
+          "false_negative_pixels": 859,
+          "reference_foreground_pixels": 13989,
+          "candidate_foreground_pixels": 15533,
+          "tolerant_precision_2px": 0.997489216506792,
+          "tolerant_recall_2px": 0.9994281220959326,
+          "tolerant_f1_2px": 0.9984577280118029,
+          "input_iou": 0.824295010845987,
+          "input_tolerant_precision_2px": 0.9987767977853602,
+          "input_tolerant_recall_2px": 0.9994866529774127,
+          "input_tolerant_f1_2px": 0.9991315992983132,
+          "candidate_bytes": 14255,
+          "element_count": 7,
+          "path_count": 7,
+          "group_count": 0,
+          "basic_shape_count": 0,
+          "command_count": 377,
+          "numeric_token_count": 2122,
+          "maximum_nesting": 1
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "latency_ms": 384000,
+    "usage": {
+      "input_tokens": 9442,
+      "cached_input_tokens": 0,
+      "output_tokens": 17758,
+      "reasoning_tokens": 10032,
+      "total_tokens": 27200
+    },
+    "cost": {
+      "usd": 0.289975,
+      "estimated": true,
+      "pricing_source_url": "https://developers.openai.com/api/docs/guides/batch"
+    },
+    "metrics": {
+      "fallback_used": true,
+      "model_candidate": {
+        "metric_version": "1.0.0",
+        "iou": 0.8008174719375305,
+        "precision": 0.8452672247263361,
+        "recall": 0.9383801558367288,
+        "disagreement": 0.012454986572265625,
+        "grayscale_mae": 0.01582632625804051,
+        "false_positive_pixels": 2403,
+        "false_negative_pixels": 862,
+        "reference_foreground_pixels": 13989,
+        "candidate_foreground_pixels": 15530,
+        "tolerant_precision_2px": 0.9974887314874437,
+        "tolerant_recall_2px": 0.9994281220959326,
+        "tolerant_f1_2px": 0.9984574850309119,
+        "input_iou": 0.8241191299759629,
+        "input_precision": 0.9051513200257566,
+        "input_recall": 0.9020148870636551,
+        "input_tolerant_precision_2px": 0.9987765614938828,
+        "input_tolerant_recall_2px": 0.9994866529774127,
+        "input_tolerant_f1_2px": 0.9991314810686065,
+        "candidate_bytes": 12566,
+        "element_count": 10,
+        "path_count": 7,
+        "group_count": 3,
+        "basic_shape_count": 0,
+        "command_count": 79,
+        "numeric_token_count": 2004,
+        "maximum_nesting": 3,
+        "active_stroke_count": 0,
+        "non_black_paint_count": 0,
+        "baseline_iou": 0.8010004880429478,
+        "delta_iou_vs_classical": -0.00018301610541726632,
+        "baseline_input_tolerant_f1_2px": 0.9991315992983132,
+        "byte_ratio_vs_classical": 0.8815152578042792,
+        "command_ratio_vs_classical": 0.20954907161803712,
+        "numeric_token_ratio_vs_classical": 0.944392082940622
+      },
+      "final_classical": {
+        "metric_version": "1.0.0",
+        "iou": 0.8010004880429478,
+        "precision": 0.8452971093800297,
+        "recall": 0.9385946100507542,
+        "disagreement": 0.01244354248046875,
+        "grayscale_mae": 0.01582915362189621,
+        "false_positive_pixels": 2403,
+        "false_negative_pixels": 859,
+        "reference_foreground_pixels": 13989,
+        "candidate_foreground_pixels": 15533,
+        "tolerant_precision_2px": 0.997489216506792,
+        "tolerant_recall_2px": 0.9994281220959326,
+        "tolerant_f1_2px": 0.9984577280118029,
+        "input_iou": 0.824295010845987,
+        "input_tolerant_precision_2px": 0.9987767977853602,
+        "input_tolerant_recall_2px": 0.9994866529774127,
+        "input_tolerant_f1_2px": 0.9991315992983132,
+        "candidate_bytes": 14255,
+        "element_count": 7,
+        "path_count": 7,
+        "group_count": 0,
+        "basic_shape_count": 0,
+        "command_count": 377,
+        "numeric_token_count": 2122,
+        "maximum_nesting": 1
+      }
+    },
+    "ratings": {
+      "fidelity": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No blind human rating has been assigned."
+      },
+      "manufacturability": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No blind human rating has been assigned."
+      }
+    }
+  },
+  "outcome": {
+    "status": "fallback",
+    "accepted_attempt": 1,
+    "final_svg": {
+      "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/external-openclipart-rabbit-line-art/classical.svg",
+      "sha256": "64aa000554ff575ee8f27b5df5b01b62c153ac0c084411f43e6685c99ad3e198",
+      "media_type": "image/svg+xml",
+      "bytes": 14255
+    },
+    "notes": "The one-call model refactor missed at least one hard safety, fidelity, or complexity gate; the exact production classical trace was retained unchanged."
+  },
+  "output_training_rights": {
+    "training_allowed": false,
+    "source": {
+      "cleared": true,
+      "basis": "asset_license",
+      "evidence_url": "https://openclipart.org/share",
+      "notes": "Corpus source is training-cleared under CC0-1.0."
+    },
+    "provider_output": {
+      "cleared": false,
+      "basis": "provider_terms",
+      "terms_url": "https://openai.com/policies/services-agreement/",
+      "terms_version": "OpenAI Services Agreement effective 2026-01-01",
+      "terms_effective_at": "2026-01-01",
+      "notes": "Retained for evaluation only. The Services Agreement assigns output ownership to the customer but restricts using output to develop competing AI models outside its stated exception."
+    },
+    "reviewed_at": "2026-07-23",
+    "notes": "Source and provider-output rights must both be cleared before training; these OpenAI outputs are not marked as distillation-ready."
+  }
+}

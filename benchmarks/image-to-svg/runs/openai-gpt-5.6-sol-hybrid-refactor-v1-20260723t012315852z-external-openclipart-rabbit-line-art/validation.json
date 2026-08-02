@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "external-openclipart-rabbit-line-art",
+  "run_id": "openai-gpt-5.6-sol-hybrid-refactor-v1-20260723t012315852z-external-openclipart-rabbit-line-art",
+  "track": "hybrid",
+  "passed": false,
+  "failures": [
+    {
+      "code": "insufficient_coordinate_reduction",
+      "severity": "error",
+      "message": "Geometry numeric-token count 2004 exceeds 1697."
+    }
+  ],
+  "metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.8008174719375305,
+    "precision": 0.8452672247263361,
+    "recall": 0.9383801558367288,
+    "disagreement": 0.012454986572265625,
+    "grayscale_mae": 0.01582632625804051,
+    "false_positive_pixels": 2403,
+    "false_negative_pixels": 862,
+    "reference_foreground_pixels": 13989,
+    "candidate_foreground_pixels": 15530,
+    "tolerant_precision_2px": 0.9974887314874437,
+    "tolerant_recall_2px": 0.9994281220959326,
+    "tolerant_f1_2px": 0.9984574850309119,
+    "input_iou": 0.8241191299759629,
+    "input_precision": 0.9051513200257566,
+    "input_recall": 0.9020148870636551,
+    "input_tolerant_precision_2px": 0.9987765614938828,
+    "input_tolerant_recall_2px": 0.9994866529774127,
+    "input_tolerant_f1_2px": 0.9991314810686065,
+    "candidate_bytes": 12566,
+    "element_count": 10,
+    "path_count": 7,
+    "group_count": 3,
+    "basic_shape_count": 0,
+    "command_count": 79,
+    "numeric_token_count": 2004,
+    "maximum_nesting": 3,
+    "active_stroke_count": 0,
+    "non_black_paint_count": 0,
+    "baseline_iou": 0.8010004880429478,
+    "delta_iou_vs_classical": -0.00018301610541726632,
+    "baseline_input_tolerant_f1_2px": 0.9991315992983132,
+    "byte_ratio_vs_classical": 0.8815152578042792,
+    "command_ratio_vs_classical": 0.20954907161803712,
+    "numeric_token_ratio_vs_classical": 0.944392082940622
+  },
+  "gates": {
+    "input_tolerant_precision_minimum": 0.985,
+    "input_tolerant_recall_minimum": 0.985,
+    "input_tolerant_f1_minimum": 0.9941315992983132,
+    "reference_iou_minimum": 0.7910004880429478,
+    "reference_tolerant_precision_minimum": 0.985,
+    "reference_tolerant_recall_minimum": 0.985,
+    "command_count_maximum": 301,
+    "numeric_token_count_maximum": 1697,
+    "candidate_bytes_maximum": 12829,
+    "element_count_maximum": 512,
+    "maximum_nesting": 8,
+    "active_stroke_count_maximum": 0,
+    "non_black_paint_count_maximum": 0
+  },
+  "provider": {
+    "remote_batch_id": "batch_6a616d2e413481909e26e845193024c9",
+    "batch_request_id": "batch_req_6a616eebc74c8190be3e6c058d4c1089",
+    "request_id": "6e2e791c-58bf-492e-926a-b4100cf4e487",
+    "response_id": "resp_0f211a0e628cb6f5016a616e40c1c081a28159e9f470f50f7b",
+    "model": "gpt-5.6-sol",
+    "status": "completed",
+    "incomplete_details": null
+  },
+  "thresholds": {
+    "reference_luminance": 170,
+    "candidate_luminance": 128
+  }
+}

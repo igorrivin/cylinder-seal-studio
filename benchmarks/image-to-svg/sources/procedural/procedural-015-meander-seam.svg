@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-015-meander-seam-title procedural-015-meander-seam-description">
+  <title id="procedural-015-meander-seam-title">Seam-crossing meander</title>
+  <desc id="procedural-015-meander-seam-description">A continuous Greek-key meander whose horizontal rails and corner fragments cross both edges.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M -30 120 H 542 M -30 392 H 542"/>
+  <path d="M -24 173 H 84 V 227 H 30 V 335 H 138 V 281 H 84 V 173 H 192 V 227 H 138 V 335 H 246 V 281 H 192 V 173 H 300 V 227 H 246 V 335 H 354 V 281 H 300 V 173 H 408 V 227 H 354 V 335 H 462 V 281 H 408 V 173 H 516 V 227 H 462 V 335 H 570"/>
+</g>
+</svg>

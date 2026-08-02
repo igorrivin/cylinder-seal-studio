@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-017-rosette-beads-title procedural-017-rosette-beads-description">
+  <title id="procedural-017-rosette-beads-title">Rosette and bead band</title>
+  <desc id="procedural-017-rosette-beads-description">Four outlined rosettes alternate with bead triplets between double horizontal rules.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <path d="M 18 112 H 494 M 18 400 H 494" fill="none" stroke="#111" stroke-width="8"/>
+<g fill="none" stroke="#111" stroke-width="6"><ellipse cx="101.68" cy="256.00" rx="13.25" ry="25.44" transform="rotate(90 101.68 256.00)"/>
+<ellipse cx="92.99" cy="276.99" rx="13.25" ry="25.44" transform="rotate(135 92.99 276.99)"/>
+<ellipse cx="72.00" cy="285.68" rx="13.25" ry="25.44" transform="rotate(180 72.00 285.68)"/>
+<ellipse cx="51.01" cy="276.99" rx="13.25" ry="25.44" transform="rotate(225 51.01 276.99)"/>
+<ellipse cx="42.32" cy="256.00" rx="13.25" ry="25.44" transform="rotate(270 42.32 256.00)"/>
+<ellipse cx="51.01" cy="235.01" rx="13.25" ry="25.44" transform="rotate(315 51.01 235.01)"/>
+<ellipse cx="72.00" cy="226.32" rx="13.25" ry="25.44" transform="rotate(360 72.00 226.32)"/>
+<ellipse cx="92.99" cy="235.01" rx="13.25" ry="25.44" transform="rotate(405 92.99 235.01)"/><circle cx="72" cy="256" r="9.54" fill="#111" stroke="none"/></g>
+<g fill="none" stroke="#111" stroke-width="6"><ellipse cx="224.68" cy="256.00" rx="13.25" ry="25.44" transform="rotate(90 224.68 256.00)"/>
+<ellipse cx="215.99" cy="276.99" rx="13.25" ry="25.44" transform="rotate(135 215.99 276.99)"/>
+<ellipse cx="195.00" cy="285.68" rx="13.25" ry="25.44" transform="rotate(180 195.00 285.68)"/>
+<ellipse cx="174.01" cy="276.99" rx="13.25" ry="25.44" transform="rotate(225 174.01 276.99)"/>
+<ellipse cx="165.32" cy="256.00" rx="13.25" ry="25.44" transform="rotate(270 165.32 256.00)"/>
+<ellipse cx="174.01" cy="235.01" rx="13.25" ry="25.44" transform="rotate(315 174.01 235.01)"/>
+<ellipse cx="195.00" cy="226.32" rx="13.25" ry="25.44" transform="rotate(360 195.00 226.32)"/>
+<ellipse cx="215.99" cy="235.01" rx="13.25" ry="25.44" transform="rotate(405 215.99 235.01)"/><circle cx="195" cy="256" r="9.54" fill="#111" stroke="none"/></g>
+<g fill="none" stroke="#111" stroke-width="6"><ellipse cx="347.68" cy="256.00" rx="13.25" ry="25.44" transform="rotate(90 347.68 256.00)"/>
+<ellipse cx="338.99" cy="276.99" rx="13.25" ry="25.44" transform="rotate(135 338.99 276.99)"/>
+<ellipse cx="318.00" cy="285.68" rx="13.25" ry="25.44" transform="rotate(180 318.00 285.68)"/>
+<ellipse cx="297.01" cy="276.99" rx="13.25" ry="25.44" transform="rotate(225 297.01 276.99)"/>
+<ellipse cx="288.32" cy="256.00" rx="13.25" ry="25.44" transform="rotate(270 288.32 256.00)"/>
+<ellipse cx="297.01" cy="235.01" rx="13.25" ry="25.44" transform="rotate(315 297.01 235.01)"/>
+<ellipse cx="318.00" cy="226.32" rx="13.25" ry="25.44" transform="rotate(360 318.00 226.32)"/>
+<ellipse cx="338.99" cy="235.01" rx="13.25" ry="25.44" transform="rotate(405 338.99 235.01)"/><circle cx="318" cy="256" r="9.54" fill="#111" stroke="none"/></g>
+<g fill="none" stroke="#111" stroke-width="6"><ellipse cx="470.68" cy="256.00" rx="13.25" ry="25.44" transform="rotate(90 470.68 256.00)"/>
+<ellipse cx="461.99" cy="276.99" rx="13.25" ry="25.44" transform="rotate(135 461.99 276.99)"/>
+<ellipse cx="441.00" cy="285.68" rx="13.25" ry="25.44" transform="rotate(180 441.00 285.68)"/>
+<ellipse cx="420.01" cy="276.99" rx="13.25" ry="25.44" transform="rotate(225 420.01 276.99)"/>
+<ellipse cx="411.32" cy="256.00" rx="13.25" ry="25.44" transform="rotate(270 411.32 256.00)"/>
+<ellipse cx="420.01" cy="235.01" rx="13.25" ry="25.44" transform="rotate(315 420.01 235.01)"/>
+<ellipse cx="441.00" cy="226.32" rx="13.25" ry="25.44" transform="rotate(360 441.00 226.32)"/>
+<ellipse cx="461.99" cy="235.01" rx="13.25" ry="25.44" transform="rotate(405 461.99 235.01)"/><circle cx="441" cy="256" r="9.54" fill="#111" stroke="none"/></g>
+<g fill="#111"><circle cx="133" cy="232" r="7"/><circle cx="133" cy="256" r="7"/><circle cx="133" cy="280" r="7"/><circle cx="256" cy="232" r="7"/><circle cx="256" cy="256" r="7"/><circle cx="256" cy="280" r="7"/><circle cx="379" cy="232" r="7"/><circle cx="379" cy="256" r="7"/><circle cx="379" cy="280" r="7"/></g>
+</svg>

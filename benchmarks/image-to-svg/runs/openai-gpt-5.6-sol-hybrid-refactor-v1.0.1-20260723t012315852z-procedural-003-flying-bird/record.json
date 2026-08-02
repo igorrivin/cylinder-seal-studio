@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-procedural-003-flying-bird",
+  "recorded_at": "2026-07-23T01:34:40.849Z",
+  "immutable": true,
+  "benchmark": {
+    "corpus_id": "cylinder-seal-image-to-svg",
+    "corpus_version": "1.0.0",
+    "manifest_sha256": "08fa9c41caf5ca32de49fa9aa534038bc388a360887b103b646754c522fcad6b",
+    "case_id": "procedural-003-flying-bird",
+    "split": "development",
+    "input": {
+      "path": "benchmarks/image-to-svg/inputs/procedural-003-flying-bird.png",
+      "sha256": "dc5331bfad1648bdafe18f88b5bf3eebd2d9b3d9d18026fb3661d3de7f56af4e",
+      "media_type": "image/png",
+      "bytes": 7977
+    },
+    "reference": {
+      "path": "benchmarks/image-to-svg/sources/procedural/procedural-003-flying-bird.svg",
+      "sha256": "772761ce949892647fbffe6934084d09fb88c72aa312a94898d881df8ead0110",
+      "media_type": "image/svg+xml",
+      "bytes": 842
+    }
+  },
+  "pipeline": {
+    "name": "openai-gpt-5.6-sol-hybrid-refactor",
+    "version": "1.0.1",
+    "git_commit": "c361e39d60071d388c4124a71a582c57880f7c7d",
+    "worktree_dirty": true,
+    "renderer": {
+      "name": "@resvg/resvg-js",
+      "version": "2.6.2",
+      "settings": {
+        "width": 512,
+        "height": 512,
+        "background": "#ffffff",
+        "shape_rendering": 2,
+        "reference_threshold": 170,
+        "candidate_threshold": 128,
+        "metric_version": "1.0.0",
+        "collector_sha256": "fd3f59a30353ea3333027a20f2df6058ee328782ac8c4acff6a46eae734beef1"
+      }
+    }
+  },
+  "attempts": [
+    {
+      "index": 0,
+      "kind": "generation",
+      "status": "completed",
+      "started_at": "2026-07-23T01:25:00.000Z",
+      "finished_at": "2026-07-23T01:31:24.000Z",
+      "latency_ms": 384000,
+      "model": {
+        "provider": "OpenAI",
+        "id": "gpt-5.6-sol",
+        "version": "gpt-5.6-sol",
+        "settings": {
+          "api": "responses-batch",
+          "endpoint": "/v1/responses",
+          "delivery": "batch",
+          "remote_batch_id": "batch_6a616d2e413481909e26e845193024c9",
+          "reasoning_effort": "high",
+          "max_output_tokens": 65536,
+          "image_detail": "original",
+          "image_count": 2,
+          "store": false,
+          "strategy": "hybrid",
+          "batch_discount_percent": 50,
+          "latency_scope": "shared_batch_wall_clock_not_model_latency",
+          "baseline_trace_sha256": "ca0e6e1fb6cffa24bf51c496f47249b1d60781ebe3fbda6e2f892a1110006aa7"
+        }
+      },
+      "prompt": {
+        "template_id": "trace-constrained-svg-refactor",
+        "template_version": "1.0.0",
+        "system": "You are an expert SVG refactoring engineer preserving fabrication geometry exactly while simplifying editable monochrome artwork.",
+        "user": "You are refactoring an existing production SVG, not redrawing or restyling an image.\n\nInputs, in order:\n1. ORIGINAL_IMAGE: the intended monochrome artwork.\n2. BASELINE_RENDER: the rendering currently produced by the application.\n3. BASELINE_SVG: the exact editable source of BASELINE_RENDER, included below.\n\nProduce a smaller, cleaner, semantically organized SVG while preserving the rendered design.\n\nNon-negotiable requirements:\n- Preserve every object, overlap, negative space, edge crossing, repeated motif, relative placement, proportion, and line-weight hierarchy.\n- Do not add, omit, reinterpret, or stylize details.\n- Treat BASELINE_SVG as the authoritative geometry. Use ORIGINAL_IMAGE only to understand which contours and shapes belong together.\n- At 512x512, no meaningful foreground boundary may move by more than two pixels.\n- If uncertain about any geometry, retain the baseline geometry.\n- Prefer fewer smooth Bezier segments and basic geometric shapes.\n- Group clearly related parts with stable descriptive kebab-case IDs where useful, but do not add metadata merely to satisfy this request.\n- Use viewBox=\"0 0 512 512\" and explicit black filled geometry.\n- Use only svg, g, path, circle, ellipse, polygon, polyline, line, and rect elements.\n- Do not use raster images, text, CSS or style attributes, links, scripts, animation, external resources, defs/use, filters, gradients, masks, or clip paths.\n- Return exactly one complete SVG document, with no Markdown or explanation.\n\nThe result is automatically rejected unless it preserves the image within a strict two-pixel fidelity tolerance and materially reduces geometric complexity.\n\n<BASELINE_SVG sha256=\"ca0e6e1fb6cffa24bf51c496f47249b1d60781ebe3fbda6e2f892a1110006aa7\">\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40mm\" height=\"40mm\" viewBox=\"0 0 512 512\" preserveAspectRatio=\"none\">\n  <path d=\"M0 0 C7.08 5.63 12.93 12.32 19 19 C20.4 20.49 20.4 20.49 21.83 22.02 C27.73 28.33 33.17 34.87 38.45 41.71 C40.57 44.45 42.74 47.14 44.94 49.81 C64.76 74.58 79.6 102.49 91 132 C94.57 130.21 96.78 128.58 99.75 126 C139.64 93 193.73 84.43 244 86 C244.91 86.02 245.82 86.05 246.76 86.07 C249.78 86.16 252.8 86.26 255.81 86.38 C256.76 86.41 257.71 86.44 258.69 86.47 C263.13 86.66 265.97 86.98 270 89 C269.36 89.42 268.71 89.84 268.05 90.28 C240.13 108.63 212.83 128.43 191 154 C190.03 155.1 189.07 156.2 188.07 157.34 C182 164.31 176.27 171.4 171 179 C172.05 179.22 173.11 179.44 174.19 179.66 C211.64 187.9 240.77 209.98 267 237 C267 237.33 267 237.66 267 238 C203.39 239.57 139.46 226.56 86 191 C85.43 191.53 84.86 192.07 84.27 192.62 C60.71 214.27 32.99 230.1 3 241 C2.2 241.3 1.4 241.59 0.58 241.9 C-36.15 255.42 -77.86 262.75 -117 262 C-112.51 258.4 -107.98 254.85 -103.44 251.31 C-102.64 250.69 -101.84 250.07 -101.01 249.43 C-96.56 245.97 -92.09 242.55 -87.56 239.19 C-79.13 232.89 -71.09 226.2 -63.32 219.1 C-61.29 217.27 -59.22 215.51 -57.12 213.75 C-49.47 207.08 -42.55 199.5 -37 191 C-57.24 189.04 -77.3 188.76 -97.62 188.88 C-100.69 188.89 -103.75 188.89 -106.81 188.9 C-114.21 188.92 -121.6 188.96 -129 189 C-125.14 184.99 -120.79 181.97 -116.19 178.88 C-115.34 178.3 -114.48 177.72 -113.61 177.13 C-111.88 175.96 -110.15 174.8 -108.41 173.63 C-106.33 172.22 -104.26 170.79 -102.19 169.35 C-62 141.67 -17.24 126.86 31.61 135.34 C32.73 135.56 33.85 135.78 35 136 C34.11 134.82 33.22 133.63 32.3 132.41 C31.76 131.68 31.21 130.94 30.64 130.19 C29.26 128.35 27.89 126.52 26.51 124.68 C12.8 106.01 4.35 85.69 0 63 C-0.23 61.85 -0.45 60.7 -0.68 59.51 C-3.47 41.92 -5.69 17.08 0 0 Z M41 148 C40.67 149.65 40.34 151.3 40 153 C42.7 155.3 42.7 155.3 45.09 154.65 C48.37 153.92 51.36 152.81 54.5 151.62 C78.13 143.06 101.59 143.77 126 148 C128.66 148.35 131.33 148.69 134 149 C134.99 148.01 135.98 147.02 137 146 C136.5 144.02 136.5 144.02 136 142 C104.25 133.3 71 133 41 148 Z \" transform=\"translate(181,91)\" fill=\"#000000\"/>\n</svg>\n</BASELINE_SVG>",
+        "sha256": "15ebe3aafaeff5a433fa5f65295080441e4515462f7516b914cecbc4903315d2"
+      },
+      "usage": {
+        "input_tokens": 2298,
+        "cached_input_tokens": 0,
+        "output_tokens": 9634,
+        "reasoning_tokens": 8780,
+        "total_tokens": 11932
+      },
+      "cost": {
+        "usd": 0.150255,
+        "estimated": true,
+        "pricing_source_url": "https://developers.openai.com/api/docs/guides/batch"
+      },
+      "artifacts": {
+        "provider_response": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-procedural-003-flying-bird/provider-response.json",
+          "sha256": "86ff7b016c47aa5f796ff5bcc16ca74a3ce1adb6fc7c7fc07325c37e3e785fd8",
+          "media_type": "application/json",
+          "bytes": 57521
+        },
+        "batch_request": {
+          "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/batch-request.jsonl",
+          "sha256": "a01e78ae22ace7c2bd3a5e94688c25496112c35b3bae4d56659aee6a3af4e53c",
+          "media_type": "application/jsonl",
+          "bytes": 769848
+        },
+        "raw_model_output": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-procedural-003-flying-bird/model-output.txt",
+          "sha256": "58886333f7d6f8a965ea917c5817c885b556aadf49300ee0472599fab8e84fde",
+          "media_type": "text/plain",
+          "bytes": 1593
+        },
+        "validation_report": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-procedural-003-flying-bird/validation.json",
+          "sha256": "2137536fb38de5b520544a52dc93fbda128e3123884d3303dd48c60c12c6c4bc",
+          "media_type": "application/json",
+          "bytes": 2511
+        },
+        "source_trace": {
+          "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/procedural-003-flying-bird/classical.svg",
+          "sha256": "ca0e6e1fb6cffa24bf51c496f47249b1d60781ebe3fbda6e2f892a1110006aa7",
+          "media_type": "image/svg+xml",
+          "bytes": 2200
+        },
+        "candidate_svg": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-procedural-003-flying-bird/candidate.svg",
+          "sha256": "58886333f7d6f8a965ea917c5817c885b556aadf49300ee0472599fab8e84fde",
+          "media_type": "image/svg+xml",
+          "bytes": 1593
+        },
+        "rendered_png": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-procedural-003-flying-bird/render.png",
+          "sha256": "cdf6b6c0b2fc52adb971bd680b15f6e8fba3bb61a71c3b84b18f776b1e478f13",
+          "media_type": "image/png",
+          "bytes": 8285
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "metric_version": "1.0.0",
+          "iou": 0.979200790369966,
+          "precision": 0.9817788436473593,
+          "recall": 0.9973254951805953,
+          "disagreement": 0.0030517578125,
+          "grayscale_mae": 0.012986545936729219,
+          "false_positive_pixels": 699,
+          "false_negative_pixels": 101,
+          "reference_foreground_pixels": 37764,
+          "candidate_foreground_pixels": 38362,
+          "tolerant_precision_2px": 1,
+          "tolerant_recall_2px": 1,
+          "tolerant_f1_2px": 1,
+          "input_iou": 0.979200790369966,
+          "input_precision": 0.9817788436473593,
+          "input_recall": 0.9973254951805953,
+          "input_tolerant_precision_2px": 1,
+          "input_tolerant_recall_2px": 1,
+          "input_tolerant_f1_2px": 1,
+          "candidate_bytes": 1593,
+          "element_count": 1,
+          "path_count": 1,
+          "group_count": 0,
+          "basic_shape_count": 0,
+          "command_count": 44,
+          "numeric_token_count": 208,
+          "maximum_nesting": 1,
+          "active_stroke_count": 0,
+          "non_black_paint_count": 0,
+          "baseline_iou": 0.9789219253560661,
+          "delta_iou_vs_classical": 0.00027886501389984275,
+          "baseline_input_tolerant_f1_2px": 1,
+          "byte_ratio_vs_classical": 0.7240909090909091,
+          "command_ratio_vs_classical": 0.7857142857142857,
+          "numeric_token_ratio_vs_classical": 0.6582278481012658
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "latency_ms": 384000,
+    "usage": {
+      "input_tokens": 2298,
+      "cached_input_tokens": 0,
+      "output_tokens": 9634,
+      "reasoning_tokens": 8780,
+      "total_tokens": 11932
+    },
+    "cost": {
+      "usd": 0.150255,
+      "estimated": true,
+      "pricing_source_url": "https://developers.openai.com/api/docs/guides/batch"
+    },
+    "metrics": {
+      "metric_version": "1.0.0",
+      "iou": 0.979200790369966,
+      "precision": 0.9817788436473593,
+      "recall": 0.9973254951805953,
+      "disagreement": 0.0030517578125,
+      "grayscale_mae": 0.012986545936729219,
+      "false_positive_pixels": 699,
+      "false_negative_pixels": 101,
+      "reference_foreground_pixels": 37764,
+      "candidate_foreground_pixels": 38362,
+      "tolerant_precision_2px": 1,
+      "tolerant_recall_2px": 1,
+      "tolerant_f1_2px": 1,
+      "input_iou": 0.979200790369966,
+      "input_precision": 0.9817788436473593,
+      "input_recall": 0.9973254951805953,
+      "input_tolerant_precision_2px": 1,
+      "input_tolerant_recall_2px": 1,
+      "input_tolerant_f1_2px": 1,
+      "candidate_bytes": 1593,
+      "element_count": 1,
+      "path_count": 1,
+      "group_count": 0,
+      "basic_shape_count": 0,
+      "command_count": 44,
+      "numeric_token_count": 208,
+      "maximum_nesting": 1,
+      "active_stroke_count": 0,
+      "non_black_paint_count": 0,
+      "baseline_iou": 0.9789219253560661,
+      "delta_iou_vs_classical": 0.00027886501389984275,
+      "baseline_input_tolerant_f1_2px": 1,
+      "byte_ratio_vs_classical": 0.7240909090909091,
+      "command_ratio_vs_classical": 0.7857142857142857,
+      "numeric_token_ratio_vs_classical": 0.6582278481012658
+    },
+    "ratings": {
+      "fidelity": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No blind human rating has been assigned."
+      },
+      "manufacturability": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No blind human rating has been assigned."
+      }
+    }
+  },
+  "outcome": {
+    "status": "accepted",
+    "accepted_attempt": 0,
+    "final_svg": {
+      "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-hybrid-refactor-v1.0.1-20260723t012315852z-procedural-003-flying-bird/candidate.svg",
+      "sha256": "58886333f7d6f8a965ea917c5817c885b556aadf49300ee0472599fab8e84fde",
+      "media_type": "image/svg+xml",
+      "bytes": 1593
+    },
+    "notes": "The model refactor passed every hard SVG safety, two-pixel fidelity, oracle, and complexity gate."
+  },
+  "output_training_rights": {
+    "training_allowed": false,
+    "source": {
+      "cleared": false,
+      "basis": "unknown",
+      "evidence_url": null,
+      "notes": "Corpus source is evaluation-only: Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+    },
+    "provider_output": {
+      "cleared": false,
+      "basis": "provider_terms",
+      "terms_url": "https://openai.com/policies/services-agreement/",
+      "terms_version": "OpenAI Services Agreement effective 2026-01-01",
+      "terms_effective_at": "2026-01-01",
+      "notes": "Retained for evaluation only. The Services Agreement assigns output ownership to the customer but restricts using output to develop competing AI models outside its stated exception."
+    },
+    "reviewed_at": "2026-07-23",
+    "notes": "Source and provider-output rights must both be cleared before training; these OpenAI outputs are not marked as distillation-ready."
+  }
+}

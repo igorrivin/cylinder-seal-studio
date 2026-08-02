@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-020-gazelle-chase-seam-title procedural-020-gazelle-chase-seam-description">
+  <title id="procedural-020-gazelle-chase-seam-title">Gazelle chase cylinder frieze</title>
+  <desc id="procedural-020-gazelle-chase-seam-description">A repeated running gazelle motif forms a chase scene, with partial animals at both seams.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M -20 406 H 532 M -20 106 H 532"/>
+  <g transform="translate(-82 0)">
+    <path d="M 43 281 C 73 230 132 231 154 277 C 164 298 154 326 129 339 C 94 358 55 334 43 281 Z"/>
+    <path d="M 144 270 C 160 223 190 209 212 229 C 223 240 218 259 201 265 L 160 285"/>
+    <path d="M 197 229 Q 206 197 192 173 M 204 231 Q 222 202 217 177"/>
+    <path d="M 65 329 L 31 389 M 91 342 L 125 394 M 127 335 L 167 384 M 148 314 L 196 357"/>
+    <path d="M 45 277 Q 17 253 5 272"/>
+  </g>
+<g transform="translate(92 0)">
+    <path d="M 43 281 C 73 230 132 231 154 277 C 164 298 154 326 129 339 C 94 358 55 334 43 281 Z"/>
+    <path d="M 144 270 C 160 223 190 209 212 229 C 223 240 218 259 201 265 L 160 285"/>
+    <path d="M 197 229 Q 206 197 192 173 M 204 231 Q 222 202 217 177"/>
+    <path d="M 65 329 L 31 389 M 91 342 L 125 394 M 127 335 L 167 384 M 148 314 L 196 357"/>
+    <path d="M 45 277 Q 17 253 5 272"/>
+  </g>
+<g transform="translate(266 0)">
+    <path d="M 43 281 C 73 230 132 231 154 277 C 164 298 154 326 129 339 C 94 358 55 334 43 281 Z"/>
+    <path d="M 144 270 C 160 223 190 209 212 229 C 223 240 218 259 201 265 L 160 285"/>
+    <path d="M 197 229 Q 206 197 192 173 M 204 231 Q 222 202 217 177"/>
+    <path d="M 65 329 L 31 389 M 91 342 L 125 394 M 127 335 L 167 384 M 148 314 L 196 357"/>
+    <path d="M 45 277 Q 17 253 5 272"/>
+  </g>
+<g transform="translate(440 0)">
+    <path d="M 43 281 C 73 230 132 231 154 277 C 164 298 154 326 129 339 C 94 358 55 334 43 281 Z"/>
+    <path d="M 144 270 C 160 223 190 209 212 229 C 223 240 218 259 201 265 L 160 285"/>
+    <path d="M 197 229 Q 206 197 192 173 M 204 231 Q 222 202 217 177"/>
+    <path d="M 65 329 L 31 389 M 91 342 L 125 394 M 127 335 L 167 384 M 148 314 L 196 357"/>
+    <path d="M 45 277 Q 17 253 5 272"/>
+  </g>
+</g>
+</svg>

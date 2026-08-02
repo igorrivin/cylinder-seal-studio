@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-019-braid-seam-title procedural-019-braid-seam-description">
+  <title id="procedural-019-braid-seam-title">Seam-crossing braided ribbon</title>
+  <desc id="procedural-019-braid-seam-description">Three interlaced diagonal ribbons form a wide braid that exits and re-enters at both edges.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M -74 331 C -13 331 11 181 72 181 C 133 181 157 331 218 331 C 279 331 303 181 364 181 C 425 181 449 331 586 331"/>
+  <path d="M -74 181 C -13 181 11 331 72 331 C 133 331 157 181 218 181 C 279 181 303 331 364 331 C 425 331 449 181 586 181"/>
+  <path d="M -36 256 C 21 126 123 126 181 256 C 239 386 341 386 399 256 C 457 126 521 147 555 212"/>
+</g>
+<g fill="#fff" stroke="none">
+  <circle cx="72" cy="181" r="10"/><circle cx="218" cy="331" r="10"/><circle cx="364" cy="181" r="10"/>
+</g>
+</svg>

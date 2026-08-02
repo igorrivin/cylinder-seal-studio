@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-003-flying-bird-title procedural-003-flying-bird-description">
+  <title id="procedural-003-flying-bird-title">Bird in flight</title>
+  <desc id="procedural-003-flying-bird-description">A sweeping filled bird silhouette with a small incised wing detail.</desc>
+  
+  <path d="M 52 280 C 123 226 167 217 218 228 C 185 191 174 148 181 91 C 232 142 258 184 272 225 C 311 190 362 172 452 179 C 404 208 376 237 351 270 C 382 276 415 293 448 329 C 369 329 311 312 267 281 C 224 323 155 350 64 353 C 104 324 129 304 145 282 C 117 278 86 278 52 280 Z" fill="#111"/>
+<path d="M 225 242 C 252 229 281 228 314 236" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+</svg>

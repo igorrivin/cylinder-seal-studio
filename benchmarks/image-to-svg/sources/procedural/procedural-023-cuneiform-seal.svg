@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-023-cuneiform-seal-title procedural-023-cuneiform-seal-description">
+  <title id="procedural-023-cuneiform-seal-title">Circular seal inscription</title>
+  <desc id="procedural-023-cuneiform-seal-description">Radial pseudo-cuneiform wedges surround a central eight-pointed star inside a double seal border.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="8"><circle cx="256" cy="256" r="211"/><circle cx="256" cy="256" r="184"/><circle cx="256" cy="256" r="76"/></g>
+<polygon points="256,199 264.80171894439707,234.7507707522404 296.3050865276332,215.6949134723668 277.2492292477596,247.19828105560293 313,256 277.2492292477596,264.80171894439707 296.3050865276332,296.3050865276332 264.80171894439707,277.2492292477596 256,313 247.19828105560293,277.2492292477596 215.6949134723668,296.3050865276332 234.7507707522404,264.80171894439707 199,256 234.7507707522404,247.19828105560293 215.69491347236678,215.6949134723668 247.19828105560293,234.7507707522404" fill="#111"/>
+<g><path d="M 387.00 256.00 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(35 387.00 256.00)"/>
+<path d="M 380.59 296.48 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(24 380.59 296.48)"/>
+<path d="M 361.98 333.00 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(42 361.98 333.00)"/>
+<path d="M 333.00 361.98 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(89 333.00 361.98)"/>
+<path d="M 296.48 380.59 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(78 296.48 380.59)"/>
+<path d="M 256.00 387.00 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(96 256.00 387.00)"/>
+<path d="M 215.52 380.59 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(143 215.52 380.59)"/>
+<path d="M 179.00 361.98 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(132 179.00 361.98)"/>
+<path d="M 150.02 333.00 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(150 150.02 333.00)"/>
+<path d="M 131.41 296.48 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(197 131.41 296.48)"/>
+<path d="M 125.00 256.00 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(186 125.00 256.00)"/>
+<path d="M 131.41 215.52 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(204 131.41 215.52)"/>
+<path d="M 150.02 179.00 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(251 150.02 179.00)"/>
+<path d="M 179.00 150.02 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(240 179.00 150.02)"/>
+<path d="M 215.52 131.41 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(258 215.52 131.41)"/>
+<path d="M 256.00 125.00 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(305 256.00 125.00)"/>
+<path d="M 296.48 131.41 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(294 296.48 131.41)"/>
+<path d="M 333.00 150.02 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(312 333.00 150.02)"/>
+<path d="M 361.98 179.00 l 25.2 -6.3 l -18 14.4 z" fill="#111" transform="rotate(359 361.98 179.00)"/>
+<path d="M 380.59 215.52 l 20.16 -5.04 l -14.399999999999999 11.52 z" fill="#111" transform="rotate(348 380.59 215.52)"/></g>
+</svg>

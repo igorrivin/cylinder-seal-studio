@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold",
+  "recorded_at": "2026-07-22T22:15:05.888Z",
+  "immutable": true,
+  "benchmark": {
+    "corpus_id": "cylinder-seal-image-to-svg",
+    "corpus_version": "1.0.0",
+    "manifest_sha256": "08fa9c41caf5ca32de49fa9aa534038bc388a360887b103b646754c522fcad6b",
+    "case_id": "existing-easter-bunny-gold",
+    "split": "development",
+    "input": {
+      "path": "benchmarks/image-to-svg/inputs/existing-easter-bunny-gold.png",
+      "sha256": "29cc99ec305b9671a8f82c685132a511684e3f2a318131d064f7d2dc29ca98aa",
+      "media_type": "image/png",
+      "bytes": 105659
+    },
+    "reference": {
+      "path": "benchmarks/svg-gold/gold-standard.svg",
+      "sha256": "c1ff4a28d648e8e233202e58b5a457b9eaa7c49d3d134a07dc58040426bb6491",
+      "media_type": "image/svg+xml",
+      "bytes": 15643
+    }
+  },
+  "pipeline": {
+    "name": "gemini-3.6-flash-one-shot",
+    "version": "1.0.0",
+    "git_commit": "c361e39d60071d388c4124a71a582c57880f7c7d",
+    "worktree_dirty": true,
+    "renderer": {
+      "name": "@resvg/resvg-js",
+      "version": "2.6.2",
+      "settings": {
+        "width": 512,
+        "height": 512,
+        "background": "#ffffff",
+        "shape_rendering": 2,
+        "reference_threshold": 170,
+        "candidate_threshold": 128
+      }
+    }
+  },
+  "attempts": [
+    {
+      "index": 0,
+      "kind": "generation",
+      "status": "completed",
+      "started_at": "2026-07-22T22:13:13.304Z",
+      "finished_at": "2026-07-22T22:15:05.888Z",
+      "latency_ms": 112584,
+      "model": {
+        "provider": "Google",
+        "id": "gemini-3.6-flash",
+        "version": "gemini-3.6-flash",
+        "settings": {
+          "api": "interactions",
+          "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+          "store": false,
+          "max_output_tokens": 32768,
+          "seed": 0,
+          "thinking_level": "medium",
+          "thinking_summaries": "none"
+        }
+      },
+      "prompt": {
+        "template_id": "semantic-image-to-svg-one-shot",
+        "template_version": "1.0.0",
+        "system": "You are an expert vector illustrator reconstructing fabrication-ready monochrome artwork from a raster reference.",
+        "user": "Recreate the attached monochrome line-art image as a clean, editable, self-contained SVG. Infer the intended vector design rather than tracing antialiased pixels or noise. Preserve every distinct object, its placement, proportions, overlaps, repeated motifs, line-weight hierarchy, silhouettes, negative spaces, and any artwork crossing an image edge. Use viewBox=\"0 0 512 512\", explicit black fills or strokes, and only basic SVG geometry such as paths, groups, circles, ellipses, polygons, polylines, lines, and rectangles. Prefer smooth, economical geometry, but do not omit meaningful small details. Do not embed the raster, use text, scripts, external resources, CSS, filters, gradients, masks, clip paths, or reusable external definitions. Return only one complete <svg xmlns=\"http://www.w3.org/2000/svg\">...</svg> document, with no Markdown or explanation.",
+        "sha256": "78be5e78a6ab25a674b5b2cbdb07c01bdf813421008968f28575395691bf7a25"
+      },
+      "usage": {
+        "input_tokens": 1302,
+        "cached_input_tokens": 0,
+        "output_tokens": 31233,
+        "reasoning_tokens": 8467,
+        "total_tokens": 32535
+      },
+      "cost": {
+        "usd": 0.2362005,
+        "estimated": true,
+        "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "artifacts": {
+        "provider_response": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold/provider-response.json",
+          "sha256": "4384910d50ae22358ac3e71b1948732d62f024fe8e8a0093e8253ab0bbc84360",
+          "media_type": "application/json",
+          "bytes": 68182
+        },
+        "raw_model_output": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold/model-output.txt",
+          "sha256": "eedbe238f7d3a8dc69b561cf0ad0677ea85680d0adaf0db1e08a4c704ac55a85",
+          "media_type": "text/plain",
+          "bytes": 39128
+        },
+        "validation_report": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold/validation.json",
+          "sha256": "96583280c7c5b84db8a47063edfd39ace2f11344048d7f520840ba6aebe4e636",
+          "media_type": "application/json",
+          "bytes": 1375
+        },
+        "candidate_svg": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold/candidate.svg",
+          "sha256": "db215b9f1eb789c20fc44c158777eadb988a2a3b6576435ee558c98f09e35003",
+          "media_type": "image/svg+xml",
+          "bytes": 39117
+        },
+        "rendered_png": {
+          "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold/render.png",
+          "sha256": "8606da681e944b9077303d8d5bc8f64c5708905bd4fea183255526d0e827e61d",
+          "media_type": "image/png",
+          "bytes": 86223
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [
+          {
+            "code": "extraneous_model_text",
+            "severity": "warning",
+            "message": "Text outside the SVG document was removed."
+          }
+        ],
+        "metrics": {
+          "metric_version": "1.0.0",
+          "iou": 0.1993592729017599,
+          "precision": 0.29745835877782223,
+          "recall": 0.3767536139115592,
+          "disagreement": 0.21641159057617188,
+          "grayscale_mae": 0.19996987137140515,
+          "false_positive_pixels": 33363,
+          "false_negative_pixels": 23368,
+          "reference_foreground_pixels": 37494,
+          "candidate_foreground_pixels": 47489,
+          "tolerant_precision_2px": 0.664659184232138,
+          "tolerant_recall_2px": 0.654771430095482,
+          "tolerant_f1_2px": 0.6596782579697087,
+          "candidate_bytes": 39117,
+          "element_count": 453,
+          "path_count": 285,
+          "group_count": 47,
+          "basic_shape_count": 121,
+          "baseline_iou": 0.7603098227907522,
+          "delta_iou_vs_classical": -0.5609505498889923
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "latency_ms": 112584,
+    "usage": {
+      "input_tokens": 1302,
+      "cached_input_tokens": 0,
+      "output_tokens": 31233,
+      "reasoning_tokens": 8467,
+      "total_tokens": 32535
+    },
+    "cost": {
+      "usd": 0.2362005,
+      "estimated": true,
+      "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "metrics": {
+      "metric_version": "1.0.0",
+      "iou": 0.1993592729017599,
+      "precision": 0.29745835877782223,
+      "recall": 0.3767536139115592,
+      "disagreement": 0.21641159057617188,
+      "grayscale_mae": 0.19996987137140515,
+      "false_positive_pixels": 33363,
+      "false_negative_pixels": 23368,
+      "reference_foreground_pixels": 37494,
+      "candidate_foreground_pixels": 47489,
+      "tolerant_precision_2px": 0.664659184232138,
+      "tolerant_recall_2px": 0.654771430095482,
+      "tolerant_f1_2px": 0.6596782579697087,
+      "candidate_bytes": 39117,
+      "element_count": 453,
+      "path_count": 285,
+      "group_count": 47,
+      "basic_shape_count": 121,
+      "baseline_iou": 0.7603098227907522,
+      "delta_iou_vs_classical": -0.5609505498889923
+    },
+    "ratings": {
+      "fidelity": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No human rating has been assigned."
+      },
+      "manufacturability": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No human rating has been assigned."
+      }
+    }
+  },
+  "outcome": {
+    "status": "accepted",
+    "accepted_attempt": 0,
+    "final_svg": {
+      "path": "benchmarks/image-to-svg/runs/gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold/candidate.svg",
+      "sha256": "db215b9f1eb789c20fc44c158777eadb988a2a3b6576435ee558c98f09e35003",
+      "media_type": "image/svg+xml",
+      "bytes": 39117
+    },
+    "notes": "Accepted automatically after SVG safety checks, rendering, and metric computation; human quality rating remains pending."
+  },
+  "output_training_rights": {
+    "training_allowed": false,
+    "source": {
+      "cleared": false,
+      "basis": "unknown",
+      "evidence_url": null,
+      "notes": "Corpus source is evaluation-only: Evaluation-only unless provider-output training rights are separately cleared."
+    },
+    "provider_output": {
+      "cleared": false,
+      "basis": "provider_terms",
+      "terms_url": "https://ai.google.dev/gemini-api/terms",
+      "terms_version": "Gemini API Additional Terms effective 2026-03-23; updated 2026-04-28",
+      "terms_effective_at": "2026-03-23",
+      "notes": "Not cleared for distillation: the provider terms restrict using the service to develop models that compete with Gemini. Retained for evaluation only."
+    },
+    "reviewed_at": "2026-07-22",
+    "notes": "Both source and provider-output rights must be cleared before training; provider-output rights are not cleared for this run."
+  }
+}

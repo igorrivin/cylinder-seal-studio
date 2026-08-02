@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "cylinder-seal-image-to-svg",
+  "corpus_version": "1.0.0",
+  "frozen_at": "2026-07-22T00:00:00Z",
+  "policy": {
+    "strategy": "frozen",
+    "frozen_at": "2026-07-22T00:00:00Z",
+    "test_is_sealed": true,
+    "counts": {
+      "development": 24,
+      "validation": 8,
+      "test": 8
+    }
+  },
+  "development": [
+    "existing-easter-bunny-gold",
+    "external-lucide-castle",
+    "external-lucide-circuit-board",
+    "external-lucide-flower-2",
+    "external-lucide-origami",
+    "external-openclipart-can-lineart",
+    "external-openclipart-decorative-line-frame",
+    "external-openclipart-flower-lineart",
+    "external-openclipart-rabbit-line-art",
+    "external-openclipart-tree-lineart",
+    "procedural-001-crescent-star",
+    "procedural-002-amphora",
+    "procedural-003-flying-bird",
+    "procedural-004-mountain-sun",
+    "procedural-005-fish",
+    "procedural-006-ceremonial-key",
+    "procedural-007-leaf-sprig",
+    "procedural-009-tea-table",
+    "procedural-010-river-boat",
+    "procedural-012-garden-tools",
+    "procedural-013-fox-and-moon",
+    "procedural-015-meander-seam",
+    "procedural-020-gazelle-chase-seam",
+    "procedural-022-cuneiform-registers"
+  ],
+  "validation": [
+    "external-open-doodles-ballet",
+    "external-open-doodles-coffee",
+    "external-open-doodles-ice-cream",
+    "external-open-doodles-selfie",
+    "procedural-011-night-camp",
+    "procedural-016-wave-seam",
+    "procedural-018-palmette-band",
+    "procedural-023-cuneiform-seal"
+  ],
+  "test": [
+    "external-openclipart-bicycle",
+    "external-openclipart-butterfly-line-art",
+    "external-openclipart-geometric-lines",
+    "procedural-008-scarab",
+    "procedural-014-workshop-tools",
+    "procedural-017-rosette-beads",
+    "procedural-019-braid-seam",
+    "procedural-021-procession-seam"
+  ]
+}

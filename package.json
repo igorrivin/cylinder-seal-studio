@@ -24,7 +24,12 @@
     "test:watch": "vitest",
     "audit": "npm audit --omit=dev --audit-level=high",
     "benchmark:svg": "SVG_BENCHMARK_WRITE=1 vitest run benchmarks/svg-gold/gold-standard.test.ts --testTimeout=30000",
-    "check": "npm run lint && npm test && npm run build",
+    "benchmark:corpus:build": "node benchmarks/image-to-svg/generate-procedural.mjs && node benchmarks/image-to-svg/build-corpus.mjs",
+    "benchmark:corpus:check": "node benchmarks/image-to-svg/generate-procedural.mjs --check && node benchmarks/image-to-svg/build-corpus.mjs --check",
+    "benchmark:corpus": "SVG_CORPUS_WRITE=1 vitest run benchmarks/image-to-svg/classical-baseline.test.ts --testTimeout=60000",
+    "benchmark:vlm": "node benchmarks/image-to-svg/evaluate-gemini.mjs",
+    "benchmark:openai": "node benchmarks/image-to-svg/evaluate-openai-batch.mjs",
+    "check": "npm run lint && npm test && npm run benchmark:corpus:check && npm run build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -52,6 +57,8 @@
     "@types/react-dom": "^19.2.3",
     "@types/three": "^0.185.1",
     "@vitejs/plugin-react": "^5.2.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "autoprefixer": "^10.5.4",
     "eslint": "^9.39.5",
     "eslint-plugin-react-hooks": "^7.1.1",

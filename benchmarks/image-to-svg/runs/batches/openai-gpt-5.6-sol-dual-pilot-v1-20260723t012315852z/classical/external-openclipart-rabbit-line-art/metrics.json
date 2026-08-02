@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "external-openclipart-rabbit-line-art",
+  "generated_at": "2026-07-23T01:23:15.852Z",
+  "source_input": {
+    "path": "benchmarks/image-to-svg/inputs/external-openclipart-rabbit-line-art.png",
+    "sha256": "6e7c367ad769f9724cffa04300519bb84f23d6796f393328505353e523ed8c79",
+    "media_type": "image/png",
+    "bytes": 41868
+  },
+  "trace": {
+    "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/external-openclipart-rabbit-line-art/classical.svg",
+    "sha256": "64aa000554ff575ee8f27b5df5b01b62c153ac0c084411f43e6685c99ad3e198",
+    "media_type": "image/svg+xml",
+    "bytes": 14255
+  },
+  "render": {
+    "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/external-openclipart-rabbit-line-art/render.png",
+    "sha256": "e4425ca4121e8e82e1aa5060fbf895817454407341617bb331d4a037846ae86b",
+    "media_type": "image/png",
+    "bytes": 26125
+  },
+  "generator": {
+    "adapter": "production-equivalent BinaryImageConverter + formatFlatSvg",
+    "vectortracer_version": "0.1.2",
+    "trace_settings": {
+      "mode": "spline",
+      "filterSpeckle": 16,
+      "segmentLength": 5,
+      "cornerThresholdDegrees": 45,
+      "spliceThresholdDegrees": 45,
+      "maxIterations": 10,
+      "pathPrecision": 2
+    },
+    "preprocessing_threshold": 170,
+    "physical_dimensions_mm": {
+      "width": 40,
+      "height": 40
+    },
+    "git_commit": "c361e39d60071d388c4124a71a582c57880f7c7d",
+    "worktree_dirty": true,
+    "runner_sha256": "2d2697ae92f386d13cfd9cdef8a0638b72be67803d3b2cfa3892447a6b71d653"
+  },
+  "renderer": {
+    "name": "@resvg/resvg-js",
+    "version": "2.6.2",
+    "width": 512,
+    "height": 512,
+    "background": "#ffffff",
+    "shape_rendering": 2
+  },
+  "reference_metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.8010004880429478,
+    "precision": 0.8452971093800297,
+    "recall": 0.9385946100507542,
+    "disagreement": 0.01244354248046875,
+    "grayscale_mae": 0.01582915362189621,
+    "false_positive_pixels": 2403,
+    "false_negative_pixels": 859,
+    "reference_foreground_pixels": 13989,
+    "candidate_foreground_pixels": 15533,
+    "tolerant_precision_2px": 0.997489216506792,
+    "tolerant_recall_2px": 0.9994281220959326,
+    "tolerant_f1_2px": 0.9984577280118029
+  },
+  "input_metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.824295010845987,
+    "precision": 0.9051696388334514,
+    "recall": 0.9022073921971252,
+    "disagreement": 0.011432647705078125,
+    "grayscale_mae": 0.02019253899069033,
+    "false_positive_pixels": 1473,
+    "false_negative_pixels": 1524,
+    "reference_foreground_pixels": 15584,
+    "candidate_foreground_pixels": 15533,
+    "tolerant_precision_2px": 0.9987767977853602,
+    "tolerant_recall_2px": 0.9994866529774127,
+    "tolerant_f1_2px": 0.9991315992983132
+  },
+  "geometry": {
+    "candidate_bytes": 14255,
+    "element_count": 7,
+    "path_count": 7,
+    "group_count": 0,
+    "basic_shape_count": 0,
+    "command_count": 377,
+    "numeric_token_count": 2122,
+    "maximum_nesting": 1
+  }
+}

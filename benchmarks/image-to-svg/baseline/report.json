@@ -1,0 +1,499 @@
+{
+  "schemaVersion": "1.0.0",
+  "corpus": {
+    "id": "cylinder-seal-image-to-svg",
+    "version": "1.0.0",
+    "title": "Cylinder Seal Studio image-to-SVG evaluation corpus",
+    "description": "Rights-tracked vector-oracle and expert-reconstruction cases for evaluating semantic raster-to-SVG systems.",
+    "created_at": "2026-07-22T00:00:00Z",
+    "case_count": 40
+  },
+  "preprocessingThreshold": 170,
+  "traceSettings": {
+    "mode": "spline",
+    "filterSpeckle": 16,
+    "segmentLength": 5,
+    "cornerThresholdDegrees": 45,
+    "spliceThresholdDegrees": 45,
+    "maxIterations": 10,
+    "pathPrecision": 2
+  },
+  "results": [
+    {
+      "id": "existing-easter-bunny-gold",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 150328,
+      "iou": 0.7603098227907522,
+      "precision": 0.8637212030716723,
+      "recall": 0.8639515655838268,
+      "disagreement": 0.0389556884765625
+    },
+    {
+      "id": "external-lucide-castle",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 6026,
+      "iou": 0.9720890434215709,
+      "precision": 0.992277724632256,
+      "recall": 0.9794991104420419,
+      "disagreement": 0.007839202880859375
+    },
+    {
+      "id": "external-lucide-circuit-board",
+      "split": "development",
+      "profile": "speckled",
+      "traceBytes": 9252,
+      "iou": 0.9769326136776326,
+      "precision": 0.9915098056660608,
+      "recall": 0.9851739597145924,
+      "disagreement": 0.00702667236328125
+    },
+    {
+      "id": "external-lucide-flower-2",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 4124,
+      "iou": 0.9838117489986649,
+      "precision": 0.9905065949760564,
+      "recall": 0.9931766489764974,
+      "disagreement": 0.0044403076171875
+    },
+    {
+      "id": "external-lucide-origami",
+      "split": "development",
+      "profile": "pixelated",
+      "traceBytes": 19429,
+      "iou": 0.9588463134596763,
+      "precision": 0.9733065603235228,
+      "recall": 0.9847419341090227,
+      "disagreement": 0.011348724365234375
+    },
+    {
+      "id": "external-open-doodles-ballet",
+      "split": "validation",
+      "profile": "speckled",
+      "traceBytes": 21979,
+      "iou": 0.8528186777732152,
+      "precision": 0.9199519078655951,
+      "recall": 0.9211760233177038,
+      "disagreement": 0.009571075439453125
+    },
+    {
+      "id": "external-open-doodles-coffee",
+      "split": "validation",
+      "profile": "clean",
+      "traceBytes": 20302,
+      "iou": 0.9366117036762566,
+      "precision": 0.9573898222546872,
+      "recall": 0.9773530711444984,
+      "disagreement": 0.009136199951171875
+    },
+    {
+      "id": "external-open-doodles-ice-cream",
+      "split": "validation",
+      "profile": "clean",
+      "traceBytes": 11996,
+      "iou": 0.9270208511853756,
+      "precision": 0.9612024285502739,
+      "recall": 0.9630563798219585,
+      "disagreement": 0.005847930908203125
+    },
+    {
+      "id": "external-open-doodles-selfie",
+      "split": "validation",
+      "profile": "clean",
+      "traceBytes": 19456,
+      "iou": 0.9039203958457941,
+      "precision": 0.9528831823913791,
+      "recall": 0.9462120780920941,
+      "disagreement": 0.006740570068359375
+    },
+    {
+      "id": "external-openclipart-bicycle",
+      "split": "test",
+      "profile": "softened",
+      "traceBytes": 8831,
+      "iou": 0.9185552944743425,
+      "precision": 0.9283005860048259,
+      "recall": 0.9887003345027331,
+      "disagreement": 0.008197784423828125
+    },
+    {
+      "id": "external-openclipart-butterfly-line-art",
+      "split": "test",
+      "profile": "pixelated",
+      "traceBytes": 28147,
+      "iou": 0.5618360230313844,
+      "precision": 0.642433234421365,
+      "recall": 0.8174631268436579,
+      "disagreement": 0.020610809326171875
+    },
+    {
+      "id": "external-openclipart-can-lineart",
+      "split": "development",
+      "profile": "softened",
+      "traceBytes": 8965,
+      "iou": 0.9319879005577086,
+      "precision": 0.9637358877865208,
+      "recall": 0.9658601097178683,
+      "disagreement": 0.01097869873046875
+    },
+    {
+      "id": "external-openclipart-decorative-line-frame",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 2211,
+      "iou": 0.025047923322683706,
+      "precision": 0.8711111111111111,
+      "recall": 0.025141097998973832,
+      "disagreement": 0.029102325439453125
+    },
+    {
+      "id": "external-openclipart-flower-lineart",
+      "split": "development",
+      "profile": "speckled",
+      "traceBytes": 35813,
+      "iou": 0.917554291623578,
+      "precision": 0.9683765347885402,
+      "recall": 0.9458969643666214,
+      "disagreement": 0.012165069580078125
+    },
+    {
+      "id": "external-openclipart-geometric-lines",
+      "split": "test",
+      "profile": "clean",
+      "traceBytes": 108149,
+      "iou": 0.4735517893804597,
+      "precision": 0.8254508455546979,
+      "recall": 0.5262486858881159,
+      "disagreement": 0.09977340698242188
+    },
+    {
+      "id": "external-openclipart-rabbit-line-art",
+      "split": "development",
+      "profile": "softened",
+      "traceBytes": 14255,
+      "iou": 0.8010004880429478,
+      "precision": 0.8452971093800297,
+      "recall": 0.9385946100507542,
+      "disagreement": 0.01244354248046875
+    },
+    {
+      "id": "external-openclipart-tree-lineart",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 11506,
+      "iou": 0.9255406413124534,
+      "precision": 0.9578622419448196,
+      "recall": 0.964824315920398,
+      "disagreement": 0.007617950439453125
+    },
+    {
+      "id": "procedural-001-crescent-star",
+      "split": "development",
+      "profile": "faint-scan",
+      "traceBytes": 3484,
+      "iou": 0.9755103204470293,
+      "precision": 0.9764010957653236,
+      "recall": 0.9990656661508365,
+      "disagreement": 0.003276824951171875
+    },
+    {
+      "id": "procedural-002-amphora",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 7377,
+      "iou": 0.9383427689140504,
+      "precision": 0.9682935896755006,
+      "recall": 0.9680879307598365,
+      "disagreement": 0.00457000732421875
+    },
+    {
+      "id": "procedural-003-flying-bird",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 2200,
+      "iou": 0.9789219253560661,
+      "precision": 0.9814472209917399,
+      "recall": 0.9973784556720686,
+      "disagreement": 0.003093719482421875
+    },
+    {
+      "id": "procedural-004-mountain-sun",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 8484,
+      "iou": 0.935503165030155,
+      "precision": 0.9669259698109319,
+      "recall": 0.9664280933010658,
+      "disagreement": 0.00493621826171875
+    },
+    {
+      "id": "procedural-005-fish",
+      "split": "development",
+      "profile": "pixelated",
+      "traceBytes": 21399,
+      "iou": 0.8102012115967114,
+      "precision": 0.8596763085399449,
+      "recall": 0.9336782397307237,
+      "disagreement": 0.013385772705078125
+    },
+    {
+      "id": "procedural-006-ceremonial-key",
+      "split": "development",
+      "profile": "softened",
+      "traceBytes": 5694,
+      "iou": 0.9358407079646017,
+      "precision": 0.9478839874511813,
+      "recall": 0.9866053578568572,
+      "disagreement": 0.003871917724609375
+    },
+    {
+      "id": "procedural-007-leaf-sprig",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 3584,
+      "iou": 0.9744613715919735,
+      "precision": 0.9749420411384601,
+      "recall": 0.9994943109987358,
+      "disagreement": 0.00197601318359375
+    },
+    {
+      "id": "procedural-008-scarab",
+      "split": "test",
+      "profile": "clean",
+      "traceBytes": 10485,
+      "iou": 0.9409776500908361,
+      "precision": 0.954241645244216,
+      "recall": 0.9854431219857528,
+      "disagreement": 0.005329132080078125
+    },
+    {
+      "id": "procedural-009-tea-table",
+      "split": "development",
+      "profile": "faint-scan",
+      "traceBytes": 10341,
+      "iou": 0.9169897959183674,
+      "precision": 0.93609375,
+      "recall": 0.9782289228759593,
+      "disagreement": 0.006206512451171875
+    },
+    {
+      "id": "procedural-010-river-boat",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 9149,
+      "iou": 0.9244720586122683,
+      "precision": 0.9342019307541555,
+      "recall": 0.9888594368253236,
+      "disagreement": 0.008022308349609375
+    },
+    {
+      "id": "procedural-011-night-camp",
+      "split": "validation",
+      "profile": "softened",
+      "traceBytes": 13902,
+      "iou": 0.9335871950432425,
+      "precision": 0.9460741031426796,
+      "recall": 0.986059511230785,
+      "disagreement": 0.00785064697265625
+    },
+    {
+      "id": "procedural-012-garden-tools",
+      "split": "development",
+      "profile": "speckled",
+      "traceBytes": 13365,
+      "iou": 0.9315734067535832,
+      "precision": 0.9554420497487646,
+      "recall": 0.9738835978835979,
+      "disagreement": 0.00644683837890625
+    },
+    {
+      "id": "procedural-013-fox-and-moon",
+      "split": "development",
+      "profile": "pixelated",
+      "traceBytes": 21409,
+      "iou": 0.8202607302178526,
+      "precision": 0.8761565507031829,
+      "recall": 0.9278365667254557,
+      "disagreement": 0.01583099365234375
+    },
+    {
+      "id": "procedural-014-workshop-tools",
+      "split": "test",
+      "profile": "clean",
+      "traceBytes": 18093,
+      "iou": 0.9415479115479115,
+      "precision": 0.9717017014478789,
+      "recall": 0.9680931689571544,
+      "disagreement": 0.009075164794921875
+    },
+    {
+      "id": "procedural-015-meander-seam",
+      "split": "development",
+      "profile": "faint-scan",
+      "traceBytes": 2342,
+      "iou": 1,
+      "precision": 1,
+      "recall": 1,
+      "disagreement": 0
+    },
+    {
+      "id": "procedural-016-wave-seam",
+      "split": "validation",
+      "profile": "faint-scan",
+      "traceBytes": 5899,
+      "iou": 0.9290019500088637,
+      "precision": 0.9421970514203524,
+      "recall": 0.985148980167309,
+      "disagreement": 0.00611114501953125
+    },
+    {
+      "id": "procedural-017-rosette-beads",
+      "split": "test",
+      "profile": "faint-scan",
+      "traceBytes": 20488,
+      "iou": 0.9403721736810512,
+      "precision": 0.9827141562696035,
+      "recall": 0.956188538487623,
+      "disagreement": 0.0068206787109375
+    },
+    {
+      "id": "procedural-018-palmette-band",
+      "split": "validation",
+      "profile": "pixelated",
+      "traceBytes": 26089,
+      "iou": 0.8469293756397134,
+      "precision": 0.8840277777777777,
+      "recall": 0.9527894524727963,
+      "disagreement": 0.02281951904296875
+    },
+    {
+      "id": "procedural-019-braid-seam",
+      "split": "test",
+      "profile": "speckled",
+      "traceBytes": 9356,
+      "iou": 0.951279345819045,
+      "precision": 0.9633240730847312,
+      "recall": 0.9870268494950324,
+      "disagreement": 0.007045745849609375
+    },
+    {
+      "id": "procedural-020-gazelle-chase-seam",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 16116,
+      "iou": 0.9312299645689219,
+      "precision": 0.943196965036399,
+      "recall": 0.9865584670932686,
+      "disagreement": 0.00777435302734375
+    },
+    {
+      "id": "procedural-021-procession-seam",
+      "split": "test",
+      "profile": "clean",
+      "traceBytes": 17409,
+      "iou": 0.9350542532662681,
+      "precision": 0.9405587729905174,
+      "recall": 0.9937800490871802,
+      "disagreement": 0.007831573486328125
+    },
+    {
+      "id": "procedural-022-cuneiform-registers",
+      "split": "development",
+      "profile": "clean",
+      "traceBytes": 16578,
+      "iou": 0.9212045052592386,
+      "precision": 0.9269423500210743,
+      "recall": 0.9933253036234067,
+      "disagreement": 0.006458282470703125
+    },
+    {
+      "id": "procedural-023-cuneiform-seal",
+      "split": "validation",
+      "profile": "clean",
+      "traceBytes": 10864,
+      "iou": 0.9087357304193883,
+      "precision": 0.9385876418663304,
+      "recall": 0.9661842019861102,
+      "disagreement": 0.01140594482421875
+    }
+  ],
+  "overall": {
+    "cases": 40,
+    "meanIou": 0.878735826008041,
+    "minimumIou": 0.025047923322683706,
+    "meanPrecision": 0.934408687840104,
+    "meanRecall": 0.931680355996456,
+    "meanDisagreement": 0.011798381805419922
+  },
+  "byProfile": {
+    "clean": {
+      "cases": 20,
+      "meanIou": 0.8619177612295544,
+      "minimumIou": 0.025047923322683706,
+      "meanPrecision": 0.9436722491732079,
+      "meanRecall": 0.9026547747079154,
+      "meanDisagreement": 0.013996315002441407
+    },
+    "faint-scan": {
+      "cases": 5,
+      "meanIou": 0.9523748480110623,
+      "minimumIou": 0.9169897959183674,
+      "meanPrecision": 0.9674812106910557,
+      "meanRecall": 0.9837264215363455,
+      "meanDisagreement": 0.0044830322265625
+    },
+    "pixelated": {
+      "cases": 5,
+      "meanIou": 0.7996147307890676,
+      "minimumIou": 0.5618360230313844,
+      "meanPrecision": 0.8471200863531587,
+      "meanRecall": 0.9233018639763312,
+      "meanDisagreement": 0.016799163818359376
+    },
+    "softened": {
+      "cases": 5,
+      "meanIou": 0.9041943172165686,
+      "minimumIou": 0.8010004880429478,
+      "meanPrecision": 0.9262583347530475,
+      "meanRecall": 0.9731639846717994,
+      "meanDisagreement": 0.00866851806640625
+    },
+    "speckled": {
+      "cases": 5,
+      "meanIou": 0.9260316671294108,
+      "minimumIou": 0.8528186777732152,
+      "meanPrecision": 0.9597208742307384,
+      "meanRecall": 0.9626314789555096,
+      "meanDisagreement": 0.008451080322265625
+    }
+  },
+  "bySplit": {
+    "development": {
+      "cases": 24,
+      "meanIou": 0.8853180299766037,
+      "minimumIou": 0.025047923322683706,
+      "meanPrecision": 0.9443878576382189,
+      "meanRecall": 0.9310954444324056,
+      "meanDisagreement": 0.009490331013997396
+    },
+    "test": {
+      "cases": 8,
+      "meanIou": 0.8328968051614123,
+      "minimumIou": 0.4735517893804597,
+      "meanPrecision": 0.9010906268772294,
+      "meanRecall": 0.9028679844059062,
+      "meanDisagreement": 0.02058553695678711
+    },
+    "validation": {
+      "cases": 8,
+      "meanIou": 0.9048282349489812,
+      "minimumIou": 0.8469293756397134,
+      "meanPrecision": 0.9377892394086345,
+      "meanRecall": 0.9622474622791568,
+      "meanDisagreement": 0.009935379028320312
+    }
+  }
+}

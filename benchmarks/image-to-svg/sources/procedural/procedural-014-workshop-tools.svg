@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-014-workshop-tools-title procedural-014-workshop-tools-description">
+  <title id="procedural-014-workshop-tools-title">Workshop tools</title>
+  <desc id="procedural-014-workshop-tools-description">A crossed hammer and chisel above a hand saw and coiled measuring cord.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="rotate(38 214 221)"><path d="M 199 105 H 245 V 361 H 199 Z"/><path d="M 140 68 H 304 V 132 H 140 Z" fill="#111"/></g>
+  <g transform="rotate(-43 293 225)"><path d="M 280 91 H 311 L 321 346 L 270 346 Z"/><path d="M 270 346 L 295 401 L 321 346"/></g>
+  <path d="M 49 409 L 443 321 L 456 377 L 63 465 Z"/>
+  <path d="M 89 401 L 109 426 L 129 392 L 149 417 L 169 383 L 189 408 L 209 374 L 229 399 L 249 365 L 269 390 L 289 356 L 309 381 L 329 347 L 349 372 L 369 338" stroke-width="7"/>
+  <path d="M 366 167 C 421 132 463 174 449 222 C 436 266 379 274 353 236 C 329 201 350 171 379 181 C 402 190 398 220 378 222" stroke-width="8"/>
+</g>
+</svg>

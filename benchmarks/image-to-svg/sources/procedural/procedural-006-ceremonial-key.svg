@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-006-ceremonial-key-title procedural-006-ceremonial-key-description">
+  <title id="procedural-006-ceremonial-key-title">Ceremonial key</title>
+  <desc id="procedural-006-ceremonial-key-description">An ornate diagonal key with a quatrefoil bow and stepped teeth.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g transform="rotate(-38 256 256)" fill="none" stroke="#111" stroke-linejoin="round">
+  <circle cx="151" cy="256" r="72" stroke-width="13"/>
+  <path d="M 151 184 C 176 209 176 235 151 256 C 126 235 126 209 151 184 Z M 151 328 C 176 303 176 277 151 256 C 126 277 126 303 151 328 Z" stroke-width="8"/>
+  <path d="M 218 256 H 423 V 292 H 387 V 328 H 350 V 292 H 314 V 256" stroke-width="14"/>
+  <path d="M 238 235 V 277 M 276 235 V 277" stroke-width="7"/>
+</g>
+</svg>

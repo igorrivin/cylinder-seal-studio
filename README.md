@@ -52,9 +52,14 @@ The app rejects non-finite, out-of-range, geometrically impossible, or excessive
 | `npm test` | Run the Vitest suite once |
 | `npm run test:watch` | Run tests while files change |
 | `npm run benchmark:svg` | Run the semantic SVG round-trip benchmark and refresh its review artifacts |
+| `npm run benchmark:corpus:build` | Rebuild the frozen 40-case image-to-SVG corpus and its deterministic raster inputs |
+| `npm run benchmark:corpus` | Run the production tracer across the corpus and refresh its baseline report |
+| `npm run benchmark:corpus:check` | Verify that corpus manifests, hashes, splits, and generated rasters are current |
+| `npm run benchmark:vlm -- --pilot` | Run the fixed three-case Gemini one-shot evaluation |
+| `npm run benchmark:openai -- <command>` | Prepare, submit, inspect, or collect the fixed GPT-5.6 Sol Batch pilot |
 | `npm run build` | Type-check and create a production build |
 | `npm run audit` | Check production dependencies for high-severity advisories |
-| `npm run check` | Run lint, tests, and the production build |
+| `npm run check` | Run lint, tests, corpus freshness checks, and the production build |
 | `npm run preview` | Serve the production build locally |
 
 GitHub Actions audits production dependencies and runs `npm run check` for pushes and pull requests.
@@ -83,6 +88,7 @@ Use the deploy button near the top of this README, or import this GitHub reposit
 - `src/workers/trace.worker.ts` traces processed artwork to smooth SVG paths in WebAssembly.
 - `src/components/ui/` contains the small set of shadcn/Radix primitives used by the page.
 - `benchmarks/svg-gold/` contains the semantic vector source, production-equivalent round-trip quality gate, and review artifacts.
+- `benchmarks/image-to-svg/` contains the rights-tracked 40-case evaluation corpus, frozen 24/8/8 splits, immutable model-run schema, and classical-tracer baseline.
 - Tests under `src/lib/` cover validation, worker lifecycle, tracing topology, geometry, and serialization.
 
 See [info.md](info.md) for implementation notes and project invariants.

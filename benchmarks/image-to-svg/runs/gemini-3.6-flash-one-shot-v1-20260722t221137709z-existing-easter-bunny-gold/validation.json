@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "existing-easter-bunny-gold",
+  "run_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z-existing-easter-bunny-gold",
+  "passed": true,
+  "failures": [
+    {
+      "code": "extraneous_model_text",
+      "severity": "warning",
+      "message": "Text outside the SVG document was removed."
+    }
+  ],
+  "metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.1993592729017599,
+    "precision": 0.29745835877782223,
+    "recall": 0.3767536139115592,
+    "disagreement": 0.21641159057617188,
+    "grayscale_mae": 0.19996987137140515,
+    "false_positive_pixels": 33363,
+    "false_negative_pixels": 23368,
+    "reference_foreground_pixels": 37494,
+    "candidate_foreground_pixels": 47489,
+    "tolerant_precision_2px": 0.664659184232138,
+    "tolerant_recall_2px": 0.654771430095482,
+    "tolerant_f1_2px": 0.6596782579697087,
+    "candidate_bytes": 39117,
+    "element_count": 453,
+    "path_count": 285,
+    "group_count": 47,
+    "basic_shape_count": 121,
+    "baseline_iou": 0.7603098227907522,
+    "delta_iou_vs_classical": -0.5609505498889923
+  },
+  "provider": {
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+    "interaction_id": null,
+    "model": "gemini-3.6-flash",
+    "status": "completed"
+  },
+  "thresholds": {
+    "reference_luminance": 170,
+    "candidate_luminance": 128
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "external-openclipart-rabbit-line-art",
+  "run_id": "gemini-3.6-flash-one-shot-v1-20260722t221137709z-external-openclipart-rabbit-line-art",
+  "passed": true,
+  "failures": [
+    {
+      "code": "extraneous_model_text",
+      "severity": "warning",
+      "message": "Text outside the SVG document was removed."
+    }
+  ],
+  "metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.1372475846912966,
+    "precision": 0.24631641613335317,
+    "recall": 0.2366144828079205,
+    "disagreement": 0.07937240600585938,
+    "grayscale_mae": 0.07468545951094836,
+    "false_positive_pixels": 10128,
+    "false_negative_pixels": 10679,
+    "reference_foreground_pixels": 13989,
+    "candidate_foreground_pixels": 13438,
+    "tolerant_precision_2px": 0.4181425807411817,
+    "tolerant_recall_2px": 0.3930945743083852,
+    "tolerant_f1_2px": 0.40523188257229503,
+    "candidate_bytes": 3226,
+    "element_count": 26,
+    "path_count": 24,
+    "group_count": 1,
+    "basic_shape_count": 1,
+    "baseline_iou": 0.8010004880429478,
+    "delta_iou_vs_classical": -0.6637529033516512
+  },
+  "provider": {
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+    "interaction_id": null,
+    "model": "gemini-3.6-flash",
+    "status": "completed"
+  },
+  "thresholds": {
+    "reference_luminance": 170,
+    "candidate_luminance": 128
+  }
+}

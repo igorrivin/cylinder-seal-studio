@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-procedural-003-flying-bird",
+  "recorded_at": "2026-07-23T01:32:01.527Z",
+  "immutable": true,
+  "benchmark": {
+    "corpus_id": "cylinder-seal-image-to-svg",
+    "corpus_version": "1.0.0",
+    "manifest_sha256": "08fa9c41caf5ca32de49fa9aa534038bc388a360887b103b646754c522fcad6b",
+    "case_id": "procedural-003-flying-bird",
+    "split": "development",
+    "input": {
+      "path": "benchmarks/image-to-svg/inputs/procedural-003-flying-bird.png",
+      "sha256": "dc5331bfad1648bdafe18f88b5bf3eebd2d9b3d9d18026fb3661d3de7f56af4e",
+      "media_type": "image/png",
+      "bytes": 7977
+    },
+    "reference": {
+      "path": "benchmarks/image-to-svg/sources/procedural/procedural-003-flying-bird.svg",
+      "sha256": "772761ce949892647fbffe6934084d09fb88c72aa312a94898d881df8ead0110",
+      "media_type": "image/svg+xml",
+      "bytes": 842
+    }
+  },
+  "pipeline": {
+    "name": "openai-gpt-5.6-sol-one-shot",
+    "version": "1.0.0",
+    "git_commit": "c361e39d60071d388c4124a71a582c57880f7c7d",
+    "worktree_dirty": true,
+    "renderer": {
+      "name": "@resvg/resvg-js",
+      "version": "2.6.2",
+      "settings": {
+        "width": 512,
+        "height": 512,
+        "background": "#ffffff",
+        "shape_rendering": 2,
+        "reference_threshold": 170,
+        "candidate_threshold": 128,
+        "metric_version": "1.0.0",
+        "collector_sha256": "e0017fd388a196490022b98bb08f34265607b21a9efaf30b9535bdf669a0f245"
+      }
+    }
+  },
+  "attempts": [
+    {
+      "index": 0,
+      "kind": "generation",
+      "status": "completed",
+      "started_at": "2026-07-23T01:25:00.000Z",
+      "finished_at": "2026-07-23T01:31:24.000Z",
+      "latency_ms": 384000,
+      "model": {
+        "provider": "OpenAI",
+        "id": "gpt-5.6-sol",
+        "version": "gpt-5.6-sol",
+        "settings": {
+          "api": "responses-batch",
+          "endpoint": "/v1/responses",
+          "delivery": "batch",
+          "remote_batch_id": "batch_6a616d2e413481909e26e845193024c9",
+          "reasoning_effort": "high",
+          "max_output_tokens": 65536,
+          "image_detail": "original",
+          "image_count": 1,
+          "store": false,
+          "strategy": "direct",
+          "batch_discount_percent": 50,
+          "latency_scope": "shared_batch_wall_clock_not_model_latency"
+        }
+      },
+      "prompt": {
+        "template_id": "semantic-image-to-svg-one-shot",
+        "template_version": "1.0.0",
+        "system": "You are an expert vector illustrator reconstructing fabrication-ready monochrome artwork from a raster reference.",
+        "user": "Recreate the attached monochrome line-art image as a clean, editable, self-contained SVG. Infer the intended vector design rather than tracing antialiased pixels or noise. Preserve every distinct object, its placement, proportions, overlaps, repeated motifs, line-weight hierarchy, silhouettes, negative spaces, and any artwork crossing an image edge. Use viewBox=\"0 0 512 512\", explicit black fills or strokes, and only basic SVG geometry such as paths, groups, circles, ellipses, polygons, polylines, lines, and rectangles. Prefer smooth, economical geometry, but do not omit meaningful small details. Do not embed the raster, use text, scripts, external resources, CSS, filters, gradients, masks, clip paths, or reusable external definitions. Return only one complete <svg xmlns=\"http://www.w3.org/2000/svg\">...</svg> document, with no Markdown or explanation.",
+        "sha256": "78be5e78a6ab25a674b5b2cbdb07c01bdf813421008968f28575395691bf7a25"
+      },
+      "usage": {
+        "input_tokens": 522,
+        "cached_input_tokens": 0,
+        "output_tokens": 4455,
+        "reasoning_tokens": 4142,
+        "total_tokens": 4977
+      },
+      "cost": {
+        "usd": 0.06813,
+        "estimated": true,
+        "pricing_source_url": "https://developers.openai.com/api/docs/guides/batch"
+      },
+      "artifacts": {
+        "provider_response": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-procedural-003-flying-bird/provider-response.json",
+          "sha256": "ed3083f59436d2afb883d207e48c9b6523634184d44fcf75196103a2836aa65d",
+          "media_type": "application/json",
+          "bytes": 30966
+        },
+        "batch_request": {
+          "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/batch-request.jsonl",
+          "sha256": "a01e78ae22ace7c2bd3a5e94688c25496112c35b3bae4d56659aee6a3af4e53c",
+          "media_type": "application/jsonl",
+          "bytes": 769848
+        },
+        "raw_model_output": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-procedural-003-flying-bird/model-output.txt",
+          "sha256": "7d04d274681b403a38a02d7ff180f11b5f2833dbf7e24a01611f33621716940f",
+          "media_type": "text/plain",
+          "bytes": 687
+        },
+        "validation_report": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-procedural-003-flying-bird/validation.json",
+          "sha256": "f98f2f364d7f847a01c679b0b88ba9dd9cbd765e31b8289d7647a3b030c9fecc",
+          "media_type": "application/json",
+          "bytes": 1838
+        },
+        "candidate_svg": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-procedural-003-flying-bird/candidate.svg",
+          "sha256": "7d04d274681b403a38a02d7ff180f11b5f2833dbf7e24a01611f33621716940f",
+          "media_type": "image/svg+xml",
+          "bytes": 687
+        },
+        "rendered_png": {
+          "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-procedural-003-flying-bird/render.png",
+          "sha256": "c8d2229530de0954eae1ac416eb3e5705cd46349e36a27396e4b7f58acdd6a02",
+          "media_type": "image/png",
+          "bytes": 7962
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "metric_version": "1.0.0",
+          "iou": 0.9592762554084174,
+          "precision": 0.9899602197385868,
+          "recall": 0.9687003495392438,
+          "disagreement": 0.005924224853515625,
+          "grayscale_mae": 0.005019288904526622,
+          "false_positive_pixels": 371,
+          "false_negative_pixels": 1182,
+          "reference_foreground_pixels": 37764,
+          "candidate_foreground_pixels": 36953,
+          "tolerant_precision_2px": 1,
+          "tolerant_recall_2px": 0.9983317445185891,
+          "tolerant_f1_2px": 0.9991651759093619,
+          "input_iou": 0.9592762554084174,
+          "input_precision": 0.9899602197385868,
+          "input_recall": 0.9687003495392438,
+          "input_tolerant_precision_2px": 1,
+          "input_tolerant_recall_2px": 0.9983317445185891,
+          "input_tolerant_f1_2px": 0.9991651759093619,
+          "candidate_bytes": 687,
+          "element_count": 3,
+          "path_count": 2,
+          "group_count": 0,
+          "basic_shape_count": 1,
+          "command_count": 1,
+          "numeric_token_count": 4,
+          "maximum_nesting": 1,
+          "active_stroke_count": 1,
+          "non_black_paint_count": 3,
+          "baseline_iou": 0.9789219253560661,
+          "delta_iou_vs_classical": -0.019645669947648714
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "latency_ms": 384000,
+    "usage": {
+      "input_tokens": 522,
+      "cached_input_tokens": 0,
+      "output_tokens": 4455,
+      "reasoning_tokens": 4142,
+      "total_tokens": 4977
+    },
+    "cost": {
+      "usd": 0.06813,
+      "estimated": true,
+      "pricing_source_url": "https://developers.openai.com/api/docs/guides/batch"
+    },
+    "metrics": {
+      "metric_version": "1.0.0",
+      "iou": 0.9592762554084174,
+      "precision": 0.9899602197385868,
+      "recall": 0.9687003495392438,
+      "disagreement": 0.005924224853515625,
+      "grayscale_mae": 0.005019288904526622,
+      "false_positive_pixels": 371,
+      "false_negative_pixels": 1182,
+      "reference_foreground_pixels": 37764,
+      "candidate_foreground_pixels": 36953,
+      "tolerant_precision_2px": 1,
+      "tolerant_recall_2px": 0.9983317445185891,
+      "tolerant_f1_2px": 0.9991651759093619,
+      "input_iou": 0.9592762554084174,
+      "input_precision": 0.9899602197385868,
+      "input_recall": 0.9687003495392438,
+      "input_tolerant_precision_2px": 1,
+      "input_tolerant_recall_2px": 0.9983317445185891,
+      "input_tolerant_f1_2px": 0.9991651759093619,
+      "candidate_bytes": 687,
+      "element_count": 3,
+      "path_count": 2,
+      "group_count": 0,
+      "basic_shape_count": 1,
+      "command_count": 1,
+      "numeric_token_count": 4,
+      "maximum_nesting": 1,
+      "active_stroke_count": 1,
+      "non_black_paint_count": 3,
+      "baseline_iou": 0.9789219253560661,
+      "delta_iou_vs_classical": -0.019645669947648714
+    },
+    "ratings": {
+      "fidelity": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No blind human rating has been assigned."
+      },
+      "manufacturability": {
+        "score": null,
+        "scale": "1-5",
+        "reviewer": "unreviewed",
+        "notes": "No blind human rating has been assigned."
+      }
+    }
+  },
+  "outcome": {
+    "status": "accepted",
+    "accepted_attempt": 0,
+    "final_svg": {
+      "path": "benchmarks/image-to-svg/runs/openai-gpt-5.6-sol-one-shot-v1-20260723t012315852z-procedural-003-flying-bird/candidate.svg",
+      "sha256": "7d04d274681b403a38a02d7ff180f11b5f2833dbf7e24a01611f33621716940f",
+      "media_type": "image/svg+xml",
+      "bytes": 687
+    },
+    "notes": "Accepted after the same technical SVG safety and rendering checks used for the Gemini one-shot pilot; automatic fidelity metrics are descriptive, not an acceptance gate."
+  },
+  "output_training_rights": {
+    "training_allowed": false,
+    "source": {
+      "cleared": false,
+      "basis": "unknown",
+      "evidence_url": null,
+      "notes": "Corpus source is evaluation-only: Evaluation-only because the fixtures were created with coding-agent assistance; review applicable provider-output terms before using them as training targets."
+    },
+    "provider_output": {
+      "cleared": false,
+      "basis": "provider_terms",
+      "terms_url": "https://openai.com/policies/services-agreement/",
+      "terms_version": "OpenAI Services Agreement effective 2026-01-01",
+      "terms_effective_at": "2026-01-01",
+      "notes": "Retained for evaluation only. The Services Agreement assigns output ownership to the customer but restricts using output to develop competing AI models outside its stated exception."
+    },
+    "reviewed_at": "2026-07-23",
+    "notes": "Source and provider-output rights must both be cleared before training; these OpenAI outputs are not marked as distillation-ready."
+  }
+}

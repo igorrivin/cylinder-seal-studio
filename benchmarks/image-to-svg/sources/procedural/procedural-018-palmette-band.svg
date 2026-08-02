@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-018-palmette-band-title procedural-018-palmette-band-description">
+  <title id="procedural-018-palmette-band-title">Alternating palmette band</title>
+  <desc id="procedural-018-palmette-band-description">Upright and inverted fan-shaped palmettes alternate along a bounded ornamental band.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 14 92 H 498 M 14 420 H 498"/>
+  <g transform="">
+    <path d="M 21 323 Q 70 291 119 323 M 70 322 V 167"/>
+    <path d="M 70 292 C 17 277 6 222 25 185 C 60 204 70 244 70 292 Z"/>
+    <path d="M 70 292 C 123 277 134 222 115 185 C 80 204 70 244 70 292 Z"/>
+    <path d="M 70 246 C 46 209 57 168 70 145 C 83 168 94 209 70 246 Z"/>
+  </g>
+<g transform="rotate(180 194 256)">
+    <path d="M 145 323 Q 194 291 243 323 M 194 322 V 167"/>
+    <path d="M 194 292 C 141 277 130 222 149 185 C 184 204 194 244 194 292 Z"/>
+    <path d="M 194 292 C 247 277 258 222 239 185 C 204 204 194 244 194 292 Z"/>
+    <path d="M 194 246 C 170 209 181 168 194 145 C 207 168 218 209 194 246 Z"/>
+  </g>
+<g transform="">
+    <path d="M 269 323 Q 318 291 367 323 M 318 322 V 167"/>
+    <path d="M 318 292 C 265 277 254 222 273 185 C 308 204 318 244 318 292 Z"/>
+    <path d="M 318 292 C 371 277 382 222 363 185 C 328 204 318 244 318 292 Z"/>
+    <path d="M 318 246 C 294 209 305 168 318 145 C 331 168 342 209 318 246 Z"/>
+  </g>
+<g transform="rotate(180 442 256)">
+    <path d="M 393 323 Q 442 291 491 323 M 442 322 V 167"/>
+    <path d="M 442 292 C 389 277 378 222 397 185 C 432 204 442 244 442 292 Z"/>
+    <path d="M 442 292 C 495 277 506 222 487 185 C 452 204 442 244 442 292 Z"/>
+    <path d="M 442 246 C 418 209 429 168 442 145 C 455 168 466 209 442 246 Z"/>
+  </g>
+</g>
+</svg>

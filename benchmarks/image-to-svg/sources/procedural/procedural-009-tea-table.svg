@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="procedural-009-tea-table-title procedural-009-tea-table-description">
+  <title id="procedural-009-tea-table-title">Tea table still life</title>
+  <desc id="procedural-009-tea-table-description">A loose line drawing of a teapot, cup, vase, flower, and small table.</desc>
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 54 363 Q 256 348 458 363 M 92 364 L 76 455 M 419 364 L 438 455"/>
+  <path d="M 139 331 C 117 297 122 242 159 218 C 195 195 257 207 275 248 C 292 288 267 329 234 337 Z"/>
+  <path d="M 144 239 C 108 215 80 240 89 275 C 95 297 115 306 136 297 M 272 252 C 307 241 322 261 303 276 L 277 296"/>
+  <path d="M 164 211 Q 199 183 235 211 M 189 190 V 171 H 216 V 190"/>
+  <path d="M 318 313 V 263 H 382 V 313 C 382 334 318 334 318 313 Z M 382 277 C 417 269 417 310 384 306"/>
+  <path d="M 389 350 C 378 316 383 260 397 231 C 410 256 417 313 405 350 Z"/>
+  <path d="M 397 232 C 375 206 362 177 374 150 M 397 232 C 414 201 439 181 455 176"/>
+  <path d="M 374 150 C 347 151 340 123 360 112 C 374 94 399 112 393 133 C 392 149 385 154 374 150 Z"/>
+</g>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "uploaded_at": "2026-07-23T01:23:58.034Z",
+  "response": {
+    "object": "file",
+    "id": "file-ATbMPxAT2QF43m9YmGS4qD",
+    "purpose": "batch",
+    "filename": "batch-request.jsonl",
+    "bytes": 769848,
+    "created_at": 1784769837,
+    "expires_at": 1787361837,
+    "status": "processed",
+    "status_details": null
+  }
+}

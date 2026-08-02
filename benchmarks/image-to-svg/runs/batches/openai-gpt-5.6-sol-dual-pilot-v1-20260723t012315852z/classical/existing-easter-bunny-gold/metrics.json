@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "existing-easter-bunny-gold",
+  "generated_at": "2026-07-23T01:23:15.852Z",
+  "source_input": {
+    "path": "benchmarks/image-to-svg/inputs/existing-easter-bunny-gold.png",
+    "sha256": "29cc99ec305b9671a8f82c685132a511684e3f2a318131d064f7d2dc29ca98aa",
+    "media_type": "image/png",
+    "bytes": 105659
+  },
+  "trace": {
+    "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/existing-easter-bunny-gold/classical.svg",
+    "sha256": "bf4d5615759f689973069ff045ffd9f72b4f88f062e3f1a621ed5dc99c62ec53",
+    "media_type": "image/svg+xml",
+    "bytes": 150328
+  },
+  "render": {
+    "path": "benchmarks/image-to-svg/runs/batches/openai-gpt-5.6-sol-dual-pilot-v1-20260723t012315852z/classical/existing-easter-bunny-gold/render.png",
+    "sha256": "3e2abefaba583b7b701b70953ec79883d02d9acd99a8535d2245dfbd21f6df11",
+    "media_type": "image/png",
+    "bytes": 97692
+  },
+  "generator": {
+    "adapter": "production-equivalent BinaryImageConverter + formatFlatSvg",
+    "vectortracer_version": "0.1.2",
+    "trace_settings": {
+      "mode": "spline",
+      "filterSpeckle": 16,
+      "segmentLength": 5,
+      "cornerThresholdDegrees": 45,
+      "spliceThresholdDegrees": 45,
+      "maxIterations": 10,
+      "pathPrecision": 2
+    },
+    "preprocessing_threshold": 170,
+    "physical_dimensions_mm": {
+      "width": 40,
+      "height": 40
+    },
+    "git_commit": "c361e39d60071d388c4124a71a582c57880f7c7d",
+    "worktree_dirty": true,
+    "runner_sha256": "2d2697ae92f386d13cfd9cdef8a0638b72be67803d3b2cfa3892447a6b71d653"
+  },
+  "renderer": {
+    "name": "@resvg/resvg-js",
+    "version": "2.6.2",
+    "width": 512,
+    "height": 512,
+    "background": "#ffffff",
+    "shape_rendering": 2
+  },
+  "reference_metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.7603098227907522,
+    "precision": 0.8637212030716723,
+    "recall": 0.8639515655838268,
+    "disagreement": 0.0389556884765625,
+    "grayscale_mae": 0.05140799728095995,
+    "false_positive_pixels": 5111,
+    "false_negative_pixels": 5101,
+    "reference_foreground_pixels": 37494,
+    "candidate_foreground_pixels": 37504,
+    "tolerant_precision_2px": 0.9999466723549488,
+    "tolerant_recall_2px": 0.9968795007201152,
+    "tolerant_f1_2px": 0.9984107309139019
+  },
+  "input_metrics": {
+    "metric_version": "1.0.0",
+    "iou": 0.7603098227907522,
+    "precision": 0.8637212030716723,
+    "recall": 0.8639515655838268,
+    "disagreement": 0.0389556884765625,
+    "grayscale_mae": 0.05140799728095995,
+    "false_positive_pixels": 5111,
+    "false_negative_pixels": 5101,
+    "reference_foreground_pixels": 37494,
+    "candidate_foreground_pixels": 37504,
+    "tolerant_precision_2px": 0.9999466723549488,
+    "tolerant_recall_2px": 0.9968795007201152,
+    "tolerant_f1_2px": 0.9984107309139019
+  },
+  "geometry": {
+    "candidate_bytes": 150328,
+    "element_count": 93,
+    "path_count": 93,
+    "group_count": 0,
+    "basic_shape_count": 0,
+    "command_count": 5776,
+    "numeric_token_count": 29026,
+    "maximum_nesting": 1
+  }
+}
