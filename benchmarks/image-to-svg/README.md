@@ -86,7 +86,7 @@ npm run benchmark:openai -- rescore --batch <local-batch-id>
 ```
 
 `submit` without `--batch` prepares and submits a new job. The API key is read
-from `OPENAI_API_KEY`, or from the sibling `heretic/.env` for this local
+from `OPENAI_API_KEY`, or from `~/.config/secrets/llm.env` for this local
 experiment; it is never written to the archive. Batch request/output JSONL,
 status snapshots, exact source traces, raw provider responses, verbatim model
 text, rendered candidates, validation reports, token usage, estimated cost,

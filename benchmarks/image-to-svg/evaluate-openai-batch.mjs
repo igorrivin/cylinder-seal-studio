@@ -3,6 +3,7 @@ import { execFile } from 'node:child_process'
 import { createHash } from 'node:crypto'
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { dirname, join, relative } from 'node:path'
+import { homedir } from 'node:os'
 import { env } from 'node:process'
 import { promisify } from 'node:util'
 import { fileURLToPath } from 'node:url'
@@ -66,7 +67,7 @@ const RUNS_DIR = join(BENCHMARK_DIR, 'runs')
 const BATCHES_DIR = join(RUNS_DIR, 'batches')
 const SUMMARIES_DIR = join(RUNS_DIR, 'summaries')
 const SCHEMA_PATH = join(BENCHMARK_DIR, 'run-record.schema.json')
-const DEFAULT_ENV_PATH = join(REPOSITORY_DIR, '..', '..', 'heretic', '.env')
+const DEFAULT_ENV_PATH = join(homedir(), '.config', 'secrets', 'llm.env')
 
 function usage() {
   return `Usage:
@@ -79,7 +80,7 @@ function usage() {
 The fixed pilot sends six gpt-5.6-sol requests in one Batch job: the exact
 three-case Gemini one-shot comparison plus three trace-constrained refactors.
 The test split is never selected. OPENAI_API_KEY is read from the environment,
-or from the sibling heretic/.env file without copying it into this repository.
+or from ~/.config/secrets/llm.env without copying it into this repository.
 `
 }
 
